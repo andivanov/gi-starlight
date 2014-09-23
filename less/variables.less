@@ -1,0 +1,135 @@
+/******************************************
+
+
+GENERAL
+
+
+******************************************/
+
+@GI-green: 							#5bb767;
+@GI-blue:  							#1f6fb1;
+
+@white: 							#fff;
+@nav-bg: 							#48A95E;
+
+@home-general-font-color: 			#434951;
+
+@blue-1: 							#2B7AB8;
+@blue-2: 							#2E97D3;
+@blue-3: 							#348DC8;
+@blue-4: 							#032133; //drk blue
+
+
+@btn-link-primary: 					#428bca;
+
+@home-color-alert: 					#E82E2F; //red
+@home-color-secondary: 				#33b457; //green
+@home-color-secondary-hover: 		#4CAF59; //lt green
+@home-color-secondary-A: 			#2B9438; //drk green
+@home-color-secondary-B: 			#17772D; // drk drk green
+@home-color-secondary-C: 			#228238; // hover for drk drk green
+@home-color-secondary-D: 			#CDE0CB; //hover for white on lt green
+@home-color-secondary-E: 			#005A15; // hover for drk drk drk green
+
+@font-sans-serif: 					'proxima-nova', Helvetica, Arial, sans-serif;
+@font-serif: 						'ff-tisa-web-pro', Georgia, sans-serif;
+
+// @font-sans-serif: 					'proxima nova', Helvetica, Arial, sans-serif;
+// @font-serif: 						'tisa pro', Georgia, sans-serif;
+
+@home-color-grey-light-light: 						#ededed;
+@home-color-grey-light-medium: 						#D8D8D8;
+@home-color-grey-medium: 							#d1d1d1;
+@home-color-grey-medium-dark: 						#303030;
+@home-color-grey-dark: 								;
+@home-color-grey-dark-dark: 						;
+
+@font-weight-light: 				300;
+@font-weight-bold: 					600;
+
+
+@nav-font-size: 					16px;
+
+@home-grid-bg-1: 					#F1F1F2;
+@home-grid-bg-2: 					#E4E5E6;
+@home-grid-bg-3: 					#E4E5E6;
+@home-grid-bg-4: 					#F3F3F4;
+@home-grid-bg-5: 					#ECEDEE;
+
+@home-grid-action-bg-left: 			#66BF72;
+@home-grid-action-bg-right: 		#33B457;
+@home-grid-font-color: 				#6D6E70;
+
+
+@home-bg-solid: 					#edf2f4;
+
+@footer-font-color: 				#8ABCD7;
+
+@link-color: 						#0089FF;
+
+@partner-about-bg-1: 						#29a949;
+@partner-about-bg-2: 						#1997d8;
+@partner-about-bg-3: 						#43bda8;
+@partner-about-bg-4: 						#76c043;
+
+@about-plus-arrow-border: 					55px;
+
+/******************************************
+
+
+MIXINS
+
+
+******************************************/
+
+.mixin-gradient-bg (@startColor: @home-bg-solid, @endColor: @white) {
+	background-color: @startColor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+.mixin-border-top{
+	border-top:1px solid #E6E6E6;
+}
+.mixin-font-weight-light{
+	font-weight:300;
+}
+.mixin-margin-center{
+	margin-left:auto;
+	margin-right:auto;
+}
+.mixin-transition {
+	-webkit-transition: all 0.518s ease-out;  
+	-moz-transition:    all 0.518s ease-out;
+	-ms-transition:     all 0.518s ease-out; 
+	-o-transition:      all 0.518s ease-out;  
+}
+
+
+
+/******************************************
+
+
+MEDIA QUERY EXTRAS
+
+
+******************************************/
+
+@SS: ~"only screen and (min-width: 480px) and (max-width: 600px)";
+@SM: ~"only screen and (min-width: 600px) and (max-width: 670px)";
+@MS: ~"only screen and (min-width: 320px) and (max-width: 700px)";
+@MM: ~"only screen and (min-width: 320px) and (max-width: 950px)";
+@L-1: ~"only screen and (min-width: 980px) and (max-width: 1024px)";
+@L-2: ~"only screen and (min-width: 1024px) and (max-width: 1100px)";
+@M-1: ~"only screen and (min-width: 720px) and (max-width: 920px)";
+
+@Med:~"only screen and (min-width: 770px) and (max-width: 855px)"; //bt m and ml
+@Med-2:~"only screen and (min-width: 720px) and (max-width: 770px)"; //bt med and s
+
+@medium-human:~"only screen and (min-width: 320px) and (max-width: 950px) and (min-height: 601px) and (max-height: 720px)";
+@large-human: ~"only screen and (min-width: 981px) and (max-width: 1300px) and (min-height: 601px) and (max-height: 720px)";
+@XL-human: ~"only screen and (min-width: 1301px) and (max-width: 2400px) and (min-height: 601px) and (max-height: 720px)";
+@tax-act: ~"only screen and (min-width: 650px) and (max-width: 850px) and (min-height: 375px) and (max-height: 550px)";
