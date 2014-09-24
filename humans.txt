@@ -13,3 +13,7 @@
 
     HTML5, CSS3
     jQuery, Modernizr
+
+# Notes
+	Use as a references: 
+		http://html.iwthemes.com/jekas/run/
