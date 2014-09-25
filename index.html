@@ -14,12 +14,83 @@
         <link rel="stylesheet" href="css/minified/global.min.css">
     </head>
 
-    <body>
+    <body>    
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapsible-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                 <a class="navbar-brand" href="/hix/"><img src="/hix/resources/images/getinsured-logo.png" alt="Getinsured.com" pagespeed_url_hash="1345318815"></a>
+            </div>
+            <div class="collapse navbar-collapse collapsible-navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="number">Call (866) 602-8466 </li>
+                    <li><a href="javascript:void(0)" onclick="openHelp()">Chat</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Help <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://www.getinsured.com/answers/">GetAnswers</a></li>
+                            <li><a class="language-modal" data-toggle="modal" data-target="#languageModal" href="#languageModal">Language Assistance<span class="aria-hidden"> End of dropdown</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-secondary"><a href="/hix/account/signup/consumer">Sign Up</a></li>
+                    <li class="nav-secondary"><a href="/hix/account/user/login">Log In</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+            <div class="collapse navbar-collapse collapsible-navbar" id="secondary-navbar">
+                <ul class="nav navbar-nav navbar-left  cart-nav">
+                    <li><a href="/hix/qualifyingevent" class="secondary-health">Health Insurance</a></li>
+                    <li><a href="/hix/ancillaryquote/stm" class="secondary-stm">Short-Term Medical Insurance</a></li>
+                    <li>
+                        <div id="searchResultsControl" style="height:40px;width:500px;display:none;vertical-align:top;z-index:100;background-color:#328F3D;">
+                            <div style="white-space:nowrap;overflow:hidden;padding:10px 10px 10px 10px;">
+                                <span style="font-weight:bold;color:#ffffff;">Help Search Results</span>
+                                <span style="float:right;">
+                                    <button id="collapseOrExpandSearchResults" style="color:#000000">/\</button>
+                                    <button id="closeSearchResults" style="color:#000000">X</button>
+                                </span>
+                            </div>
+                            <div id="searchbuttonclickedtest" style="margin:0 auto;height:400px;width:500px;overflow:auto;display:none;vertical-align:top;z-index:110;background-color:#ffffff;color:#000000;border-style:solid;border-color:#328F3D;padding:10px 10px 10px 10px;"></div>
+                            <div id="content" style="display:none" ;="">
+                                <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                                    <li class="active" id="basicTab"><a href="#basic" data-toggle="tab">Basic</a></li>
+                                    <li id="expertTab"><a href="#expert" data-toggle="tab">Expert</a></li>
+                                    <li id="videoTab"><a href="#video" data-toggle="tab">Video</a></li>
+                                    <li id="otherTab"><a href="#other" data-toggle="tab">Other</a></li>
+                                </ul>
+                                <div id="my-tab-content" class="tab-content">
+                                    <div class="tab-pane active" id="basic">
+                                        <div id="basicHtml"></div>
+                                    </div>
+                                    <div class="tab-pane" id="expert">
+                                        <div id="expertHtml"></div>
+                                    </div>
+                                    <div class="tab-pane" id="video">
+                                        <div id="videoHtml"></div>
+                                    </div>
+                                    <div class="tab-pane" id="other">
+                                        <div id="otherHtml"></div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </li>
+                    <li class="secondary-cart btn-append"><a class="btn" href="/hix/memberportal/universalCart"><span><i class="icon-shopping-cart"></i></span> Your Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+
         <section id="intro">
             <div class="container-fluid">
                 <div class="row">
                     <h1 class="col-md-8 col-sm-8 col-xs-12">We help you buy <span>Affordable Health Insurance</span></h1>
-                    <p class="col-md-4 col-sm-4 col-xs-12"><a href="#">Start shopping</a></p>
+                    <a href="#" class="col-md-4 col-sm-4 col-xs-12">Start shopping</a>
                 </div>
                 <ul class="list-inline text-center">
                     <li>Major Medical</li>

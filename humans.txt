@@ -27,6 +27,3 @@
 				2.animated arrow on the "lower your cost" section, just like here: https://www.zendesk.com/modernize
 				3.arm rotation for the GI dude on the same page - on scroll
 				4.move dude with the cart slightly when scrolling.
-
-
-
