@@ -5,33 +5,22 @@ GENERAL
 
 
 ******************************************/
-/******************************************
-
-
-MIXINS
-
-
-******************************************/
-.mixin-border-top {
-  border-top: 1px solid #E6E6E6;
+h1 {
+  text-align: center;
 }
-.mixin-font-weight-light {
-  font-weight: 300;
+h2 {
+  text-align: center;
 }
-.mixin-margin-center {
-  margin-left: auto;
-  margin-right: auto;
+h3 {
+  text-align: center;
 }
-.mixin-transition {
-  -webkit-transition: all 0.518s ease-out;
-  -moz-transition: all 0.518s ease-out;
-  -ms-transition: all 0.518s ease-out;
-  -o-transition: all 0.518s ease-out;
+.appbar--hovers-one .appbar-item {
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
-/******************************************
-
-
-MEDIA QUERY EXTRAS
-
-
-******************************************/
+.no-touch .appbar--hovers-one .appbar-item:hover {
+  -webkit-transform: scale3d(1.5, 1.5, 1.5);
+  transform: scale3d(1.5, 1.5, 1.5);
+  -webkit-transition: all .1s;
+  transition: all .1s;
+}
