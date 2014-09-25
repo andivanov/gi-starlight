@@ -24,6 +24,12 @@ module.exports = function(grunt) {
                 }
             }
         },
+        svgsprite: {
+            spriteCSS:{
+                src:    ['img/svg/'],
+                dest:   'img/sprite'
+            }
+        },
         watch: {
             css: {
                 files: ['less/*.less','css/*.css','js/*.js'],
@@ -39,6 +45,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-svg-sprite');
     
-    grunt.registerTask('default', [ 'less', 'cssmin', 'watch' ]);
+    grunt.registerTask('default', [ 'less', 'cssmin', 'svgsprite', 'watch' ]);
 };
