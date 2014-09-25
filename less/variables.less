@@ -34,9 +34,6 @@ GENERAL
 @font-sans-serif: 					'proxima-nova', Helvetica, Arial, sans-serif;
 @font-serif: 						'ff-tisa-web-pro', Georgia, sans-serif;
 
-// @font-sans-serif: 					'proxima nova', Helvetica, Arial, sans-serif;
-// @font-serif: 						'tisa pro', Georgia, sans-serif;
-
 @home-color-grey-light-light: 						#ededed;
 @home-color-grey-light-medium: 						#D8D8D8;
 @home-color-grey-medium: 							#d1d1d1;
@@ -74,62 +71,7 @@ GENERAL
 
 @about-plus-arrow-border: 					55px;
 
-/******************************************
-
-
-MIXINS
-
-
-******************************************/
-
-.mixin-gradient-bg (@startColor: @home-bg-solid, @endColor: @white) {
-	background-color: @startColor;
-	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
-	background: -webkit-linear-gradient(top, @startColor, @endColor);
-	background: -moz-linear-gradient(top, @startColor, @endColor);
-	background: -ms-linear-gradient(top, @startColor, @endColor);
-	background: -o-linear-gradient(top, @startColor, @endColor);
-}
-
-.mixin-border-top{
-	border-top:1px solid #E6E6E6;
-}
-.mixin-font-weight-light{
-	font-weight:300;
-}
-.mixin-margin-center{
-	margin-left:auto;
-	margin-right:auto;
-}
-.mixin-transition {
-	-webkit-transition: all 0.518s ease-out;  
-	-moz-transition:    all 0.518s ease-out;
-	-ms-transition:     all 0.518s ease-out; 
-	-o-transition:      all 0.518s ease-out;  
-}
 
 
 
-/******************************************
 
-
-MEDIA QUERY EXTRAS
-
-
-******************************************/
-
-@SS: ~"only screen and (min-width: 480px) and (max-width: 600px)";
-@SM: ~"only screen and (min-width: 600px) and (max-width: 670px)";
-@MS: ~"only screen and (min-width: 320px) and (max-width: 700px)";
-@MM: ~"only screen and (min-width: 320px) and (max-width: 950px)";
-@L-1: ~"only screen and (min-width: 980px) and (max-width: 1024px)";
-@L-2: ~"only screen and (min-width: 1024px) and (max-width: 1100px)";
-@M-1: ~"only screen and (min-width: 720px) and (max-width: 920px)";
-
-@Med:~"only screen and (min-width: 770px) and (max-width: 855px)"; //bt m and ml
-@Med-2:~"only screen and (min-width: 720px) and (max-width: 770px)"; //bt med and s
-
-@medium-human:~"only screen and (min-width: 320px) and (max-width: 950px) and (min-height: 601px) and (max-height: 720px)";
-@large-human: ~"only screen and (min-width: 981px) and (max-width: 1300px) and (min-height: 601px) and (max-height: 720px)";
-@XL-human: ~"only screen and (min-width: 1301px) and (max-width: 2400px) and (min-height: 601px) and (max-height: 720px)";
-@tax-act: ~"only screen and (min-width: 650px) and (max-width: 850px) and (min-height: 375px) and (max-height: 550px)";

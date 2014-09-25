@@ -10,16 +10,6 @@ module.exports = function(grunt) {
             title: "PHIX" // defaults to the name in package.json, or will use project directory's name
             }
         },
-        imagemin: {
-            dynamic: {
-                files: [{
-                    expand: true,
-                    cwd: 'img/',
-                    src: ['**/*.{png,jpg,gif}'],
-                    dest:'img/minified/'
-                }]
-            }
-        },
         less: {
             style: {
                 files: {
@@ -30,14 +20,14 @@ module.exports = function(grunt) {
         cssmin: {
             combine: {
                 files: {
-                    'css/global.min.css': ['css/global.css']
+                    'css/minified/global.min.css': ['css/global.css']
                 }
             }
         },
         watch: {
             css: {
-                files: ['less/*.less','css/*.css','js/*.js', 'img/*.{png,jpg,gif}'],
-                tasks: ['less:style', 'cssmin:combine', 'imagemin:dynamic'],
+                files: ['less/*.less','css/*.css','js/*.js'],
+                tasks: ['less:style', 'cssmin:combine' ],
                 options: {
                     livereload: true,
                 }
@@ -47,9 +37,8 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-notify');
     
-    grunt.registerTask('default', [ 'less', 'imagemin', 'cssmin', 'watch' ]);
+    grunt.registerTask('default', [ 'less', 'cssmin', 'watch' ]);
 };
