@@ -1,23 +1,36 @@
+.container-fluid {
+	padding-left: 0;
+}
+
 #intro {
-	.row {
-		margin-left: 0;
-		margin-right: 0;
-	}
-	.ribbon {
-		width: 100%;
-		height: 100px;
-		h1 {
-			background: #000;
-			.opacity(.2);
-			height: 100%;
-			margin: 0;
-			padding: 0;
+	.absolute-bottom {
+		bottom: 124px;
+		> div {
+			height: 140px;
+			h1 {
+				background: #000;
+				color: @white;
+				.opacity(.2);
+				height: 100%;
+				margin: 0;
+			}
+			a {
+				background: red;
+				color: @white;
+				.opacity(.2);
+				height: 100%;
+			}
 		}
-		a {
-			display: block;
-			background: red;
-			.opacity(.2);
-			height: 100%;
+	}
+	ul.ribbon {
+		height: 100px;
+		margin-bottom: 0;
+		&:nth-of-type(1) {
+			background: #1F84C9;
+		}
+		&:last-child {
+			background: #E9E9E9;
 		}
 	}
 }
+
