@@ -1,0 +1,26 @@
+/******************************************
+
+
+GENERAL
+
+
+******************************************/
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+.appbar--hovers-one .appbar-item {
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.no-touch .appbar--hovers-one .appbar-item:hover {
+  -webkit-transform: scale3d(1.5, 1.5, 1.5);
+  transform: scale3d(1.5, 1.5, 1.5);
+  -webkit-transition: all .1s;
+  transition: all .1s;
+}
