@@ -12,19 +12,57 @@ section#intro {
 	.absolute-bottom {
 		bottom: @headerHeight;
 		> div { //this is the first div "we ehlp you buy Affordable Health Insurance..."
-			height: 9em;
+			@height: 120px;
+			height: @height;
 			h1 { //header itself
+				padding-left: 21%;
+				padding-top: @height / 4 - 8px;
+				line-height: @height / 4 + 6px;
 				background: #000;
 				color: @white;
-				.opacity(.2);
+				.opacity(.4);
 				height: 100%;
 				margin: 0;
+				font-size: 24px;
+				span {
+					font-size: 38px;
+					display: block;
+				}
 			}
 			a { //call to action button
 				background: red;
 				color: @white;
-				.opacity(.2);
 				height: 100%;
+				text-transform: uppercase;
+				font-size: 26px;
+				line-height: @height / 4 + 2px;
+				padding-top: @height / 4;
+				padding-left: @height / 4;
+				letter-spacing: 1px;
+				.text-shadow();
+				.opacity(.5);
+				.accentFont();
+				&:hover {
+					text-decoration: none;
+				}
+				&:after {
+					//content: "\f061";
+					.iconFont();
+					font-size: 64px;
+					position: absolute;
+					top: @height / 3;
+					margin-left: 20px;
+				}
+				span {
+					display: block;
+					.accentSecondaryFont();
+					font-size: 44px;
+					letter-spacing: .02em;
+					&:first-letter {
+						letter-spacing: 2px;
+					}
+					
+				}
 			}
 		}
 	}

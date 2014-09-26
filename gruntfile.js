@@ -32,7 +32,7 @@ module.exports = function(grunt) {
         },
         watch: {
             css: {
-                files: ['less/*.less','css/*.css','js/*.js'],
+                files: ['less/**.less','css/*.css','js/*.js'],
                 tasks: ['less:style', 'cssmin:combine' ],
                 options: {
                     livereload: true,
