@@ -5,43 +5,93 @@ GENERAL
 
 
 ******************************************/
-*,
 html,
 body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+body {
+  font-family: 'latoregular';
+  font-weight: 400;
+}
 h1 {
   text-align: center;
+  font-family: 'latobold';
+  font-weight: 700;
 }
 h2 {
   text-align: center;
+  font-family: 'latobold';
+  font-weight: 700;
 }
 h3 {
   text-align: center;
+  font-family: 'latobold';
+  font-weight: 700;
+}
+h4 {
+  font-family: 'latobold';
+  font-weight: 700;
+}
+h5 {
+  font-family: 'latobold';
+  font-weight: 700;
+}
+h6 {
+  font-family: 'latobold';
+  font-weight: 700;
 }
 section {
   height: 100vh;
   position: relative;
 }
+@font-face {
+  font-family: 'latobold';
+  src: url('../../fonts/Lato/lato-bold-webfont.eot');
+  src: url('../../fonts/Lato/lato-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../../fonts/Lato/lato-bold-webfont.woff2') format('woff2'), url('../../fonts/Lato/lato-bold-webfont.woff') format('woff'), url('../../fonts/Lato/lato-bold-webfont.ttf') format('truetype'), url('../../fonts/Lato/lato-bold-webfont.svg#latobold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'latolight';
+  src: url('../../fonts/Lato/lato-light-webfont.eot');
+  src: url('../../fonts/Lato/lato-light-webfont.eot?#iefix') format('embedded-opentype'), url('../../fonts/Lato/lato-light-webfont.woff2') format('woff2'), url('../../fonts/Lato/lato-light-webfont.woff') format('woff'), url('../../fonts/Lato/lato-light-webfont.ttf') format('truetype'), url('../../fonts/Lato/lato-light-webfont.svg#latolight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'latoregular';
+  src: url('../../fonts/Lato/lato-regular-webfont.eot');
+  src: url('../../fonts/Lato/lato-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../../fonts/Lato/lato-regular-webfont.woff2') format('woff2'), url('../../fonts/Lato/lato-regular-webfont.woff') format('woff'), url('../../fonts/Lato/lato-regular-webfont.ttf') format('truetype'), url('../../fonts/Lato/lato-regular-webfont.svg#latoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 .appbar--hovers-one .appbar-item {
   -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
-}
-.no-touch .appbar--hovers-one .appbar-item:hover {
-  -webkit-transform: scale3d(1.5, 1.5, 1.5);
-  transform: scale3d(1.5, 1.5, 1.5);
-  -webkit-transition: all .1s;
-  transition: all .1s;
-}
-.ribbon {
-  height: 100%;
 }
 .absolute-bottom {
   position: absolute;
   bottom: 40px;
   width: 100%;
+  overflow-x: hidden;
+}
+.no-touch .appbar--hovers-one .appbar-item:hover {
+  -webkit-transform: scale3d(1.5, 1.5, 1, 5);
+  -moz-transform: scale3d(1.5, 1.5, 1, 5);
+  -o-transform: scale3d(1.5, 1.5, 1, 5);
+  -ms-transform: scale3d(1.5, 1.5, 1, 5);
+  transform: scale3d(1.5, 1.5, 1, 5);
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.ribbon {
+  height: 100%;
 }
 .navbar-brand {
   float: none;
@@ -64,6 +114,9 @@ section {
   border: none;
   font-weight: 300;
   font-size: 16px;
+}
+.navbar-default.navbar {
+  margin-bottom: 0;
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .navbar-default {
@@ -287,11 +340,14 @@ img.brandpusher {
 .container-fluid {
   padding-left: 0;
 }
+section#intro {
+  margin-bottom: -104px;
+}
 #intro .absolute-bottom {
-  bottom: 124px;
+  bottom: 104px;
 }
 #intro .absolute-bottom > div {
-  height: 140px;
+  height: 9em;
 }
 #intro .absolute-bottom > div h1 {
   background: #000;
@@ -315,11 +371,15 @@ img.brandpusher {
   height: 100%;
 }
 #intro ul.ribbon {
-  height: 100px;
+  height: 80px;
   margin-bottom: 0;
+  line-height: 80px;
 }
 #intro ul.ribbon:nth-of-type(1) {
   background: #1F84C9;
+}
+#intro ul.ribbon:nth-of-type(1) li:last-child {
+  color: #ffffff;
 }
 #intro ul.ribbon:last-child {
   background: #E9E9E9;

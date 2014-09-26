@@ -1,20 +1,26 @@
+@headerHeight: 104px;
+
 .container-fluid {
 	padding-left: 0;
 }
 
+section#intro {
+	margin-bottom: -@headerHeight;
+}
+
 #intro {
 	.absolute-bottom {
-		bottom: 124px;
-		> div {
-			height: 140px;
-			h1 {
+		bottom: @headerHeight;
+		> div { //this is the first div "we ehlp you buy Affordable Health Insurance..."
+			height: 9em;
+			h1 { //header itself
 				background: #000;
 				color: @white;
 				.opacity(.2);
 				height: 100%;
 				margin: 0;
 			}
-			a {
+			a { //call to action button
 				background: red;
 				color: @white;
 				.opacity(.2);
@@ -23,10 +29,17 @@
 		}
 	}
 	ul.ribbon {
-		height: 100px;
+		@height: 80px;
+		height: @height;
 		margin-bottom: 0;
+		line-height: @height;
 		&:nth-of-type(1) {
 			background: #1F84C9;
+			li {
+				&:last-child {
+					color: @white;
+				}
+			}
 		}
 		&:last-child {
 			background: #E9E9E9;
