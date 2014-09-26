@@ -1,14 +1,19 @@
-@headerHeight: 104px;
-
 .container-fluid {
 	padding-left: 0;
 }
 
+// --------------------------
+//
+//
+// *Intro
+//
+//
+// ---------------------------
+@headerHeight: 104px;
 section#intro {
 	margin-bottom: -@headerHeight;
 }
-
-#intro {
+#intro {	
 	.absolute-bottom {
 		bottom: @headerHeight;
 		> div { //this is the first div "we ehlp you buy Affordable Health Insurance..."
@@ -23,10 +28,34 @@ section#intro {
 				.opacity(.4);
 				height: 100%;
 				margin: 0;
-				font-size: 24px;
+				font-size: @fontSizeMainSubHeader;
+				@media @L {
+					padding-left: 15%;
+				}
+				@media @ML, @M, @S {
+					padding-left: 5%;	
+				}
+				@media @M {
+					font-size: 20px;
+				}
+				@media @S {
+					font-size: 16px;
+					padding-top: @height / 4 + 8px;
+					line-height: @height / 4 - 6px;
+				}
 				span {
-					font-size: 38px;
+					font-size: @fontSizeMainHeader;
 					display: block;
+					@media @ML {
+						font-size: @fontSizeMainHeader - 4px;
+					}
+					@media @M {
+						font-size: 24px;
+					}
+					@media @S {
+						font-size: 18px;
+						.headerSecondaryFont();
+					}
 				}
 			}
 			a { //call to action button
@@ -53,6 +82,15 @@ section#intro {
 					top: @height / 3;
 					margin-left: 20px;
 				}
+				@media @M {
+					font-size: 18px;
+				}
+				@media @S {
+					font-size: 15px;
+					line-height: @height / 4 - 8px;
+					padding-left: @height / 4 - 4px;
+					padding-top: @height / 4 + 8px;
+				}
 				span {
 					display: block;
 					.accentSecondaryFont();
@@ -61,7 +99,12 @@ section#intro {
 					&:first-letter {
 						letter-spacing: 2px;
 					}
-					
+					@media @M {
+						font-size: 30px;
+					}
+					@media @S {
+						font-size: 26px;
+					}
 				}
 			}
 		}
@@ -72,16 +115,100 @@ section#intro {
 		margin-bottom: 0;
 		line-height: @height;
 		&:nth-of-type(1) {
-			background: #1F84C9;
+			@backgroundColor: 	#1F84C9;
+			@fontColor: 	 	#53C3F7;
+			@borderColor: 	  	@fontColor;
+			@counterFontColor: 	#004D74;
+
+			background: @backgroundColor;
+			text-transform: uppercase;
+			color: @fontColor;
+			font-size: 12px;
+			.accentFont();
 			li {
-				&:last-child {
-					color: @white;
+				margin: 0 16px;
+				@media @ML {
+					margin: 0 10px;
+				}
+				@media @M {
+					margin: 0 4px;
+					display: inline-block;
+					width: 33.3%;
+					line-height: @height / 2;
+					float: left;
+					text-align: center;
+					margin: 0;
+				}
+				&:last-child { // number of days counter
+					line-height: 22px;
+					position: relative;
+					> span {
+						position: absolute;
+						top: -68px;
+						left: 20px;
+						padding: 16px 15px 6px;
+						border: 1px solid @borderColor;
+						display: block;
+						font-size: 14px;
+						color: @counterFontColor;
+						background: @backgroundColor;
+						.border-radius(50px);
+						span { // NUMBER
+							display: block;
+							font-size: 32px;
+							.contentFont();
+						}
+					}
 				}
 			}
 		}
 		&:last-child {
 			background: #E9E9E9;
+			li {
+				line-height: @height / 2;
+				color: transparent;
+				font-size: 0;
+				&[data-organization-name="aetna"] {
+					.svg-icon_build();
+				}
+				&[data-organization-name="anthem"] {
+					.svg-icon_healthcard();
+				}
+			}
 		}
 	}
 }
 
+
+
+
+
+// --------------------------
+//
+//
+// *Lower Your Cost
+//
+//
+// ---------------------------
+
+#lower-your-cost {
+	h2 {
+		margin-top: 40px;
+		margin-bottom: 30px;
+		color: @GI-green;
+		font-size: @fontSizeMainSubHeader;
+		text-transform: capitalize;
+		span {
+			display: block;
+			font-size: @fontSizeMainHeader;
+		}
+	}
+}
+.diagram {
+	border:1px solid red;
+	display: block;
+	font-size: 20px;
+	span {
+		display: block;
+	}
+}

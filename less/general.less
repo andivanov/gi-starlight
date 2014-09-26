@@ -4,17 +4,35 @@ html, body {
 body {
     .contentFont();
 }
+section {
+  height: 100vh;
+  position: relative;
+}
+
+
+
+// ------------------------
+//
+// *Headers
+//
+// ------------------------
+
+@fontSizeMainHeader:            38px;
+@fontSizeMainSubHeader:            24px;
+
+
+
 h1 {
     .headerFont();
 }
 
 h2 {
-	text-align: center;
+    text-align: center;
     .headerFont();
 }
 
 h3 {
-	text-align: center;
+    text-align: center;
     .headerFont();
 }
 h4 {
@@ -26,10 +44,7 @@ h5 {
 h6 {
     .headerFont();
 }
-section {
-  height: 100vh;
-  position: relative;
-}
+
 
 
 // ------------------------
@@ -119,6 +134,10 @@ section {
 }
 
 .headerFont(@headerFont:    'roboto_slabthin';) {
+    font-family: @headerFont;
+}
+
+.headerSecondaryFont(@headerFont:    'roboto_slablight';) {
     font-family: @headerFont;
 }
 

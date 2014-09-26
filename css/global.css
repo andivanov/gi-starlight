@@ -1677,6 +1677,10 @@ body {
 body {
   font-family: 'latoregular';
 }
+section {
+  height: 100vh;
+  position: relative;
+}
 h1 {
   font-family: 'roboto_slabthin';
 }
@@ -1696,10 +1700,6 @@ h5 {
 }
 h6 {
   font-family: 'roboto_slabthin';
-}
-section {
-  height: 100vh;
-  position: relative;
 }
 @font-face {
   font-family: 'latobold';
@@ -1794,7 +1794,7 @@ section {
 .navbar-default.navbar {
   margin-bottom: 0;
 }
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 479px) {
   .navbar-default {
     padding-left: 0;
   }
@@ -2040,9 +2040,47 @@ section#intro {
   margin: 0;
   font-size: 24px;
 }
+@media only screen and (min-width: 980px) and (max-width: 1299px) {
+  #intro .absolute-bottom > div h1 {
+    padding-left: 15%;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 979px), only screen and (min-width: 480px) and (max-width: 719px), only screen and (min-width: 320px) and (max-width: 479px) {
+  #intro .absolute-bottom > div h1 {
+    padding-left: 5%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  #intro .absolute-bottom > div h1 {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  #intro .absolute-bottom > div h1 {
+    font-size: 16px;
+    padding-top: 38px;
+    line-height: 24px;
+  }
+}
 #intro .absolute-bottom > div h1 span {
   font-size: 38px;
   display: block;
+}
+@media only screen and (min-width: 720px) and (max-width: 979px) {
+  #intro .absolute-bottom > div h1 span {
+    font-size: 34px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  #intro .absolute-bottom > div h1 span {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  #intro .absolute-bottom > div h1 span {
+    font-size: 18px;
+    font-family: 'roboto_slablight';
+  }
 }
 #intro .absolute-bottom > div a {
   background: red;
@@ -2072,6 +2110,19 @@ section#intro {
   top: 40px;
   margin-left: 20px;
 }
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  #intro .absolute-bottom > div a {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  #intro .absolute-bottom > div a {
+    font-size: 15px;
+    line-height: 22px;
+    padding-left: 26px;
+    padding-top: 38px;
+  }
+}
 #intro .absolute-bottom > div a span {
   display: block;
   font-family: 'latobold';
@@ -2081,17 +2132,111 @@ section#intro {
 #intro .absolute-bottom > div a span:first-letter {
   letter-spacing: 2px;
 }
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  #intro .absolute-bottom > div a span {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  #intro .absolute-bottom > div a span {
+    font-size: 26px;
+  }
+}
 #intro ul.ribbon {
   height: 80px;
   margin-bottom: 0;
   line-height: 80px;
 }
 #intro ul.ribbon:nth-of-type(1) {
-  background: #1F84C9;
+  background: #1f84c9;
+  text-transform: uppercase;
+  color: #53c3f7;
+  font-size: 12px;
+  font-family: 'latolight';
+}
+#intro ul.ribbon:nth-of-type(1) li {
+  margin: 0 16px;
+}
+@media only screen and (min-width: 720px) and (max-width: 979px) {
+  #intro ul.ribbon:nth-of-type(1) li {
+    margin: 0 10px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  #intro ul.ribbon:nth-of-type(1) li {
+    margin: 0 4px;
+    display: inline-block;
+    width: 33.3%;
+    line-height: 40px;
+    float: left;
+    text-align: center;
+    margin: 0;
+  }
 }
 #intro ul.ribbon:nth-of-type(1) li:last-child {
-  color: #ffffff;
+  line-height: 22px;
+  position: relative;
+}
+#intro ul.ribbon:nth-of-type(1) li:last-child > span {
+  position: absolute;
+  top: -68px;
+  left: 20px;
+  padding: 16px 15px 6px;
+  border: 1px solid #53c3f7;
+  display: block;
+  font-size: 14px;
+  color: #004d74;
+  background: #1f84c9;
+  -webkit-border-radius: 50px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50px;
+  -moz-background-clip: padding;
+  border-radius: 50px;
+  background-clip: padding-box;
+}
+#intro ul.ribbon:nth-of-type(1) li:last-child > span span {
+  display: block;
+  font-size: 32px;
+  font-family: 'latoregular';
 }
 #intro ul.ribbon:last-child {
   background: #E9E9E9;
+}
+#intro ul.ribbon:last-child li {
+  line-height: 40px;
+  color: transparent;
+  font-size: 0;
+}
+#intro ul.ribbon:last-child li[data-organization-name="aetna"] {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-image: url(../../img/sprite/svg/sprite.svg);
+  height: 23px;
+  width: 88px;
+}
+#intro ul.ribbon:last-child li[data-organization-name="anthem"] {
+  background-position: 0 -53px;
+  background-repeat: no-repeat;
+  background-image: url(../../img/sprite/svg/sprite.svg);
+  height: 23px;
+  width: 88px;
+}
+#lower-your-cost h2 {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  color: #5bb767;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+#lower-your-cost h2 span {
+  display: block;
+  font-size: 38px;
+}
+.diagram {
+  border: 1px solid red;
+  display: block;
+  font-size: 20px;
+}
+.diagram span {
+  display: block;
 }
