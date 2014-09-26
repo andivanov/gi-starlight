@@ -1,35 +1,89 @@
-.svg-icon_build {
+.svg-aetna {
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	background-image: url(svg/sprite.svg);
 }
 
+.svg-anthem-bluecross {
+	background-position: 0 -23px;
+	background-repeat: no-repeat;
+	background-image: url(svg/sprite.svg);
+}
+
+.svg-humana {
+	background-position: 0 -39px;
+	background-repeat: no-repeat;
+	background-image: url(svg/sprite.svg);
+}
+
+.svg-icon_build {
+	background-position: 0 -57px;
+	background-repeat: no-repeat;
+	background-image: url(svg/sprite.svg);
+}
+
 .svg-icon_healthcard {
-	background-position: 0 -53px;
+	background-position: 0 -110px;
 	background-repeat: no-repeat;
 	background-image: url(svg/sprite.svg);
 }
 
 .svg-icon_news {
-	background-position: 0 -135px;
+	background-position: 0 -192px;
 	background-repeat: no-repeat;
 	background-image: url(svg/sprite.svg);
 }
 
 .svg-icon_paper-plane {
-	background-position: 0 -185px;
+	background-position: 0 -242px;
 	background-repeat: no-repeat;
 	background-image: url(svg/sprite.svg);
 }
 
 .svg-icon_plant {
-	background-position: 0 -229px;
+	background-position: 0 -286px;
 	background-repeat: no-repeat;
 	background-image: url(svg/sprite.svg);
 }
 
 .svg-icon_usa {
-	background-position: 0 -287px;
+	background-position: 0 -344px;
+	background-repeat: no-repeat;
+	background-image: url(svg/sprite.svg);
+}
+
+.svg-icons_ambulance {
+	background-position: 0 -401px;
+	background-repeat: no-repeat;
+	background-image: url(svg/sprite.svg);
+}
+
+.svg-icons_heart {
+	background-position: 0 -436px;
+	background-repeat: no-repeat;
+	background-image: url(svg/sprite.svg);
+}
+
+.svg-icons_umbrella {
+	background-position: 0 -469px;
+	background-repeat: no-repeat;
+	background-image: url(svg/sprite.svg);
+}
+
+.svg-icons_vision {
+	background-position: 0 -514px;
+	background-repeat: no-repeat;
+	background-image: url(svg/sprite.svg);
+}
+
+.svg-icons_watch {
+	background-position: 0 -556px;
+	background-repeat: no-repeat;
+	background-image: url(svg/sprite.svg);
+}
+
+.svg-kaiserpermanente {
+	background-position: 0 -602px;
 	background-repeat: no-repeat;
 	background-image: url(svg/sprite.svg);
 }
