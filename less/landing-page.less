@@ -208,7 +208,39 @@ section#intro {
 	border:1px solid red;
 	display: block;
 	font-size: 20px;
-	span {
+	position: relative;
+	> span:first-child { // 'if you qualify'
+		margin:20px 0 40px;
 		display: block;
+		width: 60%;
+	}
+	span {
+		&:nth-of-type(2) {
+			border: 1px solid black;
+			padding: 30px 0;
+			text-align: center;
+			width: 25%;
+			margin-bottom: 40px;
+			display: block;
+			span {
+				display: block;
+			}
+		}
+		&:nth-of-type(3) {
+			display: block;
+			&:after {
+				content: "...";
+			}
+		}
+		&:nth-of-type(4) {
+			display: inline-block;
+			width: 40%;
+			position: absolute; // This part will be redone - ghettto
+			top: 20px;
+			right: 0;
+			&:before {
+				content: "...";
+			}
+		}
 	}
 }
