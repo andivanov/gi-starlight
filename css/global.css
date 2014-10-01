@@ -1751,9 +1751,19 @@ h6 {
 }
 .absolute-bottom {
   position: absolute;
-  bottom: 40px;
+  bottom: 0;
   width: 100%;
   overflow-x: hidden;
+}
+.group:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+.hide {
+  display: none;
 }
 .no-touch .appbar--hovers-one .appbar-item:hover {
   -webkit-transform: scale3d(1.5, 1.5, 1, 5);
@@ -1770,8 +1780,9 @@ h6 {
   height: 100%;
 }
 .navbar-brand {
-  float: none;
-  padding: 0;
+  position: relative;
+  z-index: 1;
+  top: 35px;
 }
 .navbar-brand img {
   background: #FFF;
@@ -1781,7 +1792,6 @@ h6 {
   font-weight: 200;
   margin-left: 21px;
   position: absolute;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   padding: 3px 5px;
 }
 .navbar-default {
@@ -2016,11 +2026,19 @@ img.brandpusher {
 .container-fluid {
   padding-left: 0;
 }
-section#intro {
-  margin-bottom: -104px;
+body > nav {
+  display: block;
 }
-#intro .absolute-bottom {
-  bottom: 104px;
+section#intro {
+  background: url('../../img/home-page/intro.jpg') no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -lh-property: 0;
+height:-webkit-calc(100vh - 104px);
+height:-moz-calc(100vh - 104px);
+height:calc(100vh - 104px);
+;
 }
 #intro .absolute-bottom > div {
   height: 120px;
@@ -2092,7 +2110,6 @@ section#intro {
   padding-top: 30px;
   padding-left: 30px;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   zoom: 1;
   filter: alpha(opacity=50);
   -webkit-opacity: 0.5;
@@ -2142,131 +2159,319 @@ section#intro {
     font-size: 26px;
   }
 }
+#intro .absolute-bottom > div:nth-of-type(2) div {
+  line-height: 120px;
+}
+#intro .absolute-bottom > div:nth-of-type(2) div:first-child {
+  background: #1f84c9;
+  text-transform: capitalize;
+  color: #005c8d;
+  font-size: 16px;
+  height: 100%;
+}
+#intro .absolute-bottom > div:nth-of-type(2) div:first-child li {
+  margin: 0 3.3%;
+}
+#intro .absolute-bottom > div:nth-of-type(2) div:last-child {
+  background: #005c8d;
+  text-transform: uppercase;
+  color: #1f84c9;
+  font-size: 16px;
+  height: 100%;
+}
 #intro ul.ribbon {
   height: 80px;
   margin-bottom: 0;
   line-height: 80px;
-}
-#intro ul.ribbon:nth-of-type(1) {
-  background: #1f84c9;
-  text-transform: uppercase;
-  color: #53c3f7;
-  font-size: 12px;
-  font-family: 'latolight';
-}
-#intro ul.ribbon:nth-of-type(1) li {
-  margin: 0 16px;
-}
-@media only screen and (min-width: 720px) and (max-width: 979px) {
-  #intro ul.ribbon:nth-of-type(1) li {
-    margin: 0 10px;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 719px) {
-  #intro ul.ribbon:nth-of-type(1) li {
-    margin: 0 4px;
-    display: inline-block;
-    width: 33.3%;
-    line-height: 40px;
-    float: left;
-    text-align: center;
-    margin: 0;
-  }
-}
-#intro ul.ribbon:nth-of-type(1) li:last-child {
-  line-height: 22px;
-  position: relative;
-}
-#intro ul.ribbon:nth-of-type(1) li:last-child > span {
-  position: absolute;
-  top: -68px;
-  left: 20px;
-  padding: 16px 15px 6px;
-  border: 1px solid #53c3f7;
-  display: block;
-  font-size: 14px;
-  color: #004d74;
-  background: #1f84c9;
-  -webkit-border-radius: 50px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 50px;
-  -moz-background-clip: padding;
-  border-radius: 50px;
-  background-clip: padding-box;
-}
-#intro ul.ribbon:nth-of-type(1) li:last-child > span span {
-  display: block;
-  font-size: 32px;
-  font-family: 'latoregular';
-}
-#intro ul.ribbon:last-child {
   background: #E9E9E9;
 }
-#intro ul.ribbon:last-child li {
+#intro ul.ribbon li {
   line-height: 40px;
   color: transparent;
   font-size: 0;
+  margin: 0 2.5%;
 }
-#intro ul.ribbon:last-child li[data-organization-name="aetna"] {
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-image: url(../../img/sprite/svg/sprite.svg);
-  height: 23px;
-  width: 88px;
+#intro ul.ribbon li img {
+  max-height: 30px;
 }
-#intro ul.ribbon:last-child li[data-organization-name="anthem"] {
-  background-position: 0 -53px;
-  background-repeat: no-repeat;
-  background-image: url(../../img/sprite/svg/sprite.svg);
-  height: 23px;
-  width: 88px;
+#intro ul.ribbon li img[alt="BlueCrossBlueShiled"] {
+  max-height: 50px;
 }
 #lower-your-cost h2 {
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   color: #5bb767;
-  font-size: 24px;
+  font-size: 38px;
   text-transform: capitalize;
 }
 #lower-your-cost h2 span {
   display: block;
-  font-size: 38px;
+  font-size: 24px;
 }
-.diagram {
-  border: 1px solid red;
-  display: block;
-  font-size: 20px;
+#lower-your-cost .absolute-bottom > div {
+  height: 120px;
+}
+#lower-your-cost .absolute-bottom > div:before {
+  content: url('../../img/home-page/partner-w-healthcaregov.png');
+  position: relative;
+  z-index: 1;
+  top: 50%;
+  left: 20%;
+}
+#lower-your-cost .absolute-bottom > div div {
+  height: 100%;
+}
+#lower-your-cost .absolute-bottom > div div:first-child {
+  background: #CFCFCF;
   position: relative;
 }
-.diagram > span:first-child {
-  margin: 20px 0 40px;
-  display: block;
-  width: 60%;
+#lower-your-cost .absolute-bottom > div div:first-child p {
+  width: 50%;
+  float: right;
+  color: #333;
+  margin-top: 30px;
 }
-.diagram span:nth-of-type(2) {
-  border: 1px solid black;
-  padding: 30px 0;
-  text-align: center;
-  width: 25%;
-  margin-bottom: 40px;
-  display: block;
+@media only screen and (min-width: 980px) and (max-width: 1299px) {
+  #lower-your-cost .absolute-bottom > div div:first-child p {
+    width: 70%;
+  }
 }
-.diagram span:nth-of-type(2) span {
-  display: block;
+@media only screen and (min-width: 720px) and (max-width: 979px) {
+  #lower-your-cost .absolute-bottom > div div:first-child p {
+    width: 90%;
+  }
 }
-.diagram span:nth-of-type(3) {
-  display: block;
+@media only screen and (min-width: 480px) and (max-width: 719px), only screen and (min-width: 320px) and (max-width: 479px) {
+  #lower-your-cost .absolute-bottom > div div:first-child p {
+    width: 100%;
+  }
 }
-.diagram span:nth-of-type(3):after {
-  content: "...";
-}
-.diagram span:nth-of-type(4) {
-  display: inline-block;
-  width: 40%;
+#lower-your-cost .absolute-bottom > div div:first-child p:before {
+  content: "\f069";
+  font-family: 'FontAwesome';
+  font-size: 10px;
   position: absolute;
-  top: 20px;
-  right: 0;
+  margin-left: -12px;
 }
-.diagram span:nth-of-type(4):before {
-  content: "...";
+#lower-your-cost .absolute-bottom > div div:last-child {
+  background: #EB5D3B;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 60px;
+  padding-top: 30px;
+  padding-left: 30px;
+  letter-spacing: 1px;
+  letter-spacing: .03em;
+  font-family: 'latobold';
+}
+#lower-your-cost .absolute-bottom > div div:last-child a {
+  color: #ffffff;
+}
+#lower-your-cost .absolute-bottom > div div:last-child a:hover {
+  text-decoration: none;
+}
+.message {
+  text-align: center;
+  color: #428ac5;
+  font-size: 18px;
+  font-family: 'roboto_slablight';
+}
+.message p i {
+  font-style: normal;
+  margin-right: 8px;
+}
+.message p i:after {
+  content: "\f069";
+  font-family: 'FontAwesome';
+  position: absolute;
+  font-size: 10px;
+}
+.message img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+section#stories {
+  background: url('../../img/home-page/happy-place.jpg') no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+#stories {
+  color: #ffffff;
+}
+#stories h2 {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  color: #5bb767;
+  font-size: 38px;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+#stories h2 span {
+  display: block;
+  font-size: 24px;
+}
+#stories .absolute-bottom > div {
+  height: 120px;
+}
+#stories .absolute-bottom > div div {
+  height: 100%;
+  font-family: 'latobold';
+}
+#stories .absolute-bottom > div div:first-child {
+  background: #000;
+  position: relative;
+  zoom: 1;
+  filter: alpha(opacity=80);
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+}
+#stories .absolute-bottom > div div:first-child p {
+  width: 70%;
+  float: right;
+  color: #EB5D3B;
+  font-size: 30px;
+  line-height: 60px;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+@media only screen and (min-width: 980px) and (max-width: 1299px) {
+  #stories .absolute-bottom > div div:first-child p {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 979px) {
+  #stories .absolute-bottom > div div:first-child p {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px), only screen and (min-width: 320px) and (max-width: 479px) {
+  #stories .absolute-bottom > div div:first-child p {
+    width: 100%;
+  }
+}
+#stories .absolute-bottom > div div:last-child {
+  background: #EB5D3B;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 60px;
+  padding-top: 30px;
+  padding-left: 30px;
+  letter-spacing: 1px;
+  letter-spacing: .03em;
+}
+#stories .absolute-bottom > div div:last-child a {
+  color: #ffffff;
+}
+#stories .absolute-bottom > div div:last-child a:hover {
+  text-decoration: none;
+}
+#stories blockquote {
+  width: 27%;
+  margin-left: 73%;
+  margin-bottom: 20px;
+  font-family: 'roboto_slabthin';
+  font-size: 24px;
+  border-left: none;
+  line-height: 36px;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  position: relative;
+  right: 24px;
+}
+#stories blockquote:before {
+  content: open-quote;
+  color: #1FAB68;
+  font-size: 8em;
+  position: absolute;
+  top: 54px;
+  left: -22px;
+}
+#stories blockquote:after {
+  content: close-quote;
+  color: #1FAB68;
+  font-size: 8em;
+  position: absolute;
+  bottom: -60px;
+  right: 20px;
+}
+#stories blockquote span {
+  display: block;
+  font-size: 48px;
+  line-height: 72px;
+}
+#stories blockquote + a {
+  display: block;
+  text-align: right;
+  color: #ffffff;
+  font-family: 'roboto_slablight';
+}
+#stories blockquote + a:hover {
+  text-decoration: none;
+}
+#our-process h2 {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  color: #5bb767;
+  font-size: 38px;
+  text-transform: capitalize;
+  color: #2383C7;
+}
+#our-process h2 span {
+  display: block;
+  font-size: 24px;
+}
+#our-process ol {
+  counter-reset: li;
+  width: 50%;
+  margin-left: 50%;
+  position: relative;
+}
+#our-process ol:after {
+  content: "";
+  border-left: 5px solid #2383C7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 42px;
+  z-index: -1;
+}
+#our-process ol li {
+  position: relative;
+  /* Create a positioning context */
+  margin: 0 0 40px 2em;
+  /* Give each list item a left margin to make room for the numbers */
+  padding: 4px 8px;
+  /* Add some spacing around the content */
+  list-style: none;
+}
+#our-process ol li:before {
+  content: counter(li);
+  /* Use the counter as content */
+  counter-increment: li;
+  /* Increment the counter by 1 */
+  /* Position and style the number */
+  position: absolute;
+  top: -2px;
+  left: -2em;
+  width: 2em;
+  /* Some space between the number and the content in browsers that support
+					       generated content but not positioning it (Camino 2 is one example) */
+  margin-right: 8px;
+  padding: 6px;
+  color: #ffffff;
+  background: #2383C7;
+  text-align: center;
+  font-size: 24px;
+  -webkit-border-radius: 100%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 100%;
+  -moz-background-clip: padding;
+  border-radius: 100%;
+  background-clip: padding-box;
+}
+#our-process ol li:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
 }

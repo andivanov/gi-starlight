@@ -5,7 +5,7 @@ body {
     .contentFont();
 }
 section {
-  height: 100vh;
+  height: 100vh; //THIS IS NOT A MISTAKE
   position: relative;
 }
 
@@ -163,11 +163,47 @@ h6 {
 }
 .absolute-bottom {
     position: absolute;
-    bottom: 40px;
+    bottom: 0;
     width: 100%;
     overflow-x: hidden;
 }
 
+
+
+// ------------------------
+//
+// *G
+//
+// ------------------------
+.group {
+    &:after {
+        visibility: hidden;
+        display: block;
+        content: "";
+        clear: both;
+        height: 0;
+    }
+}
+
+// ------------------------
+//
+// *H
+//
+// ------------------------
+.hide {
+    display: none;
+}
+.headerStyles() {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    color: @GI-green;
+    font-size: @fontSizeMainHeader;
+    text-transform: capitalize;
+    span {
+        display: block;
+        font-size: @fontSizeMainSubHeader;
+    }
+}
 
 // ------------------------
 //
@@ -188,7 +224,10 @@ h6 {
 .ribbon {
 	height: 100%;
 }
-
+.ribbonStyles(){
+    @height: 120px;
+    height: @height;
+}
 
 // ------------------------
 //

@@ -2,6 +2,10 @@
 	padding-left: 0;
 }
 
+body > nav {
+	display: block;
+}
+
 // --------------------------
 //
 //
@@ -9,16 +13,15 @@
 //
 //
 // ---------------------------
-@headerHeight: 104px;
 section#intro {
-	margin-bottom: -@headerHeight;
+	background: url('../../img/home-page/intro.jpg')no-repeat top center;
+	.background-size(cover);
+	.calc(height, ~'100vh - 104px'); //104 is the height of the nav element - masthead.
 }
-#intro {	
+#intro {
 	.absolute-bottom {
-		bottom: @headerHeight;
 		> div { //this is the first div "we ehlp you buy Affordable Health Insurance..."
-			@height: 120px;
-			height: @height;
+			.ribbonStyles();
 			h1 { //header itself
 				padding-left: 21%;
 				padding-top: @height / 4 - 8px;
@@ -68,7 +71,6 @@ section#intro {
 				padding-top: @height / 4;
 				padding-left: @height / 4;
 				letter-spacing: 1px;
-				.text-shadow();
 				.opacity(.5);
 				.accentFont();
 				&:hover {
@@ -107,6 +109,36 @@ section#intro {
 					}
 				}
 			}
+			&:nth-of-type(2) {
+				div {
+					line-height: @height;
+					&:first-child {
+						@backgroundColor: 	#1F84C9;
+						@fontColor: 	 	#005C8D;
+						@borderColor: 	  	@fontColor;
+						@counterFontColor: 	#004D74;
+						background: @backgroundColor;
+						text-transform: capitalize;
+						color: @fontColor;
+						font-size: 16px;
+						height: 100%;
+						li {
+							margin: 0 3.3%;
+						}
+					}
+					&:last-child {
+						@backgroundColor: 	#005C8D;
+						@fontColor: 	 	#1F84C9;
+						@borderColor: 	  	@fontColor;
+						@counterFontColor: 	#004D74;
+						background: @backgroundColor;
+						text-transform: uppercase;
+						color: @fontColor;
+						font-size: 16px;
+						height: 100%;
+					}
+				}
+			}
 		}
 	}
 	ul.ribbon {
@@ -114,65 +146,16 @@ section#intro {
 		height: @height;
 		margin-bottom: 0;
 		line-height: @height;
-		&:nth-of-type(1) {
-			@backgroundColor: 	#1F84C9;
-			@fontColor: 	 	#53C3F7;
-			@borderColor: 	  	@fontColor;
-			@counterFontColor: 	#004D74;
-
-			background: @backgroundColor;
-			text-transform: uppercase;
-			color: @fontColor;
-			font-size: 12px;
-			.accentFont();
-			li {
-				margin: 0 16px;
-				@media @ML {
-					margin: 0 10px;
-				}
-				@media @M {
-					margin: 0 4px;
-					display: inline-block;
-					width: 33.3%;
-					line-height: @height / 2;
-					float: left;
-					text-align: center;
-					margin: 0;
-				}
-				&:last-child { // number of days counter
-					line-height: 22px;
-					position: relative;
-					> span {
-						position: absolute;
-						top: -68px;
-						left: 20px;
-						padding: 16px 15px 6px;
-						border: 1px solid @borderColor;
-						display: block;
-						font-size: 14px;
-						color: @counterFontColor;
-						background: @backgroundColor;
-						.border-radius(50px);
-						span { // NUMBER
-							display: block;
-							font-size: 32px;
-							.contentFont();
-						}
-					}
-				}
-			}
-		}
-		&:last-child {
-			background: #E9E9E9;
-			li {
-				line-height: @height / 2;
-				color: transparent;
-				font-size: 0;
-				&[data-organization-name="aetna"] {
-					.svg-icon_build();
-				}
-				&[data-organization-name="anthem"] {
-					.svg-icon_healthcard();
+		background: #E9E9E9;
+		li {
+			line-height: @height / 2;
+			color: transparent;
+			font-size: 0;
+			margin: 0 2.5%;
+			img {
+				max-height: 30px;
+				&[alt="BlueCrossBlueShiled"] {
+					max-height: 50px;
 				}
 			}
 		}
@@ -193,54 +176,289 @@ section#intro {
 
 #lower-your-cost {
 	h2 {
-		margin-top: 40px;
-		margin-bottom: 30px;
-		color: @GI-green;
-		font-size: @fontSizeMainSubHeader;
-		text-transform: capitalize;
-		span {
-			display: block;
-			font-size: @fontSizeMainHeader;
+		.headerStyles();
+	}
+	.absolute-bottom {
+		> div {
+			.ribbonStyles();
+			&:before {
+				content: url('../../img/home-page/partner-w-healthcaregov.png');
+				position: relative;
+				z-index: 1;
+				top: 50%;
+				left: 20%;
+			}
+			div {
+				height: 100%;
+				&:first-child {
+					background: #CFCFCF;
+					position: relative;
+					p {
+						width: 50%;
+						float: right;
+						color: #333;
+						margin-top: @height / 4;
+						@media @L {
+							width: 70%;
+						}
+						@media @ML {
+							width: 90%;
+						}
+						@media @M, @S {
+							width: 100%;
+						}
+						&:before {
+							content: "\f069";
+							.iconFont();
+							font-size: 10px;
+							position: absolute;
+							margin-left: -12px;
+						}
+					}
+				}
+				&:last-child {
+					background: #EB5D3B;
+					text-transform: uppercase;
+					font-size: 30px;
+					line-height: @height / 2;
+					padding-top: @height / 4;
+					padding-left: @height / 4;
+					letter-spacing: 1px;
+					letter-spacing: .03em;
+					.accentSecondaryFont();
+					a {
+						color: @white;
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+			}
 		}
 	}
 }
-.diagram {
-	border:1px solid red;
-	display: block;
-	font-size: 20px;
-	position: relative;
-	> span:first-child { // 'if you qualify'
-		margin:20px 0 40px;
-		display: block;
-		width: 60%;
-	}
-	span {
-		&:nth-of-type(2) {
-			border: 1px solid black;
-			padding: 30px 0;
-			text-align: center;
-			width: 25%;
-			margin-bottom: 40px;
-			display: block;
-			span {
-				display: block;
-			}
-		}
-		&:nth-of-type(3) {
-			display: block;
+
+.message {
+	@fontColor: #428AC5;
+	text-align: center;
+	color: @fontColor;
+	font-size: 18px;
+	.headerSecondaryFont();
+	//position: relative;
+	p {
+		i {
+			font-style: normal;
+			margin-right: 8px;
 			&:after {
-				content: "...";
+				content: "\f069";
+				.iconFont();
+				position: absolute;
+				font-size: 10px;
 			}
 		}
-		&:nth-of-type(4) {
-			display: inline-block;
-			width: 40%;
-			position: absolute; // This part will be redone - ghettto
-			top: 20px;
-			right: 0;
-			&:before {
-				content: "...";
+	}
+	// This is an arrow
+	// &:after {
+	// 	content: "";
+	// 	display: inline-block;
+	// 	width: 70px;
+	// 	height: 70px;
+	// 	border-top: none;
+	// 	border-bottom: none;
+	// 	border-right: none;
+	// 	border-left: 3px solid #DF1C20;
+	// 	.border-radius(0 0 0 150px);
+	// 	position: absolute;
+	// 	left: 20%;
+	// 	top: 30px;
+	// 	.rotate(50);
+	// }
+	// &:before {
+	// 	content: "";
+	// 	display: inline-block;
+	// 	width: 25px;
+	// 	height: 25px;
+	// 	border: 2px solid #DF1C20;
+	// 	position: absolute;
+	// 	.rotate(5);
+	// 	border-top: none;
+	// 	border-left: none;
+	// 	top: 94px;
+	// 	left: 21%;
+	// }
+	img {
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
+	}
+}
+
+
+
+
+
+
+// --------------------------
+//
+//
+// *Stories
+//
+//
+// ---------------------------
+section#stories {
+	background: url('../../img/home-page/happy-place.jpg')no-repeat top center;
+	.background-size(cover);
+}
+
+#stories {
+	color: @white;
+	h2 {
+		.headerStyles();
+		color: @white;
+	}
+	.absolute-bottom {
+		> div {
+			.ribbonStyles();
+			div {
+				height: 100%;
+				.accentSecondaryFont();
+				&:first-child {
+					background: #000;
+					position: relative;
+					.opacity(.8);
+					p {
+						width: 70%;
+						float: right;
+						color: #EB5D3B;
+						font-size: 30px;
+						line-height: @height / 2;
+						padding-top: @height / 4;
+						padding-left: @height / 4;
+						@media @L {
+							width: 70%;
+						}
+						@media @ML {
+							width: 90%;
+						}
+						@media @M, @S {
+							width: 100%;
+						}
+					}
+				}
+				&:last-child {
+					background: #EB5D3B;
+					text-transform: uppercase;
+					font-size: 30px;
+					line-height: @height / 2;
+					padding-top: @height / 4;
+					padding-left: @height / 4;
+					letter-spacing: 1px;
+					letter-spacing: .03em;
+					a {
+						color: @white;
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
 			}
+		}
+	}
+	blockquote {
+		width: 27%;
+		margin-left: 73%;
+		margin-bottom: 20px;
+		.headerFont();
+		font-size: 24px;
+		border-left: none;
+		line-height: 36px;
+		quotes: "\201C""\201D""\2018""\2019";
+		position: relative;
+		right: 24px;
+		&:before {
+		    content: open-quote;
+		    color: #1FAB68;
+		    font-size: 8em;
+		    position: absolute;
+		    top: 54px;
+		    left: -22px;
+		}
+		&:after {
+		    content: close-quote;
+		    color: #1FAB68;
+		    font-size: 8em;
+		    position: absolute;
+		    bottom: -60px;
+		    right: 20px;
+		}
+		span {
+			display: block;
+			font-size: 48px;
+			line-height: 72px;			
+		}
+		+ a {
+			display: block;
+			text-align: right;
+			color: @white;
+			.headerSecondaryFont();
+			&:hover {
+				text-decoration: none;
+			}
+		} 
+	}
+}
+
+
+
+
+#our-process {
+	h2 {
+		.headerStyles();
+		color: #2383C7;
+	}
+	ol {
+		counter-reset: li;
+		width: 50%;
+		margin-left: 50%;
+		position: relative;
+		&:after {
+			    	content:"";
+			    	border-left: 5px solid #2383C7;
+			    	position:absolute;
+			    	top: 0;
+			    	bottom: 0;
+					left: 42px;
+					z-index: -1;
+			    }
+		li {
+			    position:relative; /* Create a positioning context */
+			    margin:0 0 40px 2em; /* Give each list item a left margin to make room for the numbers */
+			    padding:4px 8px; /* Add some spacing around the content */
+			    list-style: none;
+			    //position: relative;
+			    &:before {
+			    	    content:counter(li); /* Use the counter as content */
+					    counter-increment:li; /* Increment the counter by 1 */
+					    /* Position and style the number */
+					    position:absolute;
+					    top:-2px;
+					    left:-2em;
+					    width:2em;
+					    /* Some space between the number and the content in browsers that support
+					       generated content but not positioning it (Camino 2 is one example) */
+					    margin-right:8px;
+					    padding:6px;
+					    color:@white;
+					    background:#2383C7;
+					    text-align:center;
+					    font-size: 24px;
+					    .border-radius(100%);
+			    }
+			    &:last-child {
+			    	padding-bottom: 0;
+			    	margin-bottom: 0;
+			    }
+
 		}
 	}
 }
