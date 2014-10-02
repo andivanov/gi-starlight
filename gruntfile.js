@@ -10,6 +10,16 @@ module.exports = function(grunt) {
             title: "PHIX" // defaults to the name in package.json, or will use project directory's name
             }
         },
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'img/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest:'img/minified'
+                }],
+            }
+        },
         less: {
             style: {
                 files: {
@@ -44,8 +54,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-svg-sprite');
     
-    grunt.registerTask('default', [ 'less', 'cssmin', 'svgsprite', 'watch' ]);
+    grunt.registerTask('default', [ 'less', 'cssmin', 'svgsprite', 'imagemin', 'watch' ]);
 };

@@ -2,10 +2,14 @@
 	padding-left: 0;
 }
 
-body > nav {
-	display: block;
-}
 
+
+
+@callToActionBtnBgColor: 		#EB5D3B;
+
+// --------------------------
+//
+//
 // --------------------------
 //
 //
@@ -13,25 +17,39 @@ body > nav {
 //
 //
 // ---------------------------
+//
+//
+// ---------------------------
 section#intro {
-	background: url('../../img/home-page/intro.jpg')no-repeat top center;
+	background: url('../../img/minified/home-page/intro.jpg')no-repeat top center;
 	.background-size(cover);
 	.calc(height, ~'100vh - 104px'); //104 is the height of the nav element - masthead.
 }
 #intro {
 	.absolute-bottom {
-		> div { //this is the first div "we ehlp you buy Affordable Health Insurance..."
+		> div { //this is the first div "we help you buy Affordable Health Insurance..."
 			.ribbonStyles();
 			h1 { //header itself
 				padding-left: 21%;
 				padding-top: @height / 4 - 8px;
 				line-height: @height / 4 + 6px;
-				background: #000;
 				color: @white;
-				.opacity(.4);
 				height: 100%;
 				margin: 0;
 				font-size: @fontSizeMainSubHeader;
+				position: relative;
+				z-index: 0;
+				&:after {
+					content:"";
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					background: #000;
+					.opacity(.5);
+					z-index: -1;
+				}
 				@media @L {
 					padding-left: 15%;
 				}
@@ -62,7 +80,6 @@ section#intro {
 				}
 			}
 			a { //call to action button
-				background: red;
 				color: @white;
 				height: 100%;
 				text-transform: uppercase;
@@ -71,18 +88,47 @@ section#intro {
 				padding-top: @height / 4;
 				padding-left: @height / 4;
 				letter-spacing: 1px;
-				.opacity(.5);
 				.accentFont();
+				position: relative;
+				z-index: 0;
 				&:hover {
 					text-decoration: none;
+					&:after {
+						content:"";
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						background: darken(@callToActionBtnBgColor, 10%);
+						.opacity(.75);
+						z-index: -1;
+					}
+					&:before {
+						margin-left: 165px;
+					}
+				}
+				&:before {
+					content: "";
+					background-image: url('../../img/minified/home-page/get-started-arrow.png');
+					width: 56px;
+					height: 55px;
+					position: absolute;
+					top: @height / 4;
+					margin-left: 160px;
+					.transition(all 0.25s ease);
 				}
 				&:after {
-					//content: "\f061";
-					.iconFont();
-					font-size: 64px;
+					content:"";
 					position: absolute;
-					top: @height / 3;
-					margin-left: 20px;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					background: @callToActionBtnBgColor;
+					.opacity(.5);
+					z-index: -1;
+					.transition(all 0.5s ease);
 				}
 				@media @M {
 					font-size: 18px;
@@ -111,19 +157,49 @@ section#intro {
 			}
 			&:nth-of-type(2) {
 				div {
-					line-height: @height;
 					&:first-child {
 						@backgroundColor: 	#1F84C9;
-						@fontColor: 	 	#005C8D;
+						@fontColor: 	 	#5CC2F8;
 						@borderColor: 	  	@fontColor;
 						@counterFontColor: 	#004D74;
 						background: @backgroundColor;
-						text-transform: capitalize;
+						text-transform: uppercase;
 						color: @fontColor;
-						font-size: 16px;
+						font-size: 14px;
 						height: 100%;
+						.accentFont();
+						.transition(all 0.2s ease);
+						@media @L {
+							font-size: 13px;
+						}
+						@media @MLL, @ML {
+							font-size: 12px;
+						}
+						@media @M, @S {
+							font-size: 0;
+						}
 						li {
-							margin: 0 3.3%;
+							margin: 0 3%;
+							.transition(all 0.2s ease);
+							@media @L {
+								margin: 0 1.5%;
+							}
+							@media @MLL {
+								margin: 0 1%;
+							}
+							@media @ML {
+								margin: 0;
+							}
+							@media @M {
+								margin: 0 4%;
+							}
+							@media @S {
+								margin: 0 2%;
+							}
+							img {
+								display: block;
+								margin: @height / 4 auto 0;
+							}
 						}
 					}
 					&:last-child {
@@ -136,6 +212,27 @@ section#intro {
 						color: @fontColor;
 						font-size: 16px;
 						height: 100%;
+						p {
+							margin-top: @height / 4;
+						}
+						span {
+							&:first-child {
+								font-size: 42px;
+								margin: 0 10px 0 20px;
+							}
+							&:nth-of-type(2) {
+								.accentFont();
+								position: absolute;
+								top: @height / 3;
+								&:after {
+									content: '\a';
+									white-space: pre;
+								}
+							}
+							&:last-child {
+								
+							}
+						}
 					}
 				}
 			}
@@ -151,11 +248,14 @@ section#intro {
 			line-height: @height / 2;
 			color: transparent;
 			font-size: 0;
-			margin: 0 2.5%;
+			margin: 0 1.7%;
 			img {
-				max-height: 30px;
+				max-height: 40px;
 				&[alt="BlueCrossBlueShiled"] {
 					max-height: 50px;
+				}
+				&[alt="UnitedHealthcareOne"] {
+					max-height: 30px;
 				}
 			}
 		}
@@ -166,10 +266,22 @@ section#intro {
 
 
 
+
+
+
+
+
+
+// --------------------------
+//
+//
 // --------------------------
 //
 //
 // *Lower Your Cost
+//
+//
+// ---------------------------
 //
 //
 // ---------------------------
@@ -182,7 +294,7 @@ section#intro {
 		> div {
 			.ribbonStyles();
 			&:before {
-				content: url('../../img/home-page/partner-w-healthcaregov.png');
+				content: url('../../img/minified/home-page/partner-w-healthcaregov.png');
 				position: relative;
 				z-index: 1;
 				top: 50%;
@@ -217,7 +329,7 @@ section#intro {
 					}
 				}
 				&:last-child {
-					background: #EB5D3B;
+					background: @callToActionBtnBgColor;
 					text-transform: uppercase;
 					font-size: 30px;
 					line-height: @height / 2;
@@ -225,11 +337,23 @@ section#intro {
 					padding-left: @height / 4;
 					letter-spacing: 1px;
 					letter-spacing: .03em;
+					position: relative;
 					.accentSecondaryFont();
 					a {
 						color: @white;
 						&:hover {
 							text-decoration: none;
+						}
+						&:after {
+							content: "";
+							background-image: url('../../img/minified/home-page/get-started-arrow.png');
+							background-size: 100%;
+							width: 30px;
+							height: 30px;
+							position: absolute;
+							top: 44px;
+							margin-left: 20px;
+
 						}
 					}
 				}
@@ -257,35 +381,6 @@ section#intro {
 			}
 		}
 	}
-	// This is an arrow
-	// &:after {
-	// 	content: "";
-	// 	display: inline-block;
-	// 	width: 70px;
-	// 	height: 70px;
-	// 	border-top: none;
-	// 	border-bottom: none;
-	// 	border-right: none;
-	// 	border-left: 3px solid #DF1C20;
-	// 	.border-radius(0 0 0 150px);
-	// 	position: absolute;
-	// 	left: 20%;
-	// 	top: 30px;
-	// 	.rotate(50);
-	// }
-	// &:before {
-	// 	content: "";
-	// 	display: inline-block;
-	// 	width: 25px;
-	// 	height: 25px;
-	// 	border: 2px solid #DF1C20;
-	// 	position: absolute;
-	// 	.rotate(5);
-	// 	border-top: none;
-	// 	border-left: none;
-	// 	top: 94px;
-	// 	left: 21%;
-	// }
 	img {
 		display: block;
 		margin: 0 auto;
@@ -298,6 +393,23 @@ section#intro {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// --------------------------
+//
+//
 // --------------------------
 //
 //
@@ -305,8 +417,11 @@ section#intro {
 //
 //
 // ---------------------------
+//
+//
+// ---------------------------
 section#stories {
-	background: url('../../img/home-page/happy-place.jpg')no-repeat top center;
+	background: url('../../img/minified/home-page/happy-place.jpg')no-repeat top center;
 	.background-size(cover);
 }
 
@@ -323,17 +438,28 @@ section#stories {
 				height: 100%;
 				.accentSecondaryFont();
 				&:first-child {
-					background: #000;
 					position: relative;
-					.opacity(.8);
+					&:after {
+						content: "";
+						position: absolute;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						background: #000;
+						z-index: 0;
+						.opacity(.5);
+					}
 					p {
 						width: 70%;
 						float: right;
-						color: #EB5D3B;
+						color: @callToActionBtnBgColor;
 						font-size: 30px;
 						line-height: @height / 2;
 						padding-top: @height / 4;
 						padding-left: @height / 4;
+						position: relative;
+						z-index: 1;
 						@media @L {
 							width: 70%;
 						}
@@ -346,18 +472,62 @@ section#stories {
 					}
 				}
 				&:last-child {
-					background: #EB5D3B;
 					text-transform: uppercase;
 					font-size: 30px;
-					line-height: @height / 2;
+					line-height: @height / 4 + 2px;
 					padding-top: @height / 4;
 					padding-left: @height / 4;
 					letter-spacing: 1px;
 					letter-spacing: .03em;
+					position: relative;
+					&:after {
+						content: "";
+						position: absolute;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						background: @callToActionBtnBgColor;
+						z-index: 0;
+						.opacity(.5);
+					}
+					&:before {
+						content: "";
+						background-image: url('../../img/minified/home-page/get-started-arrow.png');
+						width: 56px;
+						height: 55px;
+						position: absolute;
+						top: @height / 4;
+						margin-left: 160px;
+						z-index: 2;
+					}
 					a {
 						color: @white;
+						text-transform: uppercase;
+						font-size: 26px;
+						letter-spacing: 1px;
+						.accentFont();
+						position: relative;
+						z-index: 1;
 						&:hover {
 							text-decoration: none;
+						}
+						span {
+							display: block;
+							.accentSecondaryFont();
+							font-size: 44px;
+							letter-spacing: .02em;
+							position: relative;
+							z-index: 1;
+							&:first-letter {
+								letter-spacing: 2px;
+							}
+							@media @M {
+								font-size: 30px;
+							}
+							@media @S {
+								font-size: 26px;
+							}
 						}
 					}
 				}
@@ -411,7 +581,47 @@ section#stories {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// --------------------------
+//
+//
+// --------------------------
+//
+//
+// *Our Process
+//
+//
+// ---------------------------
+//
+//
+// ---------------------------
+section#our-process {
+	height: 100%;
+}
 #our-process {
+	background: #F0F0F0;
 	h2 {
 		.headerStyles();
 		color: #2383C7;
@@ -420,45 +630,178 @@ section#stories {
 		counter-reset: li;
 		width: 50%;
 		margin-left: 50%;
+		margin-bottom: 60px;
 		position: relative;
 		&:after {
-			    	content:"";
-			    	border-left: 5px solid #2383C7;
-			    	position:absolute;
-			    	top: 0;
-			    	bottom: 0;
-					left: 42px;
-					z-index: -1;
-			    }
+	    	content:"";
+	    	border-left: 3px solid #2383C7;
+	    	position:absolute;
+	    	top: 0;
+	    	bottom: 34px;
+			left: 31px;
+			z-index: 0;
+	    }
 		li {
-			    position:relative; /* Create a positioning context */
-			    margin:0 0 40px 2em; /* Give each list item a left margin to make room for the numbers */
-			    padding:4px 8px; /* Add some spacing around the content */
-			    list-style: none;
-			    //position: relative;
-			    &:before {
-			    	    content:counter(li); /* Use the counter as content */
-					    counter-increment:li; /* Increment the counter by 1 */
-					    /* Position and style the number */
-					    position:absolute;
-					    top:-2px;
-					    left:-2em;
-					    width:2em;
-					    /* Some space between the number and the content in browsers that support
-					       generated content but not positioning it (Camino 2 is one example) */
-					    margin-right:8px;
-					    padding:6px;
-					    color:@white;
-					    background:#2383C7;
-					    text-align:center;
-					    font-size: 24px;
-					    .border-radius(100%);
-			    }
-			    &:last-child {
-			    	padding-bottom: 0;
-			    	margin-bottom: 0;
-			    }
-
+		    position:relative; /* Create a positioning context */
+		    margin:0 0 40px 2em; /* Give each list item a left margin to make room for the numbers */
+		    padding:4px 8px; /* Add some spacing around the content */
+		    list-style: none;
+		    color: #A3A3A3;
+		    .accentFont();
+		    &:before {
+		    	    content:counter(li); /* Use the counter as content */
+				    counter-increment:li; /* Increment the counter by 1 */
+				    position:absolute;
+				    top:-2px;
+				    left:-2.5em;
+				    width:2em;
+				    /* Some space between the number and the content in browsers that support
+				       generated content but not positioning it (Camino 2 is one example) */
+				    margin-right:8px;
+				    padding:6px;
+				    color:@white;
+				    background:#2383C7;
+				    text-align:center;
+				    font-size: 24px;
+				    z-index: 2;
+				    .border-radius(100%);
+		    }
+		    &:last-child {
+		    	padding-bottom: 0;
+		    	margin-bottom: 0;
+		    }
+		    span {
+		    	display: block;
+		    	font-size: 24px;
+		    	color: #2383C7;
+		    }
+		}
+	}
+	div {
+		&:nth-of-type(2) {
+			position: relative;
+			&:before {
+				content: "";
+				background-image: url('../../img/minified/home-page/plan-select-screenshot.png');
+				background-size: 100%;
+				width: 468px;
+				height: 486px;
+				position: absolute;
+				z-index: 0;
+				bottom: -45px;
+			}
+		}
+		&:nth-of-type(3) {
+			position: relative;
+			background: @white;
+			> div:first-child {
+				background: #2383C7;
+				color: #71BAE9;
+				.background-image(linear-gradient(to bottom, #2383C7 70%,#1E78BC 30%));
+				p {
+					width: 50%;
+					margin-left: 20%;
+					z-index: 1;
+					&:first-child {
+						margin-top: 30px;
+						margin-bottom: 50px;
+						font-size: 24px;
+						line-height: 36px;
+						.headerFont(); 
+						span {
+							.accentSecondaryFont();
+							text-transform: uppercase;
+							font-size: 38px;
+							line-height: 44px;
+							&:first-child {
+								display: block;
+							}
+							&:last-child {
+								position: relative;
+								&:after {
+									content: '\a';
+									white-space: pre;
+								}
+								&:before {
+									content: '\f069';
+									.iconFont();
+									font-size: 14px;
+									position: absolute;
+									right: -1.2em;
+									top: -1em;
+								}
+							}
+						}
+						~ p {
+							margin: 0 0 0 20%;
+							&:last-child {
+								color: @white;
+								.accentSecondaryFont();
+								font-size: 32px;
+								text-transform: uppercase;
+								position: relative;
+								&:after {
+									content: "";
+									background-image: url('../../img/minified/home-page/homepage-agent.png');
+									background-size: 100%;
+									position: absolute;
+									width: 400px;
+									height: 277px;
+									top: -204px;
+									right: 0;
+								}
+								small {
+									display: block;
+									padding-bottom: 14px;
+									text-transform: none;
+									&:before {
+										content: '\f069';
+										.iconFont();
+										margin: -4px 0 0 -12px;
+										position: absolute;
+									}
+								}
+							}
+							small {
+								font-size: 10px;
+								color: #358BC9;
+							}
+						}	
+					}
+				}
+			}
+			h4 {
+				&:extend(#our-process h2);
+				margin-top: 90px;
+				font-size: 24px;
+			}
+			ul {
+				color: transparent;
+				font-size: 0;
+				&:nth-of-type(1) {
+					@height: 80px;
+					height: @height;
+					border-bottom: 1px solid #DDDDDD;
+					li {
+						margin: 0 2.5%;
+					}
+					img {
+						max-height: 40px;
+						margin-top: @height / 4;
+					}
+				}
+				&:last-child {
+					@height: 100px;
+					height: @height;
+					line-height: @height;
+					li {
+						margin: 0 2%;
+					}
+					img {
+						max-height: 40px;
+					}
+				}
+			}
 		}
 	}
 }
