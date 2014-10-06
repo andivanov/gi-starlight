@@ -1,0 +1,94 @@
+// --------------------------
+//
+//
+// --------------------------
+//
+//
+// *Lower Your Cost
+//
+//
+// ---------------------------
+//
+//
+// ---------------------------
+
+
+
+#lower-your-cost {	
+
+@headerColor: 	#428AC5;
+@fontSize: 		18px;
+
+	.subtitle {
+		text-align: center;
+		color: @headerColor;
+		font-size: @fontSize;
+		.headerSecondaryFontFamily();
+		p {
+			i {
+				font-style: normal;
+				margin-right: 8px;
+				&:after {
+					.asterisk();
+				}
+			}
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+		}
+	}
+	.taxcredit-explained {
+		background: #CFCFCF;
+		position: relative;
+		height: 100%;
+		p {
+			width: 50%;
+			float: right;
+			color: #333;
+			margin-bottom: 0;
+			margin-top: @heightRibbon / 6;
+			position: relative;
+			@media @L {
+				width: 70%;
+			}
+			@media @ML {
+				width: 90%;
+			}
+			@media @M, @S {
+				width: 100%;
+			}
+			&:before {
+				.asterisk();
+				margin-left: -12px;
+			}
+			&:after { //Authorized Partner medal
+				content: "";
+				background-image: url('../../img/minified/home-page/partner-w-healthcaregov.png');
+				background-size: 100%;
+				position: absolute;
+				left: -11em;
+				top: -6.5em;
+				width: 130px;
+				height: 130px;
+				z-index: 1;
+			}
+		}
+	}
+	.call-to-action {
+		padding-top: @heightRibbon / 3;
+		padding-left: @heightRibbon / 4;
+		.accentSecondaryFont();
+		&:after {
+			.transparentBg();
+			background: @callToActionBtnBgColor;
+			.opacity(1);
+			.transition(all 0.5s ease); // transition added for the hover effect
+		}
+	}
+}
+
+
+
+

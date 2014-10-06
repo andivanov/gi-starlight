@@ -1,0 +1,103 @@
+// --------------------------
+//
+//
+// --------------------------
+//
+//
+// *Stories
+//
+//
+// ---------------------------
+//
+//
+// ---------------------------
+section#stories {
+	background: url('../../img/minified/home-page/happy-place.jpg')no-repeat top center;
+	.background-size(cover);
+}
+
+#stories {
+	color: @white;
+	h2 {
+		.headerStyles();
+		color: @white;
+	}
+
+	.header-section{
+		.accentSecondaryFont();
+		position: relative;
+		height: 100%;
+		color: @callToActionBtnBgColor;
+		font-size: @fontSizeH1;
+		line-height: @heightRibbon / 2;
+		padding-top: @heightRibbon / 4;
+		padding-left: 15%;
+		&:after {
+			.transparentBg();
+			z-index: 0;
+			background: #000;
+			.opacity(.5);
+		}
+		p {
+			position: relative; //set to relative and z-index 1 on order to keep "p" on top of the bg 
+			z-index: 1;
+			@media @L {
+				width: 70%;
+			}
+			@media @ML {
+				width: 90%;
+			}
+			@media @M, @S {
+				width: 100%;
+			}
+		}
+	}
+
+	.call-to-action { // see below location for styles
+		&:extend(#intro .call-to-action all);
+	}
+			
+
+	blockquote {
+		width: 27%;
+		margin-left: 73%;
+		margin-bottom: 20px;
+		.headerFontFamily();
+		font-size: 24px;
+		border-left: none;
+		line-height: 36px;
+		quotes: "\201C""\201D""\2018""\2019";
+		position: relative;
+		right: 24px;
+		&:before {
+		    content: open-quote;
+		    color: #1FAB68;
+		    font-size: 8em;
+		    position: absolute;
+		    top: 54px;
+		    left: -22px;
+		}
+		&:after {
+		    content: close-quote;
+		    color: #1FAB68;
+		    font-size: 8em;
+		    position: absolute;
+		    bottom: -60px;
+		    right: 20px;
+		}
+		span {
+			display: block;
+			font-size: 48px;
+			line-height: 72px;			
+		}
+		+ a {
+			display: block;
+			text-align: right;
+			color: @white;
+			.headerSecondaryFontFamily();
+			&:hover {
+				text-decoration: none;
+			}
+		} 
+	}
+}

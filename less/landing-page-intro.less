@@ -1,0 +1,258 @@
+// --------------------------
+//
+//
+// --------------------------
+//
+//
+// *Intro
+//
+//
+// ---------------------------
+//
+//
+// ---------------------------
+section#intro {
+	background: url('../../img/minified/home-page/intro.jpg')no-repeat top center;
+	.background-size(cover);
+	.calc(height, ~'100vh - 104px'); //104 is the height of the nav element - masthead.
+	@media @ML, @M, @S {
+		.calc(height, ~'100vh - 50px'); //height of the nav element - masthead.
+	}
+}
+#intro {
+	.header-section { 
+		.h1Styles();
+		padding-left: 23%;
+		height: 100%;
+		.transition(all 0.25s ease);
+		@media @L {
+			padding-left: 10%;
+		}
+		@media @MLL {
+			padding-left: 8%;
+		}
+		@media @ML {
+			padding-left: 6%;
+		}
+		@media @M {
+			padding-left: 0;
+		}
+		@media @S {
+			display: none;
+		}
+		&:after {
+			.transparentBg();
+			background: #000;
+			.opacity(.5);
+		}
+		h1 {
+			@media @M {
+				text-align: center;
+				font-size: 1.3em;
+			}
+		}
+		span {
+			display: block;
+			font-size: @fontSizeH1 - 0.5em;
+			@media @L {
+				font-size: @fontSizeH1 - 0.7em;
+				line-height: @heightRibbon / 4 + 10px;
+			}
+			@media @MLL {
+				font-size: @fontSizeH1 - 0.8em;
+				line-height: @heightRibbon / 4 + 12px;
+			}
+			@media @ML {
+				font-size: @fontSizeH1 - 0.9em;
+				line-height: @heightRibbon / 4 + 14px;
+			}
+			@media @M {
+				display: inline;
+				font-size: @fontSizeH1 - 0.7em;
+				line-height: @heightRibbon / 4 + 16px;
+			}
+		}
+	}
+
+	.call-to-action {
+		line-height: @heightRibbon / 4;
+    	padding-top: @heightRibbon / 4;
+    	padding-left: @heightRibbon;
+    	@media @ML, @M {
+			text-align: center;
+				
+		}
+		&:hover {
+			&:after {
+				.transparentBg();
+				.opacity(.80);
+				background: darken(@callToActionBtnBgColor, 10%);
+			}
+			&:before { // moving arrow on hover
+				margin-left: 165px;
+				@media @ML {
+					margin-left: 148px;
+				}
+			}
+		}
+		&:before { //this is the arrow itself
+			content: "";
+			background-image: url('../../img/minified/home-page/get-started-arrow.png');
+			background-size: 100%;
+			width: 56px;
+			height: 55px;
+			position: absolute;
+			top: @heightRibbon / 4;
+			margin-left: 160px;
+			.transition(all 0.25s ease);
+			@media @ML {
+				margin-left: 144px;
+			}
+			@media @M {
+				display: none;
+			}
+		}
+		&:after {
+			background: @callToActionBtnBgColor;
+			.transparentBg();
+			.opacity(.5);
+			.transition(all 0.5s ease); // transition added for the hover effect
+		}
+		@media @M {
+			font-size: 18px;
+		}
+		span {
+			display: block;
+			.accentSecondaryFont();
+			font-size: 44px;
+			letter-spacing: .02em;
+			&:first-letter {
+				letter-spacing: 2px;
+			}
+			@media @M {
+				display: inline;
+				font-size: 30px;
+			}
+			@media @S {
+				font-size: 26px;
+			}
+		}
+	}
+
+	.insurance-types {
+		@backgroundColor: 	#1F84C9;
+		@fontColor: 	 	#5CC2F8;
+		@borderColor: 	  	@fontColor;
+		@counterFontColor: 	#004D74;
+		background: @backgroundColor;
+		text-transform: uppercase;
+		color: @fontColor;
+		font-size: 14px;
+		height: 100%;
+		.accentFont();
+		.transition(all 0.2s ease);
+		@media @L {
+			font-size: 13px;
+		}
+		@media @MLL {
+			font-size: 12px;
+		}
+		@media @ML {
+			font-size: 10px;
+		}
+		@media @M {
+			font-size: 0;
+		}
+		@media @S {
+			display: none;
+		}
+		ul {
+			text-align: right;
+			padding-top: @heightRibbon / 4;
+			@media @L, @MLL, @ML, @M, @S  {
+				text-align: center;
+			}
+		}
+		li {
+			margin: 0 2.4%;
+			.transition(all 0.2s ease);
+			@media @L {
+				margin: 0 1.3%;
+			}
+			@media @MLL {
+				margin: 0 1%;
+			}
+			@media @ML {
+				margin: 0 1%;
+			}
+			@media @M {
+				margin: 0 4%;
+			}
+			@media @S {
+				margin: 0 2%;
+			}
+			span {
+				display: block;
+				margin: 0 auto 6px;
+			}
+		}
+	}
+
+	.counter {
+		@backgroundColor: 	#005C8D;
+		@fontColor: 	 	#1F84C9;
+		@borderColor: 	  	@fontColor;
+		@counterFontColor: 	#004D74;
+		background: @backgroundColor;
+		text-transform: uppercase;
+		color: @fontColor;
+		font-size: 16px;
+		height: 100%;
+		p {
+			margin-top: @heightRibbon / 4;
+			@media @ML {
+				text-align: center;
+			}
+			@media @M {
+				text-align: center;
+				margin-top: @heightRibbon / 10;
+			}
+			@media @S {
+				margin-left: @heightRibbon - 40px;
+			}
+		}
+		span {
+			&:first-child {
+				font-size: 42px;
+				margin: 0 10px 0 20px;
+			}
+			&:nth-of-type(2) {
+				.accentFont();
+				position: absolute;
+				top: @heightRibbon / 3;
+				.break-tag();
+				@media @M {
+					top: @heightRibbon / 6;
+				}
+			}
+		}
+	}
+
+	.carrier-logos {
+ 		@heightLocal: 80px;
+		height: @heightLocal;
+		margin-bottom: 0;
+		line-height: @heightLocal;
+		background: #E9E9E9;
+		text-align: center;
+		@media @M, @S {
+			display: none;
+		}
+		li {
+			margin: 0 1.7%;
+			@media @M {
+				margin: 0 0.5%;
+			}
+		}
+	}
+}

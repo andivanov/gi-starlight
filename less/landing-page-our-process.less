@@ -1,0 +1,198 @@
+// --------------------------
+//
+//
+// --------------------------
+//
+//
+// *Our Process
+//
+//
+// ---------------------------
+//
+//
+// ---------------------------
+section#our-process {
+	height: 100%;
+}
+#our-process {
+	background: #F0F0F0;
+	h2 {
+		.headerStyles();
+		color: #2383C7;
+	}
+	h4 {
+		text-align: center;
+		&:extend(#our-process h2);
+		margin-top: 90px;
+		font-size: 24px;
+	}
+	ol.our-process-steps {
+		counter-reset: li;
+		width: 50%;
+		margin-left: 50%;
+		margin-bottom: 60px;
+		position: relative;
+		&:before {
+			content: "";
+			background-image: url('../../img/minified/home-page/plan-select-screenshot.png');
+			background-size: 100%;
+			width: 468px;
+			height: 486px;
+			position: absolute;
+			z-index: 0;
+			bottom: -7.5em;
+			left: -38em;
+		}
+		&:after {
+	    	content:"";
+	    	border-left: 3px solid #2383C7;
+	    	position:absolute;
+	    	top: 0;
+	    	bottom: 34px;
+			left: 31px;
+			z-index: 0;
+	    }
+		li {
+		    position:relative; /* Create a positioning context */
+		    margin:0 0 40px 2em; /* Give each list item a left margin to make room for the numbers */
+		    padding:4px 8px; /* Add some spacing around the content */
+		    list-style: none;
+		    color: #A3A3A3;
+		    .accentFont();
+		    &:before {
+	    	    content:counter(li); /* Use the counter as content */
+			    counter-increment:li; /* Increment the counter by 1 */
+			    position:absolute;
+			    top:-2px;
+			    left:-2.5em;
+			    width:2em;
+			    /* Some space between the number and the content in browsers that support
+			       generated content but not positioning it (Camino 2 is one example) */
+			    margin-right:8px;
+			    padding:6px;
+			    color:@white;
+			    background:#2383C7;
+			    text-align:center;
+			    font-size: 24px;
+			    z-index: 2;
+			    .border-radius(100%);
+		    }
+		    &:last-child {
+		    	padding-bottom: 0;
+		    	margin-bottom: 0;
+		    }
+		    span {
+		    	display: block;
+		    	font-size: 24px;
+		    	color: #2383C7;
+		    }
+		}
+	}
+
+	.our-clients {
+		@heightLocal: 80px;
+		height: @heightLocal;
+		border-bottom: 1px solid #DDDDDD;
+		li {
+			margin: 0 2.5%;
+		}
+		img {
+			max-height: 40px;
+			margin-top: @heightLocal / 4;
+		}
+	}
+
+	.gi-in-press {
+		@heightLocal: 100px;
+		height: @heightLocal;
+		line-height: @heightLocal;
+		li {
+			margin: 0 2%;
+		}
+		img {
+			max-height: 40px;
+		}
+	}
+
+	.our-process-summary {
+		position: relative;
+		background: @white;			
+	}
+
+	.our-process-text-wrapper {
+		background: #2383C7;
+		color: #71BAE9;
+		.background-image(linear-gradient(to bottom, #2383C7 78%,#1E78BC 22%));
+		h3, 
+		p,
+		a {
+			margin-left: 20%;
+			text-align: left;
+			z-index: 1;
+		}
+		a {
+			color: @white;
+		}
+	}
+	.our-process-text-questions {
+		padding-top: 30px;
+		margin-bottom: 50px;
+		h3 {
+			font-size: 24px;
+			line-height: 36px;
+			.headerFontFamily();
+		}
+		p, a {
+			width: 25%;
+		}
+		span {
+			.accentSecondaryFont();
+			text-transform: uppercase;
+			font-size: 38px;
+			line-height: 44px;
+			&:first-child {
+				display: block;
+			}
+			&:last-child {
+				position: relative;
+				.break-tag();
+				&:before {
+					.asterisk();
+					right: -1.2em;
+					top: -1em;
+				}
+			}
+		}
+	}
+
+	.our-process-text-call-us {	
+		color: @white;
+		.accentSecondaryFont();
+		font-size: 32px;
+		text-transform: uppercase;
+		position: relative;
+		&:after { //background with agent herself!
+			content: "";
+			background-image: url('../../img/minified/home-page/homepage-agent.png');
+			background-size: 100%;
+			position: absolute;
+			width: 400px;
+			height: 277px;
+			top: -204px;
+			left: 52%;
+		}
+		small {
+			display: block;
+			padding-bottom: 14px;
+			text-transform: none;
+			&:before {
+				font-size: 75%;
+				margin-left: -10px;
+			}
+		}
+		small {
+			font-size: 10px;
+			color: #358BC9;
+		}
+	}
+}

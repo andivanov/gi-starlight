@@ -1,8 +1,9 @@
 html, body {
     .box-sizing(border-box);
 }
+
 body {
-    .contentFont();
+    .contentFontFamily();
     > nav {
         display: block;
     }
@@ -10,8 +11,13 @@ body {
 section {
   height: 100vh; //THIS IS NOT A MISTAKE
   position: relative;
+  overflow: hidden;
 }
 
+h1 {font-size:2em}  /* displayed at 24px */
+h2 {font-size:1.5em}  /* displayed at 18px */
+h3 {font-size:1.25em}  /* displayed at 15px */
+h4 {font-size:1em} 
 
 
 // ------------------------
@@ -20,32 +26,35 @@ section {
 //
 // ------------------------
 
-@fontSizeMainHeader:            38px;
-@fontSizeMainSubHeader:            24px;
+//@fontSizeMainHeader:            2em;
 
+@fontSizeH1:        2em;
+@lineHeightH1:      1.5;
 
+@fontSizeH1Sub:     @fontSizeH1 - 0.5em;
 
 h1 {
-    .headerFont();
+    .headerFontFamily();
+    font-size: @fontSizeH1;
 }
 
 h2 {
     text-align: center;
-    .headerFont();
+    .headerFontFamily();
 }
 
 h3 {
     text-align: center;
-    .headerFont();
+    .headerFontFamily();
 }
 h4 {
-    .headerFont();
+    .headerFontFamily();
 }
 h5 {
-    .headerFont();
+    .headerFontFamily();
 }
 h6 {
-    .headerFont();
+    .headerFontFamily();
 }
 
 
@@ -132,15 +141,15 @@ h6 {
     font-style: normal;
 }
 
-.contentFont(@contentFont:   'latoregular';) {
+.contentFontFamily(@contentFont:   'latoregular';) {
     font-family: @contentFont;
 }
 
-.headerFont(@headerFont:    'roboto_slabthin';) {
+.headerFontFamily(@headerFont:    'roboto_slabthin';) {
     font-family: @headerFont;
 }
 
-.headerSecondaryFont(@headerFont:    'roboto_slablight';) {
+.headerSecondaryFontFamily(@headerFont:    'roboto_slablight';) {
     font-family: @headerFont;
 }
 
@@ -168,8 +177,62 @@ h6 {
     position: absolute;
     bottom: 0;
     width: 100%;
-    overflow-x: hidden;
 }
+
+.asterisk(){
+    content: "\f069";
+    .iconFont();
+    font-size: 50%;
+    position: absolute;
+}
+
+
+
+
+// ------------------------
+//
+// *B
+//
+// ------------------------
+
+.break-tag(){
+    &:after {
+        content: '\a';
+        white-space: pre;
+    }
+}
+
+
+
+
+
+// ------------------------
+//
+// *C
+//
+// ------------------------
+@callToActionBtnBgColor:        #EB5D3B;
+
+.call-to-action {
+    .accentFont();
+    color: @white;
+    height: 100%;
+    text-transform: uppercase;
+    font-size: 26px;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 0;
+    a {
+        width: 100%;
+        height: 100%;
+        color: @white;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+
 
 
 
@@ -178,15 +241,11 @@ h6 {
 // *G
 //
 // ------------------------
-.group {
-    &:after {
-        visibility: hidden;
-        display: block;
-        content: "";
-        clear: both;
-        height: 0;
-    }
-}
+
+
+
+
+
 
 // ------------------------
 //
@@ -196,17 +255,32 @@ h6 {
 .hide {
     display: none;
 }
+
+.h1Styles() {
+    line-height: @heightRibbon / 4 + 6px;
+    color: @white;
+    position: relative;
+    z-index: 0;
+}
+
 .headerStyles() {
+    //padding-top: 40px;
     margin-top: 40px;
     margin-bottom: 60px;
     color: @GI-green;
-    font-size: @fontSizeMainHeader;
+    font-size: @fontSizeH1;
+    line-height: @lineHeightH1;
     text-transform: capitalize;
     span {
         display: block;
-        font-size: @fontSizeMainSubHeader;
+        font-size: @fontSizeH1Sub;
     }
 }
+
+
+
+
+
 
 // ------------------------
 //
@@ -219,18 +293,31 @@ h6 {
 }
 
 
+
+
+
+
+
+
 // ------------------------
 //
 // *R
 //
 // ------------------------
+@heightRibbon: 120px;
 .ribbon {
-	height: 100%;
+    height: @heightRibbon;
+    width: 100%;
+    @media @M {
+        height: 80px;
+    }
 }
-.ribbonStyles(){
-    @height: 120px;
-    height: @height;
-}
+
+
+
+
+
+
 
 // ------------------------
 //
@@ -240,4 +327,12 @@ h6 {
 .text-shadow(@string: 1px 1px 3px rgba(0, 0, 0, 0.5)) {
     text-shadow: @string;
 }
-
+.transparentBg(){
+    content:"";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
