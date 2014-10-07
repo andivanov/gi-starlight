@@ -1668,6 +1668,110 @@ GENERAL
 .fa-meanpath:before {
   content: "\f20c";
 }
+.abcnews,
+.aetna,
+.anthem,
+.bcbs,
+.cigna,
+.cnn,
+.forbes,
+.humana,
+.kaiserpermanente,
+.unitedhealthone,
+.venturebeat,
+.wsj,
+.accidental-medical,
+.dental,
+.major-medical,
+.short-term-medical,
+.vision {
+  background: url(../../img/minified/sprite/sprites.png) no-repeat;
+}
+.abcnews {
+  background-position: -515px -5px;
+  width: 140px;
+  height: 46px;
+}
+.aetna {
+  background-position: -551px -77px;
+  width: 87px;
+  height: 23px;
+}
+.anthem {
+  background-position: -438px -84px;
+  width: 104px;
+  height: 16px;
+}
+.bcbs {
+  background-position: -370px -89px;
+  width: 52px;
+  height: 48px;
+}
+.cigna {
+  background-position: -315px -50px;
+  width: 47px;
+  height: 51px;
+}
+.cnn {
+  background-position: -413px -6px;
+  width: 91px;
+  height: 42px;
+}
+.forbes {
+  background-position: -252px -3px;
+  width: 151px;
+  height: 38px;
+}
+.humana {
+  background-position: -218px -55px;
+  width: 89px;
+  height: 18px;
+}
+.kaiserpermanente {
+  background-position: -158px -81px;
+  width: 140px;
+  height: 23px;
+}
+.unitedhealthone {
+  background-position: -8px -78px;
+  width: 136px;
+  height: 26px;
+}
+.venturebeat {
+  background-position: -2px -39px;
+  width: 199px;
+  height: 27px;
+}
+.wsj {
+  background-position: -3px -4px;
+  width: 232px;
+  height: 24px;
+}
+.accidental-medical {
+  background-position: -684px -71px;
+  width: 30px;
+  height: 25px;
+}
+.dental {
+  background-position: -669px -12px;
+  width: 32px;
+  height: 32px;
+}
+.major-medical {
+  background-position: -640px -118px;
+  width: 26px;
+  height: 25px;
+}
+.short-term-medical {
+  background-position: -653px -64px;
+  width: 21px;
+  height: 34px;
+}
+.vision {
+  background-position: -683px -112px;
+  width: 28px;
+  height: 31px;
+}
 html,
 body {
   -webkit-box-sizing: border-box;
@@ -2075,38 +2179,6 @@ h2 span {
   display: block;
   font-size: 1.5em;
 }
-.insurance-type-accidental-medical,
-.insurance-type-dental,
-.insurance-type-major-medical,
-.insurance-type-vision,
-.insurance-typeshort-term-medical {
-  background: url(../../img/minified/home-page/sprites.png) no-repeat;
-}
-.insurance-type-accidental-medical {
-  background-position: -137px -5px;
-  width: 30px;
-  height: 25px;
-}
-.insurance-type-dental {
-  background-position: -98px -1px;
-  width: 32px;
-  height: 32px;
-}
-.insurance-type-major-medical {
-  background-position: -65px -4px;
-  width: 26px;
-  height: 25px;
-}
-.insurance-type-vision {
-  background-position: -30px 0;
-  width: 28px;
-  height: 31px;
-}
-.insurance-typeshort-term-medical {
-  background-position: 0 0;
-  width: 21px;
-  height: 34px;
-}
 section#intro {
   background: url('../../img/minified/home-page/intro.jpg') no-repeat top center;
   -webkit-background-size: cover;
@@ -2468,7 +2540,7 @@ height:calc(100vh - 50px);
   }
 }
 #intro .carrier-logos li {
-  margin: 0 1.7%;
+  margin: 0.5em 1.65% 0;
 }
 @media only screen and (min-width: 480px) and (max-width: 719px) {
   #intro .carrier-logos li {
