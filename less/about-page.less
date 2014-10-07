@@ -1,12 +1,22 @@
+#about,
+#broker-build,
+#team,
+#locations{
+	h3{
+		font-size: @fontSizeH1 + 1.2em; // 2em + x
+		margin:0 0 30px;
+	}
+	h2{
+		.sub-head();
+	}
+	p{
+		font-size: @fontSizeH1 - 0.25em; // 2em - x
+		.accentFont();
+	}
+}
 
-h2{
-	font-size: @fontSizeH1 + 1.2em; // 2em + x
-	margin:0 0 30px;
-}
-p{
-	font-size: @fontSizeH1 - 0.25em; // 2em - x
-	.accentFont();
-}
+
+
 
 @import "about-page-intro.less";
 @import "about-page-broker.less";

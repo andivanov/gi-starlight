@@ -13,20 +13,27 @@
 // ---------------------------
 
 #broker-build{
+	border-top:1px solid darken(@base-grey,5%);
 	.company-highlights{
 		text-align:center;
+		&:after{
+			.color-wide-left();
+			background:@GI-green;
+		}
 	}
 	.health-broker{
 		position:relative;
+		.calc(height, ~'100vh - 120px');
 		&:after{
 			.color-wide-left();
-			background:red;
+			background:lighten(@base-grey,5%);
 		}
 	}
 	.build-marketplaces{
+		.calc(height, ~'100vh - 120px');
 		&:after{
 			.color-wide-right();
-			background:green;
+			background:lighten(@base-grey,10%);
 		}
 	}
 }
