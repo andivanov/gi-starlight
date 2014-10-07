@@ -12,6 +12,12 @@ section {
   height: 100vh; //THIS IS NOT A MISTAKE
   position: relative;
   overflow: hidden;
+  &:nth-of-type(1) {
+        .calc(height, ~'100vh - 104px'); //104 is the height of the nav element - masthead.
+        @media @ML, @M, @S {
+            .calc(height, ~'100vh - 50px'); //height of the nav element - masthead.
+        }
+    }
 }
 
 h1 {font-size:2em}  /* displayed at 24px */
@@ -231,6 +237,24 @@ h6 {
         }
     }
 }
+.color-wide(){
+    display:block;
+    content:"";
+    position:absolute;
+    z-index:-1;
+    top:0;
+    bottom:0;
+}
+.color-wide-left(){
+    left:-100%;
+    right:0;
+    .color-wide();
+}
+.color-wide-right(){
+    right:-100%;
+    left:0;
+    .color-wide();
+}
 
 
 
@@ -295,6 +319,18 @@ h6 {
 
 
 
+// ------------------------
+//
+// *P
+//
+// ------------------------
+
+.position-0(){
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
 
 
 

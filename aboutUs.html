@@ -1,94 +1,112 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>About Us | GetInsured</title>
-        <meta name="description" content="GetInsured helps people buy health insurance.We're a health insurance broker and build health insurance marketplaces.">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Affordable Health Insurance | Obamacare Help | Getinsured.com</title>
+        <meta name="description" content="Ready to make shopping for health insurance easy? Find out if you qualify for tax credits. Plus: Handy guides to show how the ACA will affect YOU.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/minified/global.min.css">
-
-        <link rel="stylesheet" href="img/sprite/sprite.css">
     </head>
-    <body>
 
-    <div class="navbar navbar-inverse" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
+
+
+    <body>    
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapsible-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                 <a class="navbar-brand" href="#"><img src="img/minified/getinsured-logo.png" alt="Getinsured.com" pagespeed_url_hash="1345318815"></a>
             </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
+            <div class="collapse navbar-collapse collapsible-navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="number">Call (866) 602-8466 </li>
+                    <li><a href="#" onclick="openHelp()">Chat</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Help <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">GetAnswers</a></li>
+                            <li><a class="language-modal" data-toggle="modal" data-target="#languageModal" href="#languageModal">Language Assistance<span class="aria-hidden"> End of dropdown</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-secondary"><a href="#">Sign Up</a></li>
+                    <li class="nav-secondary"><a href="#">Log In</a></li>
+                </ul>
             </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </div>
+            <div class="collapse navbar-collapse collapsible-navbar" id="secondary-navbar">
+                <ul class="nav navbar-nav navbar-left  cart-nav">
+                    <li>
+                        <a href="#" class="secondary-health">Health Insurance</a>
+                    </li>
+                    <li>
+                        <a href="#" class="secondary-stm">Short-Term Medical Insurance</a>
+                    </li>
+                    <li class="secondary-cart btn-append">
+                        <a class="btn" href="#"><span><i class="icon-shopping-cart"></i></span> Your Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+
 
     <section id="about">
-
-        <div class="container-fluid">
+        <div class="container">
             <h1>About GetInsured</h1>
-            <h3>We help people buy health insurance</h3>
-             <div class="container">
-                <ol>
-                    <li><span>Checking your eligibility is super quick.</span> If you qualify, see how much government money you canget to pay for health insurance.</li>
-                    <li><span>Comparing plans is easy peasy.</span> We'll help you choose the plan that fits all your needs.</li>
-                    <li><span>Enrollemnt is a breeze.</span> Easy payment online or on the phone with expert guidance all the way.</li>
-                    <li><span>Our customers service is just awesome.</span> Even after you enrol, call us anytime to save more money and get more medical care with your plan.</li>
-                </ol>
-                <p>Plus, our licensed <span>experts</span> have <span>answers</span> to all your Obamacare questions</p>
-                <p>Call 1-866-232-8466</p>
-                <p><small>Our agents are known to get flowers from customers for their unstinting support</small></p>
-            </div>
-            <ul class="list-inline text-center ribbon">
-                <li>Aetna</li>
-                <li>Anthem</li>
-                <li>BlueCross BlueShield</li>
-                <li>UnitedHealthOne</li>
-                <li>Humana</li>
-                <li>Kaiser</li>
-            </ul>
-        </div>
+            <h2>We help people buy health insurance</h2>
+               <p>We think everyone should have health insurance. And we hate the idea that people might not buy because they're confused or overwhelmed by the shopping process. That's why we're here &mdash; to make it simpler for Americans to get insured.</p>
+        </div> 
+            <div class="absolute-bottom">
+                <div class="ribbon carrier-logos">
+                 <ul class="list-inline">
+                    <li class="aetna"><span class="hide">Aetna</span></li>
+                    <li class="anthem"><span class="hide">Anthem</span></li>
+                    <li class="bcbs"><span class="hide">Blue Cross Blue Shiled</span></li>
+                    <li class="unitedhealthone"><span class="hide">UnitedHealthcareOne</span></li>
+                    <li class="humana"><span class="hide">Humana</span></li>
+                    <li class="kaiserpermanente"><span class="hide">Kaiser Permanente</span></li>
+                    <li class="cigna"><span class="hide">Cigna</span></li>
+                </ul>
+            </div><!--/.ribbon-->
+        </div><!--/.absolute-bottom-->
+        
     </section><!--/.section-->
 
     <section id="broker-build">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <h3>We're a health insurance web broker.</h3>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 health-broker">
+                    <h2>We're your health insurance broker.</h2>
                     <p>If you’ve tried to buy health insurance anywhere else, you already know how overwhelming it can be &mdash; but we’re here to help. Our shopping tool makes it easy to find a plan you can afford. We can also help you apply for government money to pay for health insurance, if you qualify. And our licensed experts will answer all your Obamacare questions along the way. </p>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <h3>We build health insurance marketplaces.</h3>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 build-marketplaces">
+                    <h2>We build health insurance marketplaces.</h2>
                     <p>The very same technology that helps Americans shop for health insurance on GetInsured is also powering 4 state-based exchanges: California, New Mexico, Idaho, and Mississippi. Our SaaS, off-the-shelf platform powers insurance marketplaces for dozens of business partners, too.</p>
                     <a href="#"> Find out more about how to partner with us.</a>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid">
-            <ul class="list-inline text-center ribbon">
-                <li><div class="svg-icon_usa"></div>1.5 million<span>Americans Enrolled</span></li>
-                <li><div class="svg-icon_healthcard"></div>7,000+<span>Plans Available</span></li>
-                <li><div class="svg-icon_plant"></div>Doing Well<span>And Doing Good</span></li>
-            </ul>
-        </div>
+        </div><!--/.contianer-->
+
+            <div class="absolute-bottom">
+                <div class="ribbon company-highlights">
+                    <ul class="list-inline">
+                        <li>1.5 million<span>Americans Enrolled</span></li>
+                        <li>7,000+<span>Plans Available</span></li>
+                        <li>Licensed<span>Brokers in 48 States</span></li>
+                        <li>Doing Well<span>And Doing Good</span></li>
+                    </ul>
+                </div><!--/.ribbon-->
+            </div>
+       
     </section><!--/.section-->
 
     <section id="team">

@@ -56,7 +56,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-notify');
-    grunt.loadNpmTasks('grunt-svg-sprite');
     
-    grunt.registerTask('default', [ 'less', 'cssmin', 'svgsprite', 'imagemin', 'watch' ]);
+    grunt.registerTask('default', [ 'less', 'cssmin', 'imagemin', 'watch' ]);
 };

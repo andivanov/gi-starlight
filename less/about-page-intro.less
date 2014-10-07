@@ -1,0 +1,53 @@
+
+// --------------------------
+//
+//
+// --------------------------
+//
+//
+// *Intro
+//
+//
+// ---------------------------
+//
+//
+// ---------------------------
+
+section#about {
+	@about-background-overlay: 			#2b2b2b;
+	background-color:@about-background-overlay;
+	opacity:0.99;
+	color:@white;
+	text-align:center;
+	&:after{
+		content:"";
+		.position-0();
+		position:absolute;
+		background: url('../../img/minified/about-page/about-intro.jpg')no-repeat center center;
+		.background-size(cover);
+		z-index:-2;
+		opacity:0.5;
+	}
+	div{
+		z-index:1;
+	}
+	.carrier-logos{
+		&:extend(#intro .carrier-logos all);
+		background:@white;
+	}
+	h1{
+		.accentSecondaryFont();
+		text-transform: uppercase;
+		letter-spacing:0.09em;
+		font-size:1.25em;
+		margin-top:40px;
+	}
+	h2{
+		color:@white;
+	}
+}
+
+
+
+
+

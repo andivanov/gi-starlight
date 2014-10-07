@@ -1789,6 +1789,22 @@ section {
   position: relative;
   overflow: hidden;
 }
+section:nth-of-type(1) {
+  -lh-property: 0;
+height:-webkit-calc(100vh - 104px);
+height:-moz-calc(100vh - 104px);
+height:calc(100vh - 104px);
+;
+}
+@media only screen and (min-width: 720px) and (max-width: 849px), only screen and (min-width: 480px) and (max-width: 719px), only screen and (min-width: 320px) and (max-width: 479px) {
+  section:nth-of-type(1) {
+    -lh-property: 0;
+height:-webkit-calc(100vh - 50px);
+height:-moz-calc(100vh - 50px);
+height:calc(100vh - 50px);
+;
+  }
+}
 h1 {
   font-size: 2em;
 }
@@ -2527,7 +2543,8 @@ height:calc(100vh - 50px);
     top: 20px;
   }
 }
-#intro .carrier-logos {
+#intro .carrier-logos,
+section#about .carrier-logos {
   height: 80px;
   margin-bottom: 0;
   line-height: 80px;
@@ -2535,15 +2552,18 @@ height:calc(100vh - 50px);
   text-align: center;
 }
 @media only screen and (min-width: 480px) and (max-width: 719px), only screen and (min-width: 320px) and (max-width: 479px) {
-  #intro .carrier-logos {
+  #intro .carrier-logos,
+  section#about .carrier-logos {
     display: none;
   }
 }
-#intro .carrier-logos li {
+#intro .carrier-logos li,
+section#about .carrier-logos li {
   margin: 0.5em 1.65% 0;
 }
 @media only screen and (min-width: 480px) and (max-width: 719px) {
-  #intro .carrier-logos li {
+  #intro .carrier-logos li,
+  section#about .carrier-logos li {
     margin: 0 0.5%;
   }
 }
@@ -2954,4 +2974,76 @@ section#our-process {
 #our-process .our-process-text-call-us small {
   font-size: 10px;
   color: #358BC9;
+}
+h2 {
+  font-size: 3.2em;
+  margin: 0 0 30px;
+}
+p {
+  font-size: 1.75em;
+  font-family: 'latolight';
+}
+section#about {
+  background-color: #2b2b2b;
+  opacity: 0.99;
+  color: #ffffff;
+  text-align: center;
+}
+section#about:after {
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background: url('../../img/minified/about-page/about-intro.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  z-index: -2;
+  opacity: 0.5;
+}
+section#about div {
+  z-index: 1;
+}
+section#about .carrier-logos {
+  background: #ffffff;
+}
+section#about h1 {
+  font-family: 'latobold';
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 1.25em;
+  margin-top: 40px;
+}
+section#about h2 {
+  color: #ffffff;
+}
+#broker-build .company-highlights {
+  text-align: center;
+}
+#broker-build .health-broker {
+  position: relative;
+}
+#broker-build .health-broker:after {
+  left: -100%;
+  right: 0;
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  background: red;
+}
+#broker-build .build-marketplaces:after {
+  right: -100%;
+  left: 0;
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  background: green;
 }
