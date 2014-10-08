@@ -16,8 +16,20 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'img/',
                     src: ['**/*.{png,jpg,gif}'],
-                    dest:'img/minified'
-                }],
+                    dest:'img/'
+                }], 
+            }
+        },
+        sprite:{
+            all: {
+                src: 'img/sprite-pre/*.png',
+                destImg: '../img/sprite-post/sprite-main.png',
+                cssOpts:{
+                    cssClass: function(item){
+                        return '.' + item.name;
+                    }
+                },
+                destCSS: 'css/sprites.css'
             }
         },
         less: {
@@ -27,17 +39,20 @@ module.exports = function(grunt) {
                 }
             }
         },
+        concat: {
+            options: {
+                separator: ';',
+            },
+            dist: {
+                src: ['css/sprites.css', 'css/global.css'],
+                dest: 'css/universal.css',
+            },
+        },
         cssmin: {
             combine: {
                 files: {
-                    'css/minified/global.min.css': ['css/global.css']
+                    'css/minified/universal.min.css': ['css/universal.css']
                 }
-            }
-        },
-        svgsprite: {
-            spriteCSS:{
-                src:    ['img/svg/'],
-                dest:   'img/sprite'
             }
         },
         watch: {
@@ -52,10 +67,12 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-spritesmith');
     
-    grunt.registerTask('default', [ 'less', 'cssmin', 'imagemin', 'watch' ]);
+    grunt.registerTask('default', [ 'less', 'concat', 'cssmin', 'imagemin', 'sprite', 'watch' ]);
 };

@@ -31,5 +31,8 @@
 # Dev Notes
 
 	1. Use GRUNT when: 
-		a. LESS, CSS
-		b. images (must restart grunt for image minification)
+		. LESS, CSS
+	2. Restart Grunt when:
+		. images (must restart grunt for image minification)
+		. sprite (must restart grunt of sprite)
+	3. Add 'sprite' to your element when adding sprite class

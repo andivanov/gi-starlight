@@ -1,4 +1,149 @@
-/******************************************
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<i class="icon-home"></i>
+```
+*/
+.carrier-aetna {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -105px;
+  width: 100px;
+  height: 26px;
+}
+.carrier-anthem-bluecross {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px 0px;
+  width: 100px;
+  height: 15px;
+}
+.carrier-bluecross-blueshield {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -404px;
+  width: 52px;
+  height: 48px;
+}
+.carrier-cigna {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -961px;
+  width: 116px;
+  height: 125px;
+}
+.carrier-humana {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -15px;
+  width: 89px;
+  height: 17px;
+}
+.carrier-kaiser-permanente {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -32px;
+  width: 140px;
+  height: 23px;
+}
+.carrier-united-health-one {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -158px;
+  width: 162px;
+  height: 30px;
+}
+.clients-CA-coveredca {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -861px;
+  width: 274px;
+  height: 100px;
+}
+.clients-ID-yourhealthidaho {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -761px;
+  width: 243px;
+  height: 100px;
+}
+.clients-MS-onemississippi {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -661px;
+  width: 445px;
+  height: 100px;
+}
+.clients-NM-nmhix {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -561px;
+  width: 169px;
+  height: 100px;
+}
+.get-started-arrow {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -506px;
+  width: 56px;
+  height: 55px;
+}
+.insurance-type-accidental-medical {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -55px;
+  width: 30px;
+  height: 25px;
+}
+.insurance-type-dental {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -219px;
+  width: 32px;
+  height: 32px;
+}
+.insurance-type-major-medical {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -80px;
+  width: 26px;
+  height: 25px;
+}
+.insurance-type-vision {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -188px;
+  width: 28px;
+  height: 31px;
+}
+.insurance-typeshort-term-medical {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -251px;
+  width: 21px;
+  height: 34px;
+}
+.partner-w-healthcaregov {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -1086px;
+  width: 197px;
+  height: 197px;
+}
+.press-abcnews {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -452px;
+  width: 165px;
+  height: 54px;
+}
+.press-cnn {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -323px;
+  width: 85px;
+  height: 40px;
+}
+.press-forbes {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -285px;
+  width: 135px;
+  height: 38px;
+}
+.press-venture-beat {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -131px;
+  width: 199px;
+  height: 27px;
+}
+.press-wsj {
+  background-image: url(../../img/sprite-post/sprite-main.png);
+  background-position: 0px -363px;
+  width: 240px;
+  height: 41px;
+}
+;/******************************************
 
 
 GENERAL
