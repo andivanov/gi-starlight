@@ -217,7 +217,7 @@ h6 {
 // *C
 //
 // ------------------------
-@callToActionBtnBgColor:        #EB5D3B;
+@callToActionBtnBgColor:        #D83F37;
 
 .call-to-action {
     .accentFont();
@@ -244,16 +244,16 @@ h6 {
     z-index:-1;
     top:0;
     bottom:0;
+    left:-100%;
+    right:-100%;
 }
 .color-wide-left(){
-    left:-100%;
-    right:0;
     .color-wide();
+    right:0;
 }
 .color-wide-right(){
-    right:-100%;
-    left:0;
     .color-wide();
+    left:0;
 }
 
 
@@ -292,7 +292,7 @@ h6 {
     margin-top: 40px;
     margin-bottom: 60px;
     color: @GI-green;
-    font-size: @fontSizeH1;
+    //font-size: @fontSizeH1;
     line-height: @lineHeightH1;
     text-transform: capitalize;
     span {
@@ -343,7 +343,7 @@ h6 {
 @heightRibbon: 120px;
 .ribbon {
     height: @heightRibbon;
-    width: 100%;
+    //width: 100%;
     @media @M {
         height: 80px;
     }

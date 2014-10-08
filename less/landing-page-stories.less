@@ -24,21 +24,22 @@ section#stories {
 	}
 
 	.header-section{
-		.accentSecondaryFont();
 		position: relative;
+		z-index: 1;
 		height: 100%;
 		color: @callToActionBtnBgColor;
-		font-size: @fontSizeH1;
-		line-height: @heightRibbon / 2;
-		padding-top: @heightRibbon / 4;
-		padding-left: 15%;
 		&:after {
 			.transparentBg();
 			z-index: 0;
 			background: #000;
 			.opacity(.5);
+			.color-wide-left();
 		}
 		p {
+			.accentSecondaryFont();
+			font-size: @fontSizeH1;
+			line-height: @heightRibbon / 2;
+			padding-top: @heightRibbon / 4;
 			position: relative; //set to relative and z-index 1 on order to keep "p" on top of the bg 
 			z-index: 1;
 			@media @L {

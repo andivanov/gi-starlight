@@ -25,6 +25,7 @@
 		font-size: @fontSize;
 		.headerSecondaryFontFamily();
 		p {
+			margin: 0;
 			i {
 				font-style: normal;
 				margin-right: 8px;
@@ -32,23 +33,29 @@
 					.asterisk();
 				}
 			}
-		}
-		img {
-			display: block;
-			margin: 0 auto;
-			max-width: 100%;
+			&:after {
+				content: "";
+				background-image: url('../../img/minified/home-page/geeman-card.png');
+				background-size: 100%;
+				display: block;
+				margin: 0 auto;
+				width: 651px;
+				height: 390px;
+			}
 		}
 	}
 	.taxcredit-explained {
 		background: #CFCFCF;
 		position: relative;
 		height: 100%;
+		&:after {
+			background: #CFCFCF;
+			.color-wide-left();
+		}
 		p {
-			width: 50%;
-			float: right;
 			color: #333;
 			margin-bottom: 0;
-			margin-top: @heightRibbon / 6;
+			margin-top: @heightRibbon / 3;
 			position: relative;
 			@media @L {
 				width: 70%;
@@ -85,6 +92,7 @@
 			background: @callToActionBtnBgColor;
 			.opacity(1);
 			.transition(all 0.5s ease); // transition added for the hover effect
+			.color-wide-right();
 		}
 	}
 }
