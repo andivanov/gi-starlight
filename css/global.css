@@ -3249,13 +3249,26 @@ section#about h2 {
   right: 0;
   background: #5bb767;
 }
-#broker-build .health-broker {
+#broker-build .company-highlights li {
+  text-align: left;
+  margin: 0 2%;
+}
+#broker-build .company-highlights li span {
+  font-size: 2.25em;
+  display: block;
+}
+#broker-build .company-highlights li p {
+  font-size: 1.5em;
+}
+#broker-build .health-broker,
+#broker-build .build-marketplaces {
   position: relative;
   -lh-property: 0;
 height:-webkit-calc(100vh - 120px);
 height:-moz-calc(100vh - 120px);
 height:calc(100vh - 120px);
 ;
+  padding: 40px 30px;
 }
 #broker-build .health-broker:after {
   display: block;
@@ -3268,13 +3281,6 @@ height:calc(100vh - 120px);
   right: -100%;
   right: 0;
   background: #dcdcdc;
-}
-#broker-build .build-marketplaces {
-  -lh-property: 0;
-height:-webkit-calc(100vh - 120px);
-height:-moz-calc(100vh - 120px);
-height:calc(100vh - 120px);
-;
 }
 #broker-build .build-marketplaces:after {
   display: block;

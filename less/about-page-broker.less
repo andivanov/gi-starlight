@@ -20,17 +20,31 @@
 			.color-wide-left();
 			background:@GI-green;
 		}
+		li{
+			text-align:left;
+			margin:0 2%;
+			span{
+				font-size:@fontSizeH1 + 0.25em;
+				display:block;
+			}
+			p{
+				font-size:@fontSizeH1 - 0.5em;
+			}
+		}
 	}
-	.health-broker{
+	.health-broker,
+	.build-marketplaces{
 		position:relative;
 		.calc(height, ~'100vh - 120px');
+		padding:40px 30px;
+	}
+	.health-broker{
 		&:after{
 			.color-wide-left();
 			background:lighten(@base-grey,5%);
 		}
 	}
 	.build-marketplaces{
-		.calc(height, ~'100vh - 120px');
 		&:after{
 			.color-wide-right();
 			background:lighten(@base-grey,10%);
