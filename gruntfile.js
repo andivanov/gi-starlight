@@ -23,7 +23,7 @@ module.exports = function(grunt) {
         sprite:{
             all: {
                 src: 'img/sprite-pre/*.png',
-                destImg: '../img/sprite-post/sprite-main.png',
+                destImg: 'img/sprite-post/sprite-main.png',
                 cssOpts:{
                     cssClass: function(item){
                         return '.' + item.name;
@@ -51,14 +51,14 @@ module.exports = function(grunt) {
         cssmin: {
             combine: {
                 files: {
-                    'css/minified/universal.min.css': ['css/universal.css']
+                    'css/universal.min.css': ['css/universal.css']
                 }
             }
         },
         watch: {
             css: {
                 files: ['less/**.less','css/*.css','js/*.js'],
-                tasks: ['less:style', 'cssmin:combine' ],
+                tasks: ['less:style', 'concat:dist', 'cssmin:combine'],
                 options: {
                     livereload: true,
                 }
@@ -69,10 +69,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-spritesmith');
+    grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     
     grunt.registerTask('default', [ 'less', 'concat', 'cssmin', 'imagemin', 'sprite', 'watch' ]);
 };

@@ -12,7 +12,7 @@
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/minified/global.min.css">
+        <link rel="stylesheet" href="css/universal.min.css">
     </head>
 
 
@@ -26,7 +26,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                 <a class="navbar-brand" href="#"><img src="img/minified/getinsured-logo.png" alt="Getinsured Logo" title="GetInsured Logo" ></a>
+                 <a class="navbar-brand" href="#"><img src="img/getinsured-logo.png" alt="Getinsured Logo" title="GetInsured Logo" ></a>
             </div>
             <div class="collapse navbar-collapse collapsible-navbar" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -80,28 +80,28 @@
                         <div class="row">
                             <div class="col-md-8 col-sm-8 col-xs-12 insurance-types">
                                 <ul class="list-inline">
-                                    <li><span class="major-medical"></span>Major Medical</li>
-                                    <li><span class="short-term-medical"></span>Short-term Medical</li>
-                                    <li><span class="vision"></span>Vision</li>
-                                    <li><span class="accidental-medical"></span>Accident Medical</li>
-                                    <li><span class="dental"></span>Dental</li>
+                                    <li><span class="insurance-type-major-medical"></span>Major Medical</li>
+                                    <li><span class="insurance-typeshort-term-medical"></span>Short-term Medical</li>
+                                    <li><span class="insurance-type-vision"></span>Vision</li>
+                                    <li><span class="insurance-type-accidental-medical"></span>Accident Medical</li>
+                                    <li><span class="insurance-type-dental"></span>Dental</li>
                                 </ul>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-12 counter">
-                                <p><span class="number">48</span> <span>days</span> <span>to get covered</span></p>
+                                <p><span id="countdown"></span> <span>to get covered</span></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="ribbon carrier-logos">
                     <ul class="list-inline">
-                        <li class="aetna"><span class="hide">Aetna</span></li>
-                        <li class="anthem"><span class="hide">Anthem</span></li>
-                        <li class="bcbs"><span class="hide">Blue Cross Blue Shiled</span></li>
-                        <li class="unitedhealthone"><span class="hide">UnitedHealthcareOne</span></li>
-                        <li class="humana"><span class="hide">Humana</span></li>
-                        <li class="kaiserpermanente"><span class="hide">Kaiser Permanente</span></li>
-                        <li class="cigna"><span class="hide">Cigna</span></li>
+                        <li class="carrier-aetna"><span class="hide">Aetna</span></li>
+                        <li class="carrier-anthem-bluecross"><span class="hide">Anthem</span></li>
+                        <li class="carrier-bluecross-blueshield"><span class="hide">Blue Cross Blue Shiled</span></li>
+                        <li class="carrier-united-health-one"><span class="hide">UnitedHealthcareOne</span></li>
+                        <li class="carrier-humana"><span class="hide">Humana</span></li>
+                        <li class="carrier-kaiser-permanente"><span class="hide">Kaiser Permanente</span></li>
+                        <li class="carrier-cigna"><span class="hide">Cigna</span></li>
                     </ul>
                 </div>
             </div>
@@ -158,7 +158,7 @@
                     <div class="ribbon">
                         <div class="row">
                             <div class="col-md-8 col-sm-8 col-xs-12 header-section">
-                                <p>Ready for a <span>Speed-Bump-Free</span> to Enrollment?</p>
+                                <p>Ready for a <span>Speed-Bump-Free Ride </span>to Enrollment?</p>
                             </div>
                             <div  class="col-md-4 col-sm-4 col-xs-12 call-to-action">
                                 <a href="#" class="url"><span>Start</span> shopping</a>
@@ -187,7 +187,7 @@
                 <ol class="our-process-steps">
                     <li><span>Checking your eligibility is super quick.</span> If you qualify, see how much government money you canget to pay for health insurance.</li>
                     <li><span>Comparing plans is easy peasy.</span> We'll help you choose the plan that fits all your needs.</li>
-                    <li><span>Enrollemnt is a breeze.</span> Easy payment online or on the phone with expert guidance all the way.</li>
+                    <li><span>Enrollment is a breeze.</span> Easy payment online or on the phone with expert guidance all the way.</li>
                     <li><span>Our customers service is just awesome.</span> Even after you enrol, call us anytime to save more money and get more medical care with your plan.</li>
                 </ol>
                 <div class="our-process-summary">
@@ -206,18 +206,18 @@
                     </div>
                     <h4>Our agents are licensed in 48 states and certified on all state marketplaces</h4>
                     <ul class="list-inline our-clients">
-                        <li class="coveredca"><span class="hide">Covered California</span></li>
-                        <li class="nmhix"><span class="hide">NMHIX</span></li>
-                        <li class="s-1missi"><span class="hide">One,Mississippi</span></li>
-                        <li class="YourHealthIdaho"><span class="hide">Your Health Idaho</span></li>
+                        <li><i class="sprite clients-CA-coveredca"></i><span class="hide">Covered California</span></li>
+                        <li><i class="sprite clients-NM-nmhix"></i><span class="hide">NMHIX</span></li>
+                        <li><i class="sprite clients-MS-onemississippi"></i><span class="hide">One,Mississippi</span></li>
+                        <li><i class="sprite clients-ID-yourhealthidaho"></i><span class="hide">Your Health Idaho</span></li>
                     </ul>
                     <h4>And good work gets noticed</h4>
                     <ul class="list-inline gi-in-press">
-                        <li class="abcnews"><span class="hide">abcNews</span></li>
-                        <li class="cnn"><span class="hide">CNN</span></li>
-                        <li class="forbes"><span class="hide">Forbes</span></li>
-                        <li class="wsj"><span class="hide">Wall Street Journal</span></li>
-                        <li class="venturebeat"><span class="hide">Venture Beat</span></li>
+                        <li><i class="sprite press-abcnews"></i><span class="hide">abcNews</span></li>
+                        <li><i class="sprite press-cnn"></i><span class="hide">CNN</span></li>
+                        <li><i class="sprite press-forbes"></i><span class="hide">Forbes</span></li>
+                        <li><i class="sprite press-wsj"></i><span class="hide">Wall Street Journal</span></li>
+                        <li><i class="sprite press-venture-beat"></i><span class="hide">Venture Beat</span></li>
                     </ul>
                 </div>
             </div>
@@ -236,7 +236,7 @@
         <div class="container">
             <ul>
                 <li>
-                    <img src="img/minified/getinsured-footer.png" alt="GetInsured.com" pagespeed_url_hash="197445857"></li>
+                    <img src="img/getinsured-footer.png" alt="GetInsured.com" pagespeed_url_hash="197445857"></li>
                 <li>
                     <a href="https://twitter.com/GetInsuredTweet" target="_blank">
                         <i class="fa-twitter"></i>
@@ -293,6 +293,7 @@
     
         <script src="js/vendor/jquery-1.11.1.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/jquery.countdown.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

@@ -10,13 +10,34 @@
 // ---------------------------
 //
 //
+
 // ---------------------------
 section#intro {
-	background: url('../../img/minified/home-page/intro.jpg')no-repeat top center;
+	background: url('../img/images/intro.jpg')no-repeat top center;
 	.background-size(cover);
 	.calc(height, ~'100vh - 104px'); //104 is the height of the nav element - masthead.
 	@media @ML, @M, @S {
 		.calc(height, ~'100vh - 50px'); //height of the nav element - masthead.
+	}
+	.ribbon {
+		position: relative;
+		&:nth-of-type(1) {
+			&:after {
+				content:'';
+				position: absolute;
+				border-bottom: 1px solid rgba(10,10,10, 0.2);
+				width: 100%;			
+			}
+		}
+		&:nth-of-type(2) {
+			&:before {
+				content:'';
+				position: absolute;
+				top: 1px;
+				border-top: 1px solid rgba(255,255,255, 0.2);
+				width: 100%;			
+			}
+		}
 	}
 }
 #intro {
@@ -24,18 +45,6 @@ section#intro {
 		.h1Styles();
 		height: 100%;
 		.transition(all 0.25s ease);
-		@media @L {
-			padding-left: 10%;
-		}
-		@media @MLL {
-			padding-left: 8%;
-		}
-		@media @ML {
-			padding-left: 6%;
-		}
-		@media @M {
-			padding-left: 0;
-		}
 		@media @S {
 			display: none;
 		}
@@ -46,10 +55,7 @@ section#intro {
 			.color-wide-left();
 		}
 		h1 {
-			@media @M {
-				text-align: center;
-				font-size: 1.3em;
-			}
+			line-height: 1.24;
 		}
 		span {
 			display: block;
@@ -75,41 +81,30 @@ section#intro {
 	}
 
 	.call-to-action {
-		line-height: 1;
-    	padding-top: @heightRibbon / 4;
+    	padding-top: 26px;
     	padding-left: @heightRibbon / 4;
-    	@media @ML, @M {
-			text-align: center;
-		}
-		&:hover {
-			&:after {
-				.transparentBg();
-				.opacity(.80);
-				background: darken(@callToActionBtnBgColor, 10%);
-				.color-wide-right();
-			}
-			&:before { // moving arrow on hover
-				margin-left: 166px;
-				@media @ML {
-					margin-left: 148px;
+		a {
+			display: block;
+			height: 70px;
+			background: #D83F37;
+			padding: 10px 0 0 34px;
+			position: relative;
+			line-height: 48px;
+			&:hover {
+				&:before { // moving arrow on hover
+				 	right: 46px;
 				}
 			}
-		}
-		&:before { //this is the arrow itself
-			content: "";
-			background-image: url('../../img/minified/home-page/get-started-arrow.png');
-			background-size: 100%;
-			width: 56px;
-			height: 55px;
-			position: absolute;
-			top: @heightRibbon / 4;
-			margin-left: 160px;
-			.transition(all 0.25s ease);
-			@media @ML {
-				margin-left: 144px;
-			}
-			@media @M {
-				display: none;
+			&:before { //this is the arrow itself
+				content: "";
+				background-image: url('../img/sprite-pre/get-started-arrow.png');
+				background-size: 100%;
+				width: 22px;
+				height: 22px;
+				position: absolute;
+				top: 22px;
+				right: 50px;
+				.transition(all 0.25s ease);
 			}
 		}
 		&:after {
@@ -119,13 +114,7 @@ section#intro {
 			.transition(all 0.5s ease); // transition added for the hover effect
 			.color-wide-right();
 		}
-		@media @M {
-			font-size: 18px;
-		}
 		span {
-			display: block;
-			.accentSecondaryFont();
-			font-size: 44px;
 			letter-spacing: .02em;
 			&:first-letter {
 				letter-spacing: 2px;
@@ -141,11 +130,10 @@ section#intro {
 	}
 
 	.insurance-types {
-		@backgroundColor: 	#1F84C9;
-		@fontColor: 	 	#5CC2F8;
+		@backgroundColor: 	#000;//#1F84C9;
+		@fontColor: 	 	#888;//#5CC2F8;
 		@borderColor: 	  	@fontColor;
 		@counterFontColor: 	#004D74;
-		background: @backgroundColor;
 		text-transform: uppercase;
 		color: @fontColor;
 		font-size: 14px;
@@ -170,13 +158,12 @@ section#intro {
 			display: none;
 		}
 		&:after {
-			background: @backgroundColor;
+			.background-image(linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%,rgba(0, 0, 0, 0.6) 100%));
 			.color-wide-left();
 		}
 		ul {
-			//text-align: right;
 			padding-top: @heightRibbon / 4;
-			@media @L, @MLL, @ML, @M, @S  {
+			@media @MLL, @ML, @M, @S  {
 				text-align: center;
 			}
 		}
@@ -206,11 +193,10 @@ section#intro {
 	}
 
 	.counter {
-		@backgroundColor: 	#1F84C9;//#005C8D;
-		@fontColor: 	 	@white;//#1F84C9;
+		@backgroundColor: 	#000;//#005C8D;
+		@fontColor: 	 	#888;//#5cc2f8;//#1F84C9;
 		@borderColor: 	  	@fontColor;
 		@counterFontColor: 	@white;//#004D74;
-		background: @backgroundColor;
 		text-transform: uppercase;
 		color: @fontColor;
 		font-size: 16px;
@@ -218,11 +204,12 @@ section#intro {
 		position: relative;
 		z-index: 0;
 		&:after {
-			background: @backgroundColor;
+			.background-image(linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%,rgba(0, 0, 0, 0.6) 100%));
 			.color-wide-right();
 		}
 		p {
-			margin-top: @heightRibbon / 4;
+			margin-left: @heightRibbon / 9;
+			margin-top: 10px;
 			@media @ML {
 				text-align: center;
 			}
@@ -234,37 +221,59 @@ section#intro {
 				margin-left: @heightRibbon - 40px;
 			}
 		}
-		span {
-			&:first-child {
-				font-size: 42px;
-				margin: 0 10px 0 20px;
-			}
-			&:nth-of-type(2) {
-				.accentFont();
-				position: absolute;
-				top: @heightRibbon / 3;
-				.break-tag();
-				@media @M {
-					top: @heightRibbon / 6;
-				}
+	}
+	
+	#countdown {
+		text-transform: lowercase;
+		font-size: 4.4em;
+		position: relative;
+		.countdown-text {
+			font-size: 0.30em;
+			position: absolute;
+			display: block;
+			width: 260px;
+			top: 8px;
+			left: 94px;
+			span{
+				font-size: 0.7em;
 			}
 		}
+		+ span {
+			.accentFont();
+			font-size: 1.35em;
+		}
 	}
+	
 
 	.carrier-logos {
  		@heightLocal: 80px;
 		height: @heightLocal;
-		margin-bottom: 0;
-		line-height: @heightLocal;
+		line-height: 1;
 		background: #E9E9E9;
 		text-align: center;
 		@media @M, @S {
 			display: none;
 		}
 		li {
-			margin: 0.5em 1.65% 0;
+			margin: 8px 2% 0;
+			position:relative;
+			overflow: hidden;
+			top: -8px;
+			line-height: 1;
 			@media @MLL {
 				margin: 0.5em 1%;
+			}
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			&.carrier-bluecross-blueshield {
+				top: 4px;
+			}
+			&.carrier-cigna {
+				top: 8px;
 			}
 		}
 	}

@@ -17,7 +17,7 @@
 #lower-your-cost {	
 
 @headerColor: 	#428AC5;
-@fontSize: 		18px;
+@fontSize: 		1.5em;
 
 	.subtitle {
 		text-align: center;
@@ -35,7 +35,7 @@
 			}
 			&:after {
 				content: "";
-				background-image: url('../../img/minified/home-page/geeman-card.png');
+				background-image: url('../img/images/geeman-card.png');
 				background-size: 100%;
 				display: block;
 				margin: 0 auto;
@@ -72,7 +72,7 @@
 			}
 			&:after { //Authorized Partner medal
 				content: "";
-				background-image: url('../../img/minified/home-page/partner-w-healthcaregov.png');
+				background-image: url('../img/sprite-pre/partner-w-healthcaregov.png');
 				background-size: 100%;
 				position: absolute;
 				left: -11em;
@@ -80,16 +80,34 @@
 				width: 130px;
 				height: 130px;
 				z-index: 1;
+				@media @L {
+					left: 38em;
+				}
 			}
 		}
 	}
 	.call-to-action {
-		padding-top: @heightRibbon / 3;
+		padding-top: 26px;
 		padding-left: @heightRibbon / 4;
-		.accentSecondaryFont();
+		a {
+			&:extend(#intro .call-to-action a all);
+			font-size: 0.83em;
+			padding-left: 14px;
+			line-height: 52px;
+			&:hover {
+				&:before { // moving arrow on hover
+				 	right: 16px;
+				}
+			}
+			&:before {
+				right: 20px;
+				top: 24px;
+			}
+		}
+		//.accentSecondaryFont();
 		&:after {
 			.transparentBg();
-			background: @callToActionBtnBgColor;
+			background: #CFCFCF;
 			.opacity(1);
 			.transition(all 0.5s ease); // transition added for the hover effect
 			.color-wide-right();
