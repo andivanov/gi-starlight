@@ -58,7 +58,8 @@
 			margin-top: @heightRibbon / 3;
 			position: relative;
 			@media @L {
-				width: 70%;
+				width: 75%;
+				margin-top: @heightRibbon / 4;
 			}
 			@media @ML {
 				width: 90%;
@@ -81,7 +82,7 @@
 				height: 130px;
 				z-index: 1;
 				@media @L {
-					left: 38em;
+					left: 35em;
 				}
 			}
 		}
@@ -89,6 +90,9 @@
 	.call-to-action {
 		padding-top: 26px;
 		padding-left: @heightRibbon / 4;
+		@media @L {
+			padding-left: @heightRibbon / 8;
+		}
 		a {
 			&:extend(#intro .call-to-action a all);
 			font-size: 0.83em;
@@ -97,14 +101,24 @@
 			&:hover {
 				&:before { // moving arrow on hover
 				 	right: 16px;
+				 	@media @L {
+				 		right: 12px;
+				 	}
 				}
 			}
 			&:before {
 				right: 20px;
 				top: 24px;
+				@media @L {
+					top: 26px;
+					right: 16px;
+				}
+			}
+			@media @L {
+				padding-left: 10px;
+				font-size: 0.7em;
 			}
 		}
-		//.accentSecondaryFont();
 		&:after {
 			.transparentBg();
 			background: #CFCFCF;

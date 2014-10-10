@@ -2590,7 +2590,8 @@ section#about .carrier-logos li.carrier-cigna {
 }
 @media only screen and (min-width: 980px) and (max-width: 1299px) {
   #lower-your-cost .taxcredit-explained p {
-    width: 70%;
+    width: 75%;
+    margin-top: 30px;
   }
 }
 @media only screen and (min-width: 720px) and (max-width: 849px) {
@@ -2628,12 +2629,17 @@ section#about .carrier-logos li.carrier-cigna {
 }
 @media only screen and (min-width: 980px) and (max-width: 1299px) {
   #lower-your-cost .taxcredit-explained p:after {
-    left: 38em;
+    left: 35em;
   }
 }
 #lower-your-cost .call-to-action {
   padding-top: 26px;
   padding-left: 30px;
+}
+@media only screen and (min-width: 980px) and (max-width: 1299px) {
+  #lower-your-cost .call-to-action {
+    padding-left: 15px;
+  }
 }
 #lower-your-cost .call-to-action a {
   font-size: 0.83em;
@@ -2643,9 +2649,26 @@ section#about .carrier-logos li.carrier-cigna {
 #lower-your-cost .call-to-action a:hover:before {
   right: 16px;
 }
+@media only screen and (min-width: 980px) and (max-width: 1299px) {
+  #lower-your-cost .call-to-action a:hover:before {
+    right: 12px;
+  }
+}
 #lower-your-cost .call-to-action a:before {
   right: 20px;
   top: 24px;
+}
+@media only screen and (min-width: 980px) and (max-width: 1299px) {
+  #lower-your-cost .call-to-action a:before {
+    top: 26px;
+    right: 16px;
+  }
+}
+@media only screen and (min-width: 980px) and (max-width: 1299px) {
+  #lower-your-cost .call-to-action a {
+    padding-left: 10px;
+    font-size: 0.7em;
+  }
 }
 #lower-your-cost .call-to-action:after {
   right: 0;
