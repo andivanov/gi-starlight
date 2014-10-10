@@ -5,6 +5,30 @@ Icon classes can be used entirely standalone. They are named after their origina
 <i class="icon-home"></i>
 ```
 */
+.accolades-licensed {
+  background-image: url(../img/sprite-post/sprite-main.png);
+  background-position: 0px -949px;
+  width: 92px;
+  height: 92px;
+}
+.accolades-plans {
+  background-image: url(../img/sprite-post/sprite-main.png);
+  background-position: 0px -1150px;
+  width: 158px;
+  height: 144px;
+}
+.accolades-usa {
+  background-image: url(../img/sprite-post/sprite-main.png);
+  background-position: 0px -783px;
+  width: 128px;
+  height: 79px;
+}
+.accolades-well {
+  background-image: url(../img/sprite-post/sprite-main.png);
+  background-position: 0px -862px;
+  width: 86px;
+  height: 87px;
+}
 .carrier-aetna {
   background-image: url(../img/sprite-post/sprite-main.png);
   background-position: 0px -34px;
@@ -77,9 +101,21 @@ Icon classes can be used entirely standalone. They are named after their origina
   width: 56px;
   height: 55px;
 }
+.gi-man-build {
+  background-image: url(../img/sprite-post/sprite-main.png);
+  background-position: 0px -1294px;
+  width: 203px;
+  height: 166px;
+}
+.gi-man-superman {
+  background-image: url(../img/sprite-post/sprite-main.png);
+  background-position: 0px -1041px;
+  width: 286px;
+  height: 109px;
+}
 .insurance-type-accidental-medical {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -104px;
+  background-position: 0px -129px;
   width: 30px;
   height: 25px;
 }
@@ -91,7 +127,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .insurance-type-major-medical {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -129px;
+  background-position: 0px -104px;
   width: 26px;
   height: 25px;
 }
@@ -109,7 +145,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .partner-w-healthcaregov {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -783px;
+  background-position: 0px -1460px;
   width: 197px;
   height: 197px;
 }

@@ -37,17 +37,76 @@
 		position:relative;
 		.calc(height, ~'100vh - 120px');
 		padding:40px 30px;
+		.sprite{
+			position:absolute;
+			bottom:20px;
+			right:0;
+		}
 	}
 	.health-broker{
+		text-align:right;
 		&:after{
 			.color-wide-left();
 			background:lighten(@base-grey,5%);
 		}
+		h2{
+			text-align:right;
+		}
 	}
 	.build-marketplaces{
+		text-align:left;
 		&:after{
 			.color-wide-right();
 			background:lighten(@base-grey,10%);
 		}
+		h2{
+			text-align:left;
+		}
 	}
 }
+
+
+
+
+// --------------------------
+//
+//
+// --------------------------
+//
+//
+// *accolades
+//
+//
+// ---------------------------
+//
+//
+// ---------------------------
+
+.company-highlights{
+	ul{
+		li{
+			.sprite,
+			span{
+				float:left;
+				display:block;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

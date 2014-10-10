@@ -1,19 +1,38 @@
 #about,
-#broker-build,
+#broker-build{
+	h2{
+		&:extend(body h1 all);
+		font-size:@fontSizeH1 + 0.75em; // 2em + x
+		margin:0 0 15px;
+		line-height:@fontSizeH1 - 0.75em; // 2m - .25
+	}
+}
+
 #team,
 #locations{
 	h2{
-		font-size: @fontSizeH1 + 1.2em; // 2em + x
-		margin:0 0 30px;
+		.sub-head();
+		color:@home-general-font-color;
 	}
 	h3{
-		.sub-head();
-	}
-	p{
-		font-size: @fontSizeH1 - 0.25em; // 2em - x
-		.accentFont();
+		&:extend(body h2 all);
+		font-size:@fontSizeH1 + 1.2em; // 2em + x
+		color:@GI-green;
 	}
 } 
+#about,
+#broker-build,
+#team,
+#locations{
+	p{
+		font-size: @fontSizeH1 - 0.35em; // 2em - x
+		.accentFont();
+	}
+	h4{
+		font-size: @fontSizeH1 - 0.5em;
+		.accentSecondaryFont();
+	}
+}
 
 
 
@@ -27,4 +46,3 @@
 
 
 
- 
