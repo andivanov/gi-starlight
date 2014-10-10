@@ -43,6 +43,9 @@ section#stories {
 			position: relative; //set to relative and z-index 1 on order to keep "p" on top of the bg 
 			z-index: 1;
 			letter-spacing: 0.01em;
+			@media @L {
+				font-size: @fontSizeH1 - 0.2em;
+			}
 		}
 	}
 
@@ -78,6 +81,10 @@ section#stories {
 		    bottom: -60px;
 		    right: 20px;
 		}
+		@media @L {
+			width: 37%;
+			margin-left: 63%;
+		}
 		span {
 			display: block;
 			font-size: 48px;
@@ -92,6 +99,9 @@ section#stories {
 			//.headerSecondaryFontFamily();
 			&:hover {
 				text-decoration: none;
+			}
+			@media @L {
+				margin-right: 60px;
 			}
 		} 
 	}

@@ -2183,7 +2183,7 @@ section#intro .ribbon:nth-of-type(2):before {
   display: block;
   font-size: 1.5em;
 }
-@media only screen and (min-width: 980px) and (max-width: 1299px) {
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
   #intro .header-section span {
     font-size: 1.3em;
     line-height: 40px;
@@ -2228,7 +2228,7 @@ section#intro .ribbon:nth-of-type(2):before {
 #stories .call-to-action a:hover:before {
   right: 46px;
 }
-@media only screen and (min-width: 980px) and (max-width: 1299px) {
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
   #intro .call-to-action a:hover:before,
   #lower-your-cost .call-to-action a:hover:before,
   #stories .call-to-action a:hover:before {
@@ -2258,7 +2258,7 @@ section#intro .ribbon:nth-of-type(2):before {
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-@media only screen and (min-width: 980px) and (max-width: 1299px) {
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
   #intro .call-to-action a:before,
   #lower-your-cost .call-to-action a:before,
   #stories .call-to-action a:before {
@@ -2268,7 +2268,7 @@ section#intro .ribbon:nth-of-type(2):before {
     height: 19px;
   }
 }
-@media only screen and (min-width: 980px) and (max-width: 1299px) {
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
   #intro .call-to-action a,
   #lower-your-cost .call-to-action a,
   #stories .call-to-action a {
@@ -2340,7 +2340,7 @@ section#intro .ribbon:nth-of-type(2):before {
   position: relative;
   z-index: 0;
 }
-@media only screen and (min-width: 980px) and (max-width: 1299px) {
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
   #intro .insurance-types {
     font-size: 13px;
   }
@@ -2396,7 +2396,7 @@ section#intro .ribbon:nth-of-type(2):before {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-@media only screen and (min-width: 980px) and (max-width: 1299px) {
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
   #intro .insurance-types li {
     margin: 0 1.3%;
   }
@@ -2588,7 +2588,7 @@ section#about .carrier-logos li.carrier-cigna {
   margin-top: 40px;
   position: relative;
 }
-@media only screen and (min-width: 980px) and (max-width: 1299px) {
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
   #lower-your-cost .taxcredit-explained p {
     width: 75%;
     margin-top: 30px;
@@ -2627,7 +2627,7 @@ section#about .carrier-logos li.carrier-cigna {
   height: 130px;
   z-index: 1;
 }
-@media only screen and (min-width: 980px) and (max-width: 1299px) {
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
   #lower-your-cost .taxcredit-explained p:after {
     left: 35em;
   }
@@ -2636,7 +2636,7 @@ section#about .carrier-logos li.carrier-cigna {
   padding-top: 26px;
   padding-left: 30px;
 }
-@media only screen and (min-width: 980px) and (max-width: 1299px) {
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
   #lower-your-cost .call-to-action {
     padding-left: 15px;
   }
@@ -2649,7 +2649,7 @@ section#about .carrier-logos li.carrier-cigna {
 #lower-your-cost .call-to-action a:hover:before {
   right: 16px;
 }
-@media only screen and (min-width: 980px) and (max-width: 1299px) {
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
   #lower-your-cost .call-to-action a:hover:before {
     right: 12px;
   }
@@ -2658,13 +2658,13 @@ section#about .carrier-logos li.carrier-cigna {
   right: 20px;
   top: 24px;
 }
-@media only screen and (min-width: 980px) and (max-width: 1299px) {
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
   #lower-your-cost .call-to-action a:before {
     top: 26px;
     right: 16px;
   }
 }
-@media only screen and (min-width: 980px) and (max-width: 1299px) {
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
   #lower-your-cost .call-to-action a {
     padding-left: 10px;
     font-size: 0.7em;
@@ -2737,6 +2737,11 @@ section#stories {
   z-index: 1;
   letter-spacing: 0.01em;
 }
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
+  #stories .header-section p {
+    font-size: 1.8em;
+  }
+}
 #stories blockquote {
   width: 27%;
   margin-left: 73%;
@@ -2765,6 +2770,12 @@ section#stories {
   bottom: -60px;
   right: 20px;
 }
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
+  #stories blockquote {
+    width: 37%;
+    margin-left: 63%;
+  }
+}
 #stories blockquote span {
   display: block;
   font-size: 48px;
@@ -2779,6 +2790,11 @@ section#stories {
 }
 #stories blockquote + a:hover {
   text-decoration: none;
+}
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
+  #stories blockquote + a {
+    margin-right: 60px;
+  }
 }
 section#our-process {
   height: 100%;
