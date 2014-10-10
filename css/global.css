@@ -1486,7 +1486,14 @@ h2 {
   text-align: center;
   font-family: 'roboto_slabthin';
   font-size: 2.5em;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  color: #5bb767;
   line-height: 1.5;
+  text-transform: capitalize;
+}
+h2 span {
+  display: block;
 }
 h2 span {
   font-size: 0.80em;
@@ -1599,6 +1606,9 @@ h6 {
   .ribbon {
     height: 80px;
   }
+}
+.ribbon .row {
+  height: 100%;
 }
 .sprite {
   display: block;
@@ -1952,19 +1962,6 @@ footer.home-section-footer .copyright p {
   font-size: 14px;
   font-weight: 400;
 }
-.row {
-  height: 100%;
-}
-h2 {
-  margin-top: 40px;
-  margin-bottom: 60px;
-  color: #5bb767;
-  line-height: 1.5;
-  text-transform: capitalize;
-}
-h2 span {
-  display: block;
-}
 section#intro {
   background: url('../img/images/intro.jpg') no-repeat top center;
   -webkit-background-size: cover;
@@ -2086,6 +2083,20 @@ section#intro .ribbon:nth-of-type(2):before {
 #stories .call-to-action a:hover:before {
   right: 46px;
 }
+@media only screen and (min-width: 980px) and (max-width: 1299px) {
+  #intro .call-to-action a:hover:before,
+  #lower-your-cost .call-to-action a:hover:before,
+  #stories .call-to-action a:hover:before {
+    right: 20px;
+  }
+}
+@media only screen and (min-width: 850px) and (max-width: 979px) {
+  #intro .call-to-action a:hover:before,
+  #lower-your-cost .call-to-action a:hover:before,
+  #stories .call-to-action a:hover:before {
+    right: 20px;
+  }
+}
 #intro .call-to-action a:before,
 #lower-your-cost .call-to-action a:before,
 #stories .call-to-action a:before {
@@ -2101,6 +2112,32 @@ section#intro .ribbon:nth-of-type(2):before {
   -moz-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
+}
+@media only screen and (min-width: 980px) and (max-width: 1299px) {
+  #intro .call-to-action a:before,
+  #lower-your-cost .call-to-action a:before,
+  #stories .call-to-action a:before {
+    right: 24px;
+    top: 24px;
+    width: 19px;
+    height: 19px;
+  }
+}
+@media only screen and (min-width: 980px) and (max-width: 1299px) {
+  #intro .call-to-action a,
+  #lower-your-cost .call-to-action a,
+  #stories .call-to-action a {
+    font-size: 0.9em;
+    padding-left: 20px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 849px) {
+  #intro .call-to-action a,
+  #lower-your-cost .call-to-action a,
+  #stories .call-to-action a {
+    font-size: 0.9em;
+    padding-left: 10px;
+  }
 }
 #intro .call-to-action:after,
 #stories .call-to-action:after {
@@ -2136,7 +2173,6 @@ section#intro .ribbon:nth-of-type(2):before {
 @media only screen and (min-width: 480px) and (max-width: 719px) {
   #intro .call-to-action span,
   #stories .call-to-action span {
-    display: inline;
     font-size: 30px;
   }
 }
@@ -2367,6 +2403,11 @@ section#about .carrier-logos li.carrier-cigna {
 #lower-your-cost .subtitle p i:after {
   content: "\f069";
   font-family: 'FontAwesome';
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
   font-size: 50%;
   position: absolute;
 }
@@ -2420,6 +2461,11 @@ section#about .carrier-logos li.carrier-cigna {
 #lower-your-cost .taxcredit-explained p:before {
   content: "\f069";
   font-family: 'FontAwesome';
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
   font-size: 50%;
   position: absolute;
   margin-left: -12px;
@@ -2742,6 +2788,11 @@ section#our-process {
 #our-process .common-questions span:last-child:before {
   content: "\f069";
   font-family: 'FontAwesome';
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
   font-size: 50%;
   position: absolute;
   right: -1.2em;

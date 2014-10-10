@@ -93,6 +93,12 @@ section#intro {
 			&:hover {
 				&:before { // moving arrow on hover
 				 	right: 46px;
+				 	@media @L {
+						right: 20px;
+					}
+					@media @MLL {
+						right: 20px;
+					}
 				}
 			}
 			&:before { //this is the arrow itself
@@ -105,6 +111,20 @@ section#intro {
 				top: 22px;
 				right: 50px;
 				.transition(all 0.25s ease);
+				@media @L {
+					right: 24px;
+					top: 24px;
+					width: 19px;
+					height: 19px;
+				}
+			}
+			@media @L {
+				font-size: 0.9em;
+				padding-left: 20px;
+			}
+			@media @ML {
+				font-size: 0.9em;
+				padding-left: 10px;
 			}
 		}
 		&:after {
@@ -120,7 +140,7 @@ section#intro {
 				letter-spacing: 2px;
 			}
 			@media @M {
-				display: inline;
+				//display: inline;
 				font-size: 30px;
 			}
 			@media @S {
