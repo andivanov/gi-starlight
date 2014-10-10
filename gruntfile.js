@@ -24,6 +24,7 @@ module.exports = function(grunt) {
             all: {
                 src: 'img/sprite-pre/*.png',
                 destImg: 'img/sprite-post/sprite-main.png',
+                padding:2,
                 cssOpts:{
                     cssClass: function(item){
                         return '.' + item.name;
