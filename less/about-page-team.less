@@ -12,14 +12,34 @@
 //
 // ---------------------------
 
+@team-border-color: 			lighten(@GI-blue, 10%);
+
 #team{
 	text-align:center;
 	.contact-group{
 		color:@white;
+		padding:40px 0;
 		p{
 			font-size: @fontSizeH1 - 0.65em; // 2em - x
 		}
 		background-color:@GI-blue;
+	}
+	.contact{
+		div{
+			border-right:1px solid @team-border-color;
+			.calc(height, ~'120px');
+			&:last-child{
+				border:none;
+			}
+		}
+	}
+	.gi-in-press{
+		&:extend(#our-process .gi-in-press all);
+		border-top: 1px solid @team-border-color;
+		margin-top: 30px;
+		padding-top: 30px;
+		padding-bottom: 0;
+
 	}
 }
 

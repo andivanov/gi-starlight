@@ -2,3 +2,5 @@
 /.DS_Store
 /less/.DS_Store
 /node_modules
+cairo-1.12.8/
+cairo.tar.xz

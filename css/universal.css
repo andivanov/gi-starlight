@@ -2936,12 +2936,14 @@ section#our-process {
 #our-process .our-clients li {
   margin: 0 2.5%;
 }
-#our-process .gi-in-press {
+#our-process .gi-in-press,
+#team .gi-in-press {
   text-align: center;
   padding-bottom: 60px;
   margin-bottom: 0;
 }
-#our-process .gi-in-press li {
+#our-process .gi-in-press li,
+#team .gi-in-press li {
   margin: 0 2%;
 }
 #our-process .our-process-summary {
@@ -3107,6 +3109,8 @@ section#about div {
 }
 section#about .carrier-logos {
   background: #ffffff;
+  height: auto;
+  padding: 20px 0;
 }
 section#about h1 {
   font-family: 'latobold';
@@ -3139,9 +3143,10 @@ section#about h2 {
 }
 #broker-build .company-highlights li {
   text-align: left;
-  margin: 0 2%;
+  margin: 0;
+  width: 29%;
 }
-#broker-build .company-highlights li span {
+#broker-build .company-highlights li flake span {
   font-size: 2.25em;
   display: block;
 }
@@ -3156,7 +3161,7 @@ height:-webkit-calc(100vh - 120px);
 height:-moz-calc(100vh - 120px);
 height:calc(100vh - 120px);
 ;
-  padding: 40px 30px;
+  padding: 40px 70px;
 }
 #broker-build .health-broker .sprite,
 #broker-build .build-marketplaces .sprite {
@@ -3177,7 +3182,7 @@ height:calc(100vh - 120px);
   left: -100%;
   right: -100%;
   right: 0;
-  background: #dcdcdc;
+  background: #e1e1e1;
 }
 #broker-build .health-broker h2 {
   text-align: right;
@@ -3199,6 +3204,7 @@ height:calc(100vh - 120px);
 }
 #broker-build .build-marketplaces h2 {
   text-align: left;
+  color: #1f6fb1;
 }
 .company-highlights ul li .sprite,
 .company-highlights ul li span {
@@ -3210,8 +3216,26 @@ height:calc(100vh - 120px);
 }
 #team .contact-group {
   color: #ffffff;
+  padding: 40px 0;
   background-color: #1f6fb1;
 }
 #team .contact-group p {
   font-size: 1.35em;
+}
+#team .contact div {
+  border-right: 1px solid #298ada;
+  -lh-property: 0;
+height:-webkit-calc(120px);
+height:-moz-calc(120px);
+height:calc(120px);
+;
+}
+#team .contact div:last-child {
+  border: none;
+}
+#team .gi-in-press {
+  border-top: 1px solid #298ada;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 0;
 }

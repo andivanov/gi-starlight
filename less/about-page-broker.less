@@ -22,7 +22,8 @@
 		}
 		li{
 			text-align:left;
-			margin:0 2%;
+			margin:0;
+			width:29%;flake
 			span{
 				font-size:@fontSizeH1 + 0.25em;
 				display:block;
@@ -36,7 +37,7 @@
 	.build-marketplaces{
 		position:relative;
 		.calc(height, ~'100vh - 120px');
-		padding:40px 30px;
+		padding:40px 70px;
 		.sprite{
 			position:absolute;
 			bottom:20px;
@@ -47,7 +48,7 @@
 		text-align:right;
 		&:after{
 			.color-wide-left();
-			background:lighten(@base-grey,5%);
+			background:lighten(@base-grey,7%);
 		}
 		h2{
 			text-align:right;
@@ -61,6 +62,7 @@
 		}
 		h2{
 			text-align:left;
+			color:@GI-blue;
 		}
 	}
 }
