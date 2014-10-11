@@ -19,11 +19,21 @@
 @headerColor: 	#428AC5;
 @fontSize: 		1.5em;
 
+	@media @ML-V {
+		@heightRibbon: 140px;
+		.ribbon {
+			height: @heightRibbon;
+		}
+	}
+
 	.subtitle {
 		text-align: center;
 		color: @headerColor;
 		font-size: @fontSize;
 		.headerSecondaryFontFamily();
+		@media @ML-V {
+			margin-top: 6em;
+		}
 		p {
 			margin: 0;
 			i {
@@ -55,17 +65,12 @@
 		p {
 			color: #333;
 			margin-bottom: 0;
-			margin-top: @heightRibbon / 3;
+			width: 75%;
+			margin-top: @heightRibbon / 4;
 			position: relative;
-			@media @L {
-				width: 75%;
-				margin-top: @heightRibbon / 4;
-			}
-			@media @ML {
-				width: 90%;
-			}
-			@media @M, @S {
-				width: 100%;
+			@media @ML-V {
+				margin-top: @heightRibbon / 6;
+				width: 80%;
 			}
 			&:before {
 				.asterisk();
@@ -76,13 +81,20 @@
 				background-image: url('../img/sprite-pre/partner-w-healthcaregov.png');
 				background-size: 100%;
 				position: absolute;
-				left: -11em;
+				left: 43em;
 				top: -6.5em;
 				width: 130px;
 				height: 130px;
 				z-index: 1;
 				@media @L {
-					left: 35em;
+					left: 42em;
+				}
+				@media @ML {
+					left: 34em;
+				}
+				@media @ML-V {
+					top: -6.5em;
+					left: 23em;
 				}
 			}
 		}
@@ -93,11 +105,18 @@
 		@media @L {
 			padding-left: @heightRibbon / 8;
 		}
+		@media @ML-V {
+			padding-top: @heightRibbon / 3;
+		}
 		a {
 			&:extend(#intro .call-to-action a all);
 			font-size: 0.83em;
 			padding-left: 14px;
 			line-height: 52px;
+			@media @ML-V {
+				font-size: 0.65em;
+				letter-spacing: 0;
+			}
 			&:hover {
 				&:before { // moving arrow on hover
 				 	right: 16px;
@@ -106,12 +125,15 @@
 				 	}
 				}
 			}
-			&:before {
+			&:before { //this is an arrow
 				right: 20px;
 				top: 24px;
 				@media @L {
 					top: 26px;
 					right: 16px;
+				}
+				@media @ML-V {
+					top: 21px;
 				}
 			}
 			@media @L {

@@ -1650,7 +1650,7 @@ height:-moz-calc(100vh - 104px);
 height:calc(100vh - 104px);
 ;
 }
-@media only screen and (min-width: 720px) and (max-width: 849px), only screen and (min-width: 480px) and (max-width: 719px), only screen and (min-width: 320px) and (max-width: 479px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape), only screen and (min-width: 480px) and (max-width: 768px), only screen and (min-width: 320px) and (max-width: 479px) {
   section:nth-of-type(1) {
     -lh-property: 0;
 height:-webkit-calc(100vh - 50px);
@@ -1782,11 +1782,6 @@ h6 {
 }
 .ribbon {
   height: 120px;
-}
-@media only screen and (min-width: 480px) and (max-width: 719px) {
-  .ribbon {
-    height: 80px;
-  }
 }
 .ribbon .row {
   height: 100%;
@@ -2044,24 +2039,22 @@ footer.home-section-footer {
   padding: 80px 0 50px;
   font-weight: 300;
 }
-@media only screen and (min-width: 480px) and (max-width: 719px), only screen and (min-width: 320px) and (max-width: 479px) {
-  footer.home-section-footer {
-    padding: 100px 40px 40px;
-  }
-}
 footer.home-section-footer .container-fluid {
   padding: 0;
 }
+footer.home-section-footer .container ul:first-child {
+  margin-left: 0;
+}
 footer.home-section-footer ul {
   list-style-type: none;
-  margin-left: 0;
+  margin-left: 1%;
   float: left;
   padding-left: 0;
-  width: 20%;
+  width: 15%;
   margin-right: 6%;
   margin-top: 34px;
 }
-@media only screen and (min-width: 480px) and (max-width: 719px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   footer.home-section-footer ul {
     width: 70%;
     margin-right: 0;
@@ -2077,7 +2070,7 @@ footer.home-section-footer ul:first-child {
   width: 49%;
   margin-top: 0;
 }
-@media only screen and (min-width: 480px) and (max-width: 719px), only screen and (min-width: 320px) and (max-width: 479px) {
+@media only screen and (min-width: 480px) and (max-width: 768px), only screen and (min-width: 320px) and (max-width: 479px) {
   footer.home-section-footer ul:first-child {
     width: 100%;
   }
@@ -2111,7 +2104,7 @@ footer.home-section-footer ul:first-child li:first-child {
 footer.home-section-footer ul:last-child {
   width: 13%;
 }
-@media only screen and (min-width: 480px) and (max-width: 719px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   footer.home-section-footer ul:last-child {
     width: 30%;
   }
@@ -2154,13 +2147,26 @@ height:-moz-calc(100vh - 104px);
 height:calc(100vh - 104px);
 ;
 }
-@media only screen and (min-width: 720px) and (max-width: 849px), only screen and (min-width: 480px) and (max-width: 719px), only screen and (min-width: 320px) and (max-width: 479px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   section#intro {
     -lh-property: 0;
-height:-webkit-calc(100vh - 50px);
-height:-moz-calc(100vh - 50px);
-height:calc(100vh - 50px);
+height:-webkit-calc(100vh - 160px);
+height:-moz-calc(100vh - 160px);
+height:calc(100vh - 160px);
 ;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  section#intro {
+    -lh-property: 0;
+height:-webkit-calc(100vh - 160px);
+height:-moz-calc(100vh - 160px);
+height:calc(100vh - 160px);
+;
+    background: url('../img/images/intro-tablet.jpg') no-repeat top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
   }
 }
 section#intro .ribbon {
@@ -2189,11 +2195,6 @@ section#intro .ribbon:nth-of-type(2):before {
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-  #intro .header-section {
-    display: none;
-  }
-}
 #intro .header-section:after {
   left: 0;
   background: #000;
@@ -2215,39 +2216,46 @@ section#intro .ribbon:nth-of-type(2):before {
 #intro .header-section h1 {
   line-height: 1.24;
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #intro .header-section h1 {
+    font-size: 1.7em;
+    line-height: 0.7;
+    margin-top: 1.5em;
+  }
+}
 #intro .header-section span {
   display: block;
   font-size: 1.5em;
 }
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #intro .header-section span {
     font-size: 1.3em;
     line-height: 40px;
   }
 }
-@media only screen and (min-width: 850px) and (max-width: 979px) {
-  #intro .header-section span {
-    font-size: 1.2em;
-    line-height: 42px;
-  }
-}
-@media only screen and (min-width: 720px) and (max-width: 849px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   #intro .header-section span {
     font-size: 1.1em;
     line-height: 44px;
   }
 }
-@media only screen and (min-width: 480px) and (max-width: 719px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   #intro .header-section span {
-    display: inline;
     font-size: 1.3em;
-    line-height: 46px;
+    display: block;
+    line-height: 1.9;
   }
 }
 #intro .call-to-action,
 #stories .call-to-action {
   padding-top: 26px;
   padding-left: 30px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #intro .call-to-action,
+  #stories .call-to-action {
+    padding-top: 35.29411765px;
+  }
 }
 #intro .call-to-action a,
 #lower-your-cost .call-to-action a,
@@ -2264,14 +2272,14 @@ section#intro .ribbon:nth-of-type(2):before {
 #stories .call-to-action a:hover:before {
   right: 46px;
 }
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #intro .call-to-action a:hover:before,
   #lower-your-cost .call-to-action a:hover:before,
   #stories .call-to-action a:hover:before {
     right: 20px;
   }
 }
-@media only screen and (min-width: 850px) and (max-width: 979px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   #intro .call-to-action a:hover:before,
   #lower-your-cost .call-to-action a:hover:before,
   #stories .call-to-action a:hover:before {
@@ -2294,7 +2302,7 @@ section#intro .ribbon:nth-of-type(2):before {
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #intro .call-to-action a:before,
   #lower-your-cost .call-to-action a:before,
   #stories .call-to-action a:before {
@@ -2304,7 +2312,17 @@ section#intro .ribbon:nth-of-type(2):before {
     height: 19px;
   }
 }
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #intro .call-to-action a:before,
+  #lower-your-cost .call-to-action a:before,
+  #stories .call-to-action a:before {
+    right: 24px;
+    top: 19px;
+    width: 20px;
+    height: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #intro .call-to-action a,
   #lower-your-cost .call-to-action a,
   #stories .call-to-action a {
@@ -2312,12 +2330,39 @@ section#intro .ribbon:nth-of-type(2):before {
     padding-left: 20px;
   }
 }
-@media only screen and (min-width: 720px) and (max-width: 849px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   #intro .call-to-action a,
   #lower-your-cost .call-to-action a,
   #stories .call-to-action a {
     font-size: 0.9em;
     padding-left: 10px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #intro .call-to-action a,
+  #lower-your-cost .call-to-action a,
+  #stories .call-to-action a {
+    height: 60px;
+    font-size: 0.9em;
+    padding-left: 10px;
+    padding-top: 6px;
+  }
+}
+#intro .call-to-action a span,
+#lower-your-cost .call-to-action a span,
+#stories .call-to-action a span {
+  letter-spacing: .02em;
+}
+#intro .call-to-action a span:first-letter,
+#lower-your-cost .call-to-action a span:first-letter,
+#stories .call-to-action a span:first-letter {
+  letter-spacing: 2px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #intro .call-to-action a span,
+  #lower-your-cost .call-to-action a span,
+  #stories .call-to-action a span {
+    font-size: 23px;
   }
 }
 #intro .call-to-action:after,
@@ -2343,26 +2388,6 @@ section#intro .ribbon:nth-of-type(2):before {
   right: -100%;
   left: 0;
 }
-#intro .call-to-action span,
-#stories .call-to-action span {
-  letter-spacing: .02em;
-}
-#intro .call-to-action span:first-letter,
-#stories .call-to-action span:first-letter {
-  letter-spacing: 2px;
-}
-@media only screen and (min-width: 480px) and (max-width: 719px) {
-  #intro .call-to-action span,
-  #stories .call-to-action span {
-    font-size: 30px;
-  }
-}
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-  #intro .call-to-action span,
-  #stories .call-to-action span {
-    font-size: 26px;
-  }
-}
 #intro .insurance-types {
   text-transform: uppercase;
   color: #888888;
@@ -2375,30 +2400,16 @@ section#intro .ribbon:nth-of-type(2):before {
   transition: all 0.2s ease;
   position: relative;
   z-index: 0;
+  padding-top: 30px;
 }
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #intro .insurance-types {
     font-size: 13px;
   }
 }
-@media only screen and (min-width: 850px) and (max-width: 979px) {
-  #intro .insurance-types {
-    font-size: 12px;
-  }
-}
-@media only screen and (min-width: 720px) and (max-width: 849px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   #intro .insurance-types {
     font-size: 10px;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 719px) {
-  #intro .insurance-types {
-    font-size: 0;
-  }
-}
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-  #intro .insurance-types {
-    display: none;
   }
 }
 #intro .insurance-types:after {
@@ -2417,14 +2428,6 @@ section#intro .ribbon:nth-of-type(2):before {
   right: -100%;
   right: 0;
 }
-#intro .insurance-types ul {
-  padding-top: 30px;
-}
-@media only screen and (min-width: 850px) and (max-width: 979px), only screen and (min-width: 720px) and (max-width: 849px), only screen and (min-width: 480px) and (max-width: 719px), only screen and (min-width: 320px) and (max-width: 479px) {
-  #intro .insurance-types ul {
-    text-align: center;
-  }
-}
 #intro .insurance-types li {
   margin: 0 4% 0 0;
   -webkit-transition: all 0.2s ease;
@@ -2432,29 +2435,26 @@ section#intro .ribbon:nth-of-type(2):before {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
+#intro .insurance-types li:first-child {
+  margin-left: 0;
+}
+#intro .insurance-types li:last-child {
+  margin-right: 0;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #intro .insurance-types li {
     margin: 0 1.3%;
   }
 }
-@media only screen and (min-width: 850px) and (max-width: 979px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   #intro .insurance-types li {
-    margin: 0 1%;
+    margin: 0 3.3%;
   }
 }
-@media only screen and (min-width: 720px) and (max-width: 849px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   #intro .insurance-types li {
-    margin: 0 1%;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 719px) {
-  #intro .insurance-types li {
-    margin: 0 4%;
-  }
-}
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-  #intro .insurance-types li {
-    margin: 0 2%;
+    font-size: 9px;
+    margin: 0 0.5%;
   }
 }
 #intro .insurance-types li span {
@@ -2489,26 +2489,15 @@ section#intro .ribbon:nth-of-type(2):before {
   margin-left: 13.33333333px;
   margin-top: 10px;
 }
-@media only screen and (min-width: 720px) and (max-width: 849px) {
-  #intro .counter p {
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 719px) {
-  #intro .counter p {
-    text-align: center;
-    margin-top: 12px;
-  }
-}
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-  #intro .counter p {
-    margin-left: 80px;
-  }
-}
 #intro #countdown {
   text-transform: lowercase;
   font-size: 4.4em;
   position: relative;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #intro #countdown {
+    font-size: 3.7em;
+  }
 }
 #intro #countdown .countdown-text {
   font-size: 0.30em;
@@ -2521,9 +2510,26 @@ section#intro .ribbon:nth-of-type(2):before {
 #intro #countdown .countdown-text span {
   font-size: 0.7em;
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #intro #countdown .countdown-text {
+    left: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #intro #countdown .countdown-text {
+    font-size: 0.35em;
+    left: 80px;
+    top: 4px;
+  }
+}
 #intro #countdown + span {
   font-family: 'latolight';
   font-size: 1.35em;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #intro #countdown + span {
+    font-size: 1.34em;
+  }
 }
 #intro .carrier-logos,
 section#about .carrier-logos {
@@ -2532,7 +2538,7 @@ section#about .carrier-logos {
   background: #E9E9E9;
   text-align: center;
 }
-@media only screen and (min-width: 480px) and (max-width: 719px), only screen and (min-width: 320px) and (max-width: 479px) {
+@media only screen and (min-width: 480px) and (max-width: 768px), only screen and (min-width: 320px) and (max-width: 479px) {
   #intro .carrier-logos,
   section#about .carrier-logos {
     display: none;
@@ -2546,10 +2552,18 @@ section#about .carrier-logos li {
   top: -8px;
   line-height: 1;
 }
-@media only screen and (min-width: 850px) and (max-width: 979px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #intro .carrier-logos li,
   section#about .carrier-logos li {
-    margin: 0.5em 1%;
+    margin-left: 2.95%;
+    margin-right: 2.95%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #intro .carrier-logos li,
+  section#about .carrier-logos li {
+    margin-left: 2.1%;
+    margin-right: 2.1%;
   }
 }
 #intro .carrier-logos li:first-child,
@@ -2568,11 +2582,21 @@ section#about .carrier-logos li.carrier-bluecross-blueshield {
 section#about .carrier-logos li.carrier-cigna {
   top: 8px;
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #lower-your-cost .ribbon {
+    height: 140px;
+  }
+}
 #lower-your-cost .subtitle {
   text-align: center;
   color: #428ac5;
   font-size: 1.5em;
   font-family: 'roboto_slablight';
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #lower-your-cost .subtitle {
+    margin-top: 6em;
+  }
 }
 #lower-your-cost .subtitle p {
   margin: 0;
@@ -2621,23 +2645,14 @@ section#about .carrier-logos li.carrier-cigna {
 #lower-your-cost .taxcredit-explained p {
   color: #333;
   margin-bottom: 0;
-  margin-top: 40px;
+  width: 75%;
+  margin-top: 30px;
   position: relative;
 }
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   #lower-your-cost .taxcredit-explained p {
-    width: 75%;
-    margin-top: 30px;
-  }
-}
-@media only screen and (min-width: 720px) and (max-width: 849px) {
-  #lower-your-cost .taxcredit-explained p {
-    width: 90%;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 719px), only screen and (min-width: 320px) and (max-width: 479px) {
-  #lower-your-cost .taxcredit-explained p {
-    width: 100%;
+    margin-top: 20px;
+    width: 80%;
   }
 }
 #lower-your-cost .taxcredit-explained p:before {
@@ -2657,24 +2672,40 @@ section#about .carrier-logos li.carrier-cigna {
   background-image: url('../img/sprite-pre/partner-w-healthcaregov.png');
   background-size: 100%;
   position: absolute;
-  left: -11em;
+  left: 43em;
   top: -6.5em;
   width: 130px;
   height: 130px;
   z-index: 1;
 }
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #lower-your-cost .taxcredit-explained p:after {
-    left: 35em;
+    left: 42em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #lower-your-cost .taxcredit-explained p:after {
+    left: 34em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #lower-your-cost .taxcredit-explained p:after {
+    top: -6.5em;
+    left: 23em;
   }
 }
 #lower-your-cost .call-to-action {
   padding-top: 26px;
   padding-left: 30px;
 }
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #lower-your-cost .call-to-action {
     padding-left: 15px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #lower-your-cost .call-to-action {
+    padding-top: 40px;
   }
 }
 #lower-your-cost .call-to-action a {
@@ -2682,10 +2713,16 @@ section#about .carrier-logos li.carrier-cigna {
   padding-left: 14px;
   line-height: 52px;
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #lower-your-cost .call-to-action a {
+    font-size: 0.65em;
+    letter-spacing: 0;
+  }
+}
 #lower-your-cost .call-to-action a:hover:before {
   right: 16px;
 }
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #lower-your-cost .call-to-action a:hover:before {
     right: 12px;
   }
@@ -2694,13 +2731,18 @@ section#about .carrier-logos li.carrier-cigna {
   right: 20px;
   top: 24px;
 }
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #lower-your-cost .call-to-action a:before {
     top: 26px;
     right: 16px;
   }
 }
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #lower-your-cost .call-to-action a:before {
+    top: 21px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #lower-your-cost .call-to-action a {
     padding-left: 10px;
     font-size: 0.7em;
@@ -2773,14 +2815,40 @@ section#stories {
   z-index: 1;
   letter-spacing: 0.01em;
 }
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #stories .header-section p {
     font-size: 1.8em;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #stories .header-section p {
+    font-size: 1.6em;
+    padding-top: 15px;
+    line-height: 1.2;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #stories .header-section p span:first-child {
+    display: block;
+    font-size: 1.4em;
+  }
+}
+#stories .header-section p span:last-child {
+  line-height: 1.6;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape), only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #stories .call-to-action {
+    padding-left: 15px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #stories .call-to-action a {
+    padding-left: 20px;
+  }
+}
 #stories blockquote {
-  width: 27%;
-  margin-left: 73%;
+  width: 35%;
+  margin-left: 70%;
   margin-bottom: 20px;
   font-family: 'roboto_slabthin';
   font-size: 24px;
@@ -2806,10 +2874,16 @@ section#stories {
   bottom: -60px;
   right: 20px;
 }
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #stories blockquote {
-    width: 37%;
-    margin-left: 63%;
+    width: 31%;
+    margin-left: 69%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #stories blockquote {
+    width: 45%;
+    margin-left: 55%;
   }
 }
 #stories blockquote span {
@@ -2817,19 +2891,29 @@ section#stories {
   font-size: 48px;
   line-height: 72px;
 }
+@media only screen and (min-width: 1280px) and (max-width: 2560px) {
+  #stories blockquote span {
+    line-height: 60px;
+  }
+}
 #stories blockquote + a {
   display: block;
   text-align: right;
   color: #ffffff;
-  margin-right: 20px;
+  margin-right: 5%;
   font-family: 'latolight';
 }
 #stories blockquote + a:hover {
   text-decoration: none;
 }
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #stories blockquote + a {
-    margin-right: 60px;
+    margin-right: 66px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #stories blockquote + a {
+    margin-right: 8px;
   }
 }
 section#our-process {
@@ -2863,6 +2947,12 @@ section#our-process {
   margin-bottom: 60px;
   position: relative;
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #our-process ol.our-process-steps {
+    width: 65%;
+    margin-left: 35%;
+  }
+}
 #our-process ol.our-process-steps:before {
   content: "";
   background-image: url('../img/images/plan-select-screenshot.png');
@@ -2872,7 +2962,19 @@ section#our-process {
   position: absolute;
   z-index: 0;
   bottom: -7.5em;
-  left: -38em;
+  left: -40.7em;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #our-process ol.our-process-steps:before {
+    left: -33.5em;
+    bottom: -9.1em;
+    width: 428px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #our-process ol.our-process-steps:before {
+    left: -33.9em;
+  }
 }
 #our-process ol.our-process-steps:after {
   content: "";
@@ -2925,8 +3027,18 @@ section#our-process {
 }
 #our-process ol.our-process-steps li span {
   display: block;
-  font-size: 24px;
+  font-size: 2em;
   color: #2383C7;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
+  #our-process ol.our-process-steps li span {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #our-process ol.our-process-steps li span {
+    font-size: 1.45em;
+  }
 }
 #our-process .our-clients {
   text-align: center;
@@ -2944,7 +3056,27 @@ section#our-process {
 }
 #our-process .gi-in-press li,
 #team .gi-in-press li {
-  margin: 0 2%;
+  margin: 0 1.75%;
+}
+#our-process .gi-in-press li:first-child,
+#team .gi-in-press li:first-child {
+  margin-left: 0;
+}
+#our-process .gi-in-press li:last-child,
+#team .gi-in-press li:last-child {
+  margin-right: 0;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
+  #our-process .gi-in-press li,
+  #team .gi-in-press li {
+    margin: 0 2.5%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #our-process .gi-in-press li,
+  #team .gi-in-press li {
+    margin: 0 0.9%;
+  }
 }
 #our-process .our-process-summary {
   position: relative;
@@ -2966,7 +3098,12 @@ section#our-process {
   width: 400px;
   height: 277px;
   bottom: 0;
-  left: 52%;
+  left: 56.7%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #our-process .common-questions:after {
+    left: 58.2%;
+  }
 }
 #our-process .common-questions:before {
   background: #2383C7;
@@ -2981,9 +3118,16 @@ section#our-process {
 }
 #our-process .common-questions h3 {
   text-align: left;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 2em;
+  line-height: 1.4;
+  margin-bottom: 1.2em;
   font-family: 'roboto_slabthin';
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #our-process .common-questions h3 {
+    font-size: 1.8em;
+    line-height: 1.6;
+  }
 }
 #our-process .common-questions p {
   line-height: 12px;
@@ -2994,8 +3138,8 @@ section#our-process {
 #our-process .common-questions span {
   font-family: 'latobold';
   text-transform: uppercase;
-  font-size: 38px;
-  line-height: 44px;
+  font-size: 1.5em;
+  line-height: 1.1;
 }
 #our-process .common-questions span:first-child {
   display: block;

@@ -46,17 +46,42 @@ section#stories {
 			@media @L {
 				font-size: @fontSizeH1 - 0.2em;
 			}
+			@media @ML-V {
+				font-size: @fontSizeH1 - 0.4em;
+				padding-top: @heightRibbon / 8;
+				line-height: 1.2;
+			}
+			span {
+				&:first-child {
+					@media @ML-V {
+						display: block;
+						font-size: @fontSizeH1 - 0.6em;
+						//text-indent: 20px;
+					}
+				}
+				&:last-child {
+					line-height: 1.6;
+				}
+			}
 		}
 	}
 
 	.call-to-action { // see below location for styles
 		&:extend(#intro .call-to-action all);
+		@media @L, @ML {
+			padding-left: 15px;
+		}
+		a {
+			@media @ML {
+				padding-left: 20px;
+			}
+		}
 	}
 			
 
 	blockquote {
-		width: 27%;
-		margin-left: 73%;
+		width: 35%;
+		margin-left: 70%;
 		margin-bottom: 20px;
 		.headerFontFamily();
 		font-size: 24px;
@@ -82,26 +107,36 @@ section#stories {
 		    right: 20px;
 		}
 		@media @L {
-			width: 37%;
-			margin-left: 63%;
+			width: 31%;
+			margin-left: 69%;
+		}
+		@media @ML-V {
+			width: 45%;
+			margin-left: 55%;
 		}
 		span {
 			display: block;
 			font-size: 48px;
-			line-height: 72px;			
+			line-height: 72px;
+			@media @XL {
+				line-height: 60px;
+			}		
 		}
-		+ a {
+		+ a { //More happy stories from GetInsured customers
 			display: block;
 			text-align: right;
 			color: @white;
-			margin-right: 20px;
+			margin-right: 5%;
 			.accentFont();
 			//.headerSecondaryFontFamily();
 			&:hover {
 				text-decoration: none;
 			}
 			@media @L {
-				margin-right: 60px;
+				margin-right: 66px;
+			}
+			@media @ML {
+				margin-right: 8px;
 			}
 		} 
 	}

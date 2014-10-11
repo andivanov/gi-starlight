@@ -16,8 +16,13 @@ section#intro {
 	background: url('../img/images/intro.jpg')no-repeat top center;
 	.background-size(cover);
 	.calc(height, ~'100vh - 104px'); //104 is the height of the nav element - masthead.
-	@media @ML, @M, @S {
-		.calc(height, ~'100vh - 50px'); //height of the nav element - masthead.
+	@media @ML{
+		.calc(height, ~'100vh - 160px'); //height of the nav element - masthead.
+	}
+	@media @ML-V{
+		.calc(height, ~'100vh - 160px'); //height of the nav element - masthead.
+		background: url('../img/images/intro-tablet.jpg')no-repeat top center;
+		.background-size(cover);
 	}
 	.ribbon {
 		position: relative;
@@ -45,9 +50,6 @@ section#intro {
 		.h1Styles();
 		height: 100%;
 		.transition(all 0.25s ease);
-		@media @S {
-			display: none;
-		}
 		&:after {
 			.transparentBg();
 			background: #000;
@@ -56,6 +58,11 @@ section#intro {
 		}
 		h1 {
 			line-height: 1.24;
+			@media @ML-V {
+				font-size: @fontSizeH1 - 0.3em;
+				line-height: 0.7;
+				margin-top: 1.5em;
+			}
 		}
 		span {
 			display: block;
@@ -64,18 +71,14 @@ section#intro {
 				font-size: @fontSizeH1 - 0.7em;
 				line-height: @heightRibbon / 4 + 10px;
 			}
-			@media @MLL {
-				font-size: @fontSizeH1 - 0.8em;
-				line-height: @heightRibbon / 4 + 12px;
-			}
 			@media @ML {
 				font-size: @fontSizeH1 - 0.9em;
 				line-height: @heightRibbon / 4 + 14px;
 			}
-			@media @M {
-				display: inline;
+			@media @ML-V {
 				font-size: @fontSizeH1 - 0.7em;
-				line-height: @heightRibbon / 4 + 16px;
+				display: block;
+				line-height: 1.9;
 			}
 		}
 	}
@@ -83,6 +86,9 @@ section#intro {
 	.call-to-action {
     	padding-top: 26px;
     	padding-left: @heightRibbon / 4;
+		@media @ML-V {
+			padding-top: @heightRibbon / 3.4;
+		}
 		a {
 			display: block;
 			height: 70px;
@@ -96,7 +102,7 @@ section#intro {
 				 	@media @L {
 						right: 20px;
 					}
-					@media @MLL {
+					@media @ML-V {
 						right: 20px;
 					}
 				}
@@ -117,6 +123,12 @@ section#intro {
 					width: 19px;
 					height: 19px;
 				}
+				@media @ML-V {
+					right: 24px;
+					top: 19px;
+					width: 20px;
+					height: 20px;
+				}
 			}
 			@media @L {
 				font-size: 0.9em;
@@ -126,6 +138,21 @@ section#intro {
 				font-size: 0.9em;
 				padding-left: 10px;
 			}
+			@media @ML-V {
+				height: 60px;
+				font-size: 0.9em;
+				padding-left: 10px;
+				padding-top: 6px;
+			}
+			span {
+				letter-spacing: .02em;
+				&:first-letter {
+					letter-spacing: 2px;
+				}
+				@media @ML-V {
+					font-size: 23px;
+				}
+			}
 		}
 		&:after {
 			background: @callToActionBtnBgColor;
@@ -133,19 +160,6 @@ section#intro {
 			.opacity(.5);
 			.transition(all 0.5s ease); // transition added for the hover effect
 			.color-wide-right();
-		}
-		span {
-			letter-spacing: .02em;
-			&:first-letter {
-				letter-spacing: 2px;
-			}
-			@media @M {
-				//display: inline;
-				font-size: 30px;
-			}
-			@media @S {
-				font-size: 26px;
-			}
 		}
 	}
 
@@ -162,48 +176,35 @@ section#intro {
 		.transition(all 0.2s ease);
 		position: relative;
 		z-index: 0;
+		padding-top: @heightRibbon / 4;
 		@media @L {
 			font-size: 13px;
 		}
-		@media @MLL {
-			font-size: 12px;
-		}
 		@media @ML {
 			font-size: 10px;
-		}
-		@media @M {
-			font-size: 0;
-		}
-		@media @S {
-			display: none;
 		}
 		&:after {
 			.background-image(linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%,rgba(0, 0, 0, 0.6) 100%));
 			.color-wide-left();
 		}
-		ul {
-			padding-top: @heightRibbon / 4;
-			@media @MLL, @ML, @M, @S  {
-				text-align: center;
-			}
-		}
 		li {
 			margin: 0 4% 0 0;
 			.transition(all 0.2s ease);
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
 			@media @L {
 				margin: 0 1.3%;
 			}
-			@media @MLL {
-				margin: 0 1%;
-			}
 			@media @ML {
-				margin: 0 1%;
+				margin: 0 3.3%;
 			}
-			@media @M {
-				margin: 0 4%;
-			}
-			@media @S {
-				margin: 0 2%;
+			@media @ML-V {
+				font-size: 9px;
+				margin: 0 0.5%;
 			}
 			span {
 				display: block;
@@ -230,16 +231,6 @@ section#intro {
 		p {
 			margin-left: @heightRibbon / 9;
 			margin-top: 10px;
-			@media @ML {
-				text-align: center;
-			}
-			@media @M {
-				text-align: center;
-				margin-top: @heightRibbon / 10;
-			}
-			@media @S {
-				margin-left: @heightRibbon - 40px;
-			}
 		}
 	}
 	
@@ -247,6 +238,9 @@ section#intro {
 		text-transform: lowercase;
 		font-size: 4.4em;
 		position: relative;
+		@media @ML-V {
+			font-size: 3.7em;
+		}
 		.countdown-text {
 			font-size: 0.30em;
 			position: absolute;
@@ -254,13 +248,24 @@ section#intro {
 			width: 260px;
 			top: 8px;
 			left: 94px;
-			span{
+			span{ 
 				font-size: 0.7em;
+			}
+			@media @ML {
+				left: 100%;
+			}
+			@media @ML-V {
+				font-size: 0.35em;
+				left: 80px;
+				top: 4px;
 			}
 		}
 		+ span {
 			.accentFont();
 			font-size: 1.35em;
+			@media @ML-V {
+				font-size: 1.34em;
+			}
 		}
 	}
 	
@@ -280,8 +285,15 @@ section#intro {
 			overflow: hidden;
 			top: -8px;
 			line-height: 1;
-			@media @MLL {
-				margin: 0.5em 1%;
+			@media @L {
+				@margin: 2.95%;
+				margin-left: @margin;
+				margin-right: @margin;
+			}
+			@media @ML {
+				@margin: 2.1%;
+				margin-left: @margin;
+				margin-right: @margin;
 			}
 			&:first-child {
 				margin-left: 0;

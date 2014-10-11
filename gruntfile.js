@@ -61,7 +61,8 @@ module.exports = function(grunt) {
                 files: ['less/**.less','css/*.css','js/*.js'],
                 tasks: ['less:style', 'concat:dist', 'cssmin:combine'],
                 options: {
-                    livereload: true,
+                    //port: 8888,
+                    //livereload: true,
                 }
             }
         }

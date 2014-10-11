@@ -33,6 +33,10 @@ section#our-process {
 		margin-left: 50%;
 		margin-bottom: 60px;
 		position: relative;
+		@media @ML-V {
+			width: 65%;
+			margin-left: 35%;
+		}
 		&:before {
 			content: "";
 			background-image: url('../img/images/plan-select-screenshot.png');
@@ -42,7 +46,15 @@ section#our-process {
 			position: absolute;
 			z-index: 0;
 			bottom: -7.5em;
-			left: -38em;
+			left: -40.7em;
+			@media @ML {
+				left: -33.5em;
+				bottom: -9.1em;
+				width: 428px;
+			}
+			@media @ML-V {
+				left: -33.9em;
+			}
 		}
 		&:after {
 	    	content:"";
@@ -84,8 +96,14 @@ section#our-process {
 		    }
 		    span {
 		    	display: block;
-		    	font-size: 24px;
+		    	font-size: 2em;
 		    	color: #2383C7;
+		    	@media @L {
+		    		font-size: 1.5em;
+		    	}
+		    	@media @ML-V {
+		    		font-size: 1.45em;
+		    	}
 		    }
 		}
 	}
@@ -104,7 +122,19 @@ section#our-process {
 		padding-bottom: @heightRibbon / 2;
 		margin-bottom: 0;
 		li {
-			margin: 0 2%;
+			margin: 0 1.75%;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			@media @L {
+				margin: 0 2.5%;
+			}
+			@media @ML {
+				margin: 0 0.9%;
+			}
 		}
 	}
 
@@ -127,7 +157,10 @@ section#our-process {
 			width: 400px;
 			height: 277px;
 			bottom: 0;
-			left: 52%;
+			left: 56.7%;
+			@media @ML {
+				left: 58.2%;
+			}
 		}
 		&:before {
 			background: #2383C7;
@@ -135,9 +168,14 @@ section#our-process {
 		}
 		h3 {
 			text-align: left;
-			font-size: 24px;
-			line-height: 36px;
+			font-size: 2em;
+			line-height: 1.4;
+			margin-bottom: 1.2em;
 			.headerFontFamily();
+			@media @ML-V {
+				font-size: 1.8em;
+				line-height: 1.6;
+			}
 		}
 		p {
 			line-height: 12px;
@@ -148,8 +186,8 @@ section#our-process {
 		span {
 			.accentSecondaryFont();
 			text-transform: uppercase;
-			font-size: 38px;
-			line-height: 44px;
+			font-size: 1.5em;
+			line-height: 1.1;
 			&:first-child {
 				display: block;
 			}
