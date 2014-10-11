@@ -1659,6 +1659,9 @@ height:calc(100vh - 50px);
 ;
   }
 }
+a[href^=tel] {
+  color: #ffffff;
+}
 h1 {
   font-family: 'roboto_slabthin';
   font-size: 2em;
@@ -2967,7 +2970,7 @@ section#our-process {
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   #our-process ol.our-process-steps:before {
     left: -33.5em;
-    bottom: -9.1em;
+    bottom: -7.8em;
     width: 428px;
   }
 }
