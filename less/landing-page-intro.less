@@ -13,16 +13,28 @@
 
 // ---------------------------
 section#intro {
-	background: url('../img/images/intro.jpg')no-repeat top center;
-	.background-size(cover);
-	.calc(height, ~'100vh - 104px'); //104 is the height of the nav element - masthead.
-	@media @ML{
-		.calc(height, ~'100vh - 160px'); //height of the nav element - masthead.
+	@media @S-V {
+		.calc(height, ~'100vh - 50px'); //height of the nav element - masthead.
+		background: url('../img/images/intro-mobile.jpg')no-repeat top center;
+		.background-size(cover);
+	}
+	@media @M {
+		.calc(height, ~'100vh - 50px'); //height of the nav element - masthead.
+		background: url('../img/images/intro-mobile.jpg')no-repeat top center;
+		.background-size(cover);
 	}
 	@media @ML-V{
 		.calc(height, ~'100vh - 160px'); //height of the nav element - masthead.
 		background: url('../img/images/intro-tablet.jpg')no-repeat top center;
 		.background-size(cover);
+	}
+	@media @ML{
+		.calc(height, ~'100vh - 160px'); //height of the nav element - masthead.
+	}
+	@media @L, @XL, @XXL {
+		background: url('../img/images/intro-desktop.jpg')no-repeat top center;
+		.background-size(cover);
+		.calc(height, ~'100vh - 104px'); //104 is the height of the nav element - masthead.
 	}
 	.ribbon {
 		position: relative;
@@ -32,6 +44,10 @@ section#intro {
 				position: absolute;
 				border-bottom: 1px solid rgba(10,10,10, 0.2);
 				width: 100%;			
+			}
+			@media @S-V {
+				height: auto;
+				//.calc(height, ~'100vh - 170px');
 			}
 		}
 		&:nth-of-type(2) {
@@ -50,6 +66,9 @@ section#intro {
 		.h1Styles();
 		height: 100%;
 		.transition(all 0.25s ease);
+		@media @S-V {
+			.calc(height, ~'100vh - 250px'); //height of the nav element - masthead.
+		}
 		&:after {
 			.transparentBg();
 			background: #000;
@@ -58,27 +77,56 @@ section#intro {
 		}
 		h1 {
 			line-height: 1.24;
+			
+			@media @S-V {
+				margin-top: 25%;
+				font-size: 1.7em;
+				line-height: 1.5;
+			}
+			@media @XS-V {
+				margin-top: 15%;
+				font-size: 1.65em;
+				line-height: 1.5;
+			}
 			@media @ML-V {
 				font-size: @fontSizeH1 - 0.3em;
 				line-height: 0.7;
 				margin-top: 1.5em;
 			}
+			@media @ML {
+				font-size: @fontSizeH1;
+				line-height: 0.7;
+				margin-top: 1.5em;
+			}
+			@media @L {
+				font-size: @fontSizeH1;
+				line-height: 1;
+				margin-top: 1em;
+			}
 		}
 		span {
 			display: block;
 			font-size: @fontSizeH1 - 0.5em;
-			@media @L {
-				font-size: @fontSizeH1 - 0.7em;
-				line-height: @heightRibbon / 4 + 10px;
-			}
-			@media @ML {
-				font-size: @fontSizeH1 - 0.9em;
-				line-height: @heightRibbon / 4 + 14px;
+			@media @S-V {
+				line-height: 1.2;
+				margin-top: 0.2em;
+				font-size: @fontSizeH1 - 0.2em;
 			}
 			@media @ML-V {
 				font-size: @fontSizeH1 - 0.7em;
 				display: block;
 				line-height: 1.9;
+				margin-top: 0;
+			}
+			@media @ML {
+				font-size: @fontSizeH1 - 0.9em;
+				line-height: @heightRibbon / 4 + 14px;
+				margin-top: 0;
+			}
+			@media @L {
+				font-size: @fontSizeH1 - 0.7em;
+				line-height: @heightRibbon / 4 + 10px;
+				margin-top: 0;
 			}
 		}
 	}
@@ -86,8 +134,22 @@ section#intro {
 	.call-to-action {
     	padding-top: 26px;
     	padding-left: @heightRibbon / 4;
+    	@media @S-V {
+			padding-left: @heightRibbon / 6;
+			padding-top: 1em;
+			padding-bottom: 6%;
+		}
 		@media @ML-V {
-			padding-top: @heightRibbon / 3.4;
+			padding-left: @heightRibbon / 4;
+			padding-top: 34px;
+		}
+		@media @ML {
+			padding-left: @heightRibbon / 4;
+			padding-top: 26px;
+		}
+		@media @L {
+			padding-left: @heightRibbon / 8;
+			padding-top: 26px;
 		}
 		a {
 			display: block;
@@ -99,10 +161,13 @@ section#intro {
 			&:hover {
 				&:before { // moving arrow on hover
 				 	right: 46px;
-				 	@media @L {
+				 	@media @S-V {
+						right: 16px;
+					}
+				 	@media @ML-V {
 						right: 20px;
 					}
-					@media @ML-V {
+				 	@media @L {
 						right: 20px;
 					}
 				}
@@ -117,11 +182,8 @@ section#intro {
 				top: 22px;
 				right: 50px;
 				.transition(all 0.25s ease);
-				@media @L {
-					right: 24px;
-					top: 24px;
-					width: 19px;
-					height: 19px;
+				@media @S-V {
+					right: 20px;
 				}
 				@media @ML-V {
 					right: 24px;
@@ -129,13 +191,14 @@ section#intro {
 					width: 20px;
 					height: 20px;
 				}
+				@media @L {
+					right: 24px;
+					top: 24px;
+					width: 19px;
+					height: 19px;
+				}
 			}
-			@media @L {
-				font-size: 0.9em;
-				padding-left: 20px;
-			}
-			@media @ML {
-				font-size: 0.9em;
+			@media @S-V {
 				padding-left: 10px;
 			}
 			@media @ML-V {
@@ -143,6 +206,14 @@ section#intro {
 				font-size: 0.9em;
 				padding-left: 10px;
 				padding-top: 6px;
+			}
+			@media @ML {
+				font-size: 0.9em;
+				padding-left: 10px;
+			}
+			@media @L {
+				font-size: 0.9em;
+				padding-left: 20px;
 			}
 			span {
 				letter-spacing: .02em;
@@ -177,11 +248,17 @@ section#intro {
 		position: relative;
 		z-index: 0;
 		padding-top: @heightRibbon / 4;
-		@media @L {
-			font-size: 13px;
+		@media @S-V {
+			display: none;
+		}
+		@media @ML-V, @ML, @L, @XL, @XXL {
+			display: block;
 		}
 		@media @ML {
 			font-size: 10px;
+		}
+		@media @L {
+			font-size: 13px;
 		}
 		&:after {
 			.background-image(linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%,rgba(0, 0, 0, 0.6) 100%));
@@ -196,16 +273,16 @@ section#intro {
 			&:last-child {
 				margin-right: 0;
 			}
-			@media @L {
-				margin: 0 1.3%;
-			}
-			@media @ML {
-				margin: 0 3.3%;
-			}
 			@media @ML-V {
 				font-size: 9px;
 				margin: 0 0.5%;
 			}
+			@media @ML {
+				margin: 0 3.3%;
+			}
+			@media @L {
+				margin: 0 1.3%;
+			}			
 			span {
 				display: block;
 				margin: 0 auto 6px;
@@ -229,8 +306,14 @@ section#intro {
 			.color-wide-right();
 		}
 		p {
-			margin-left: @heightRibbon / 9;
+			margin-left: 0;
 			margin-top: 10px;
+			@media @ML-V {
+				margin-left: @heightRibbon / 8;
+			}
+			@media @XL {
+				margin-left: @heightRibbon / 8;
+			}
 		}
 	}
 	
@@ -251,18 +334,21 @@ section#intro {
 			span{ 
 				font-size: 0.7em;
 			}
-			@media @ML {
-				left: 100%;
-			}
 			@media @ML-V {
 				font-size: 0.35em;
 				left: 80px;
 				top: 4px;
 			}
+			@media @ML {
+				left: 100%;
+			}
 		}
 		+ span {
 			.accentFont();
 			font-size: 1.35em;
+			@media @S-V {
+				font-size: 1.33em;
+			}
 			@media @ML-V {
 				font-size: 1.34em;
 			}
@@ -276,8 +362,11 @@ section#intro {
 		line-height: 1;
 		background: #E9E9E9;
 		text-align: center;
-		@media @M, @S {
+		@media @S-V {
 			display: none;
+		}
+		@media @ML, @ML-V, @L, @XL, @XXL {
+			display: block;
 		}
 		li {
 			margin: 8px 2% 0;
@@ -285,13 +374,23 @@ section#intro {
 			overflow: hidden;
 			top: -8px;
 			line-height: 1;
-			@media @L {
-				@margin: 2.95%;
+			@media @ML-V {
+				@margin: 0.5%;
 				margin-left: @margin;
 				margin-right: @margin;
 			}
 			@media @ML {
+				@margin: 1.8%;
+				margin-left: @margin;
+				margin-right: @margin;
+			}
+			@media @L {
 				@margin: 2.1%;
+				margin-left: @margin;
+				margin-right: @margin;
+			}
+			@media @XL {
+				@margin: 2.65%;
 				margin-left: @margin;
 				margin-right: @margin;
 			}

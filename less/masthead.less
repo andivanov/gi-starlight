@@ -10,9 +10,13 @@
 		font-weight: 200;
 		margin-left: 21px;
 		position: absolute;
-		//box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 		padding: 0;
 		max-height: 50px;
+	}
+	@media @S-V {
+		img {
+			display: none;
+		}
 	}
 }
 
@@ -25,7 +29,7 @@
 	border:none;
 	font-weight: @font-weight-light;
 	font-size: @nav-font-size;
-	@media @S{
+	@media @S-V{
 		padding-left:0;
 	}
 }

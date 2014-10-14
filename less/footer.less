@@ -21,19 +21,29 @@ footer.home-section-footer{
 		width:15%;
 		margin-right:6%;
 		margin-top:34px;
-		@media @M{
-			width:70%;
+		@media @ML-V{
+			width: 33%;
 			margin-right:0;
 		}
-		@media @S{
-			width:100%;
-			margin-bottom:0;
+		@media @M{
+			width:30%;
+			margin-right:0;
 		}
+		// @media @S{
+		// 	width:100%;
+		// 	margin-bottom:0;
+		// }
 		&:first-child{
 			width:49%;
 			margin-top:0;
-			@media @M, @S{
+			@media @S{
 				width:100%;
+			}
+			@media @ML-V {
+				width: 33%;
+			}
+			@media @ML{
+				width:30%;
 			}
 			li{
 				display:inline;
@@ -63,13 +73,20 @@ footer.home-section-footer{
 			}
 		}
 		&:last-child{
-			width:13%;
-			@media @M{
-				width:30%;
-			}
-			@media @S{
+			@media @S, @M{
 				margin-top:0;
 				width:100%;
+			}
+			// @media @M{
+			// 	width:30%;
+			// }
+			@media @ML-V{
+				margin-top: 2em;
+				width:30%;
+			}
+			@media @ML{
+				margin-top: 2em;
+				width:30%;
 			}
 		}
 		li{
