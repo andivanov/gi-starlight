@@ -10,7 +10,7 @@
 // ---------------------------
 //
 //
-// ---------------------------
+// ---------------------------	
 
 @team-border-color: 			lighten(@GI-blue, 10%);
 
@@ -21,6 +21,16 @@
 		padding:40px 0;
 		p{
 			font-size: @fontSizeH1 - 0.65em; // 2em - x
+			line-height: @fontSizeH1 - 0.75em;
+		}
+		a{
+			font-size: @fontSizeH1 - 1em; // 2em - x
+			color:@white;
+			border-bottom:1px dotted @white;
+			padding-bottom:2px;
+			&:hover{
+				text-decoration: none;
+			}
 		}
 		background-color:@GI-blue;
 	}
@@ -36,8 +46,8 @@
 	.gi-in-press{
 		&:extend(#our-process .gi-in-press all);
 		border-top: 1px solid @team-border-color;
-		margin-top: 30px;
-		padding-top: 30px;
+		margin-top: 20px;
+		padding-top: 20px;
 		padding-bottom: 0;
 
 	}

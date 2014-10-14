@@ -7,25 +7,25 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 .accolades-licensed {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -997px;
+  background-position: 0px -1068px;
   width: 92px;
   height: 92px;
 }
 .accolades-plans {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -1202px;
-  width: 158px;
-  height: 144px;
+  background-position: 0px -827px;
+  width: 76px;
+  height: 69px;
 }
 .accolades-usa {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -827px;
+  background-position: 0px -898px;
   width: 128px;
   height: 79px;
 }
 .accolades-well {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -908px;
+  background-position: 0px -979px;
   width: 86px;
   height: 87px;
 }
@@ -103,13 +103,13 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .gi-man-build {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -1348px;
+  background-position: 0px -1273px;
   width: 203px;
   height: 166px;
 }
 .gi-man-superman {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -1091px;
+  background-position: 0px -1162px;
   width: 286px;
   height: 109px;
 }
@@ -145,7 +145,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .partner-w-healthcaregov {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -1516px;
+  background-position: 0px -1441px;
   width: 197px;
   height: 197px;
 }

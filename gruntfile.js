@@ -20,6 +20,7 @@ module.exports = function(grunt) {
                 }], 
             }
         },
+        
         sprite:{
             all: {
                 src: 'img/sprite-pre/*.png',
@@ -33,6 +34,23 @@ module.exports = function(grunt) {
                 destCSS: 'css/sprites.css'
             }
         },
+
+        iconizr: {
+            options: {
+                dims: true,
+                common: "sprite-svg",
+                padding: 1,
+                render    : {
+                    css     : false,
+                    less    : 'less'
+                }
+            },
+            your_target: {
+                src      : 'img/svg-pre',
+                dest     : 'less/svg/'
+            }
+        },
+
         less: {
             style: {
                 files: {
@@ -73,8 +91,18 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-spritesmith');
+    grunt.loadNpmTasks('grunt-iconizr');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    
-    grunt.registerTask('default', [ 'less', 'concat', 'cssmin', 'imagemin', 'sprite', 'watch' ]);
+
+    // grunt.registerTask('build-sprite', ['iconizr']);
+    grunt.registerTask('default', [ 'less', 'concat', 'cssmin', 'iconizr','imagemin', 'sprite','watch' ]);
 };
+
+
+
+
+
+
+
+

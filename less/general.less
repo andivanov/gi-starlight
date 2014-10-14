@@ -70,8 +70,6 @@ h6 {
     .headerFontFamily();
 }
 
-
-
 // ------------------------
 //
 // *Fonts
@@ -377,10 +375,14 @@ h6 {
     font-size:1.25em;
     margin:40px 0 20px;
 }
-.sprite{
-    display:block;
-}
 
+.sprite-svg {
+    display: inline-block;
+    background-image: url('../less/svg/icons/icons.svg');
+    .no-svg & {
+        background-image: url('../less/svg/icons/icons.png');
+    }
+}
 
 // ------------------------
 //

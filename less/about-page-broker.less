@@ -14,8 +14,17 @@
 
 #broker-build{
 	border-top:1px solid darken(@base-grey,5%);
+	h2{
+		&:after{
+					content:'';
+					&:extend(.svg-icon_bcbs);
+					&:extend(.svg-icon_bcbs-dims);
+					background-size:100%;
+			}
+	}
 	.company-highlights{
 		text-align:center;
+		padding:10px 0 0;
 		&:after{
 			.color-wide-left();
 			background:@GI-green;
@@ -23,13 +32,25 @@
 		li{
 			text-align:left;
 			margin:0;
-			width:29%;flake
+			width:29%;
+			position:relative;
+			span,
+			i,
+			p{
+				position:absolute;
+			}
 			span{
 				font-size:@fontSizeH1 + 0.25em;
 				display:block;
+				right:55px;
 			}
 			p{
 				font-size:@fontSizeH1 - 0.5em;
+				top:40px;
+				right:22px;
+			}
+			i{
+				top:0;
 			}
 		}
 	}

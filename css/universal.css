@@ -7,25 +7,25 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 .accolades-licensed {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -997px;
+  background-position: 0px -1068px;
   width: 92px;
   height: 92px;
 }
 .accolades-plans {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -1202px;
-  width: 158px;
-  height: 144px;
+  background-position: 0px -827px;
+  width: 76px;
+  height: 69px;
 }
 .accolades-usa {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -827px;
+  background-position: 0px -898px;
   width: 128px;
   height: 79px;
 }
 .accolades-well {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -908px;
+  background-position: 0px -979px;
   width: 86px;
   height: 87px;
 }
@@ -103,13 +103,13 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .gi-man-build {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -1348px;
+  background-position: 0px -1273px;
   width: 203px;
   height: 166px;
 }
 .gi-man-superman {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -1091px;
+  background-position: 0px -1162px;
   width: 286px;
   height: 109px;
 }
@@ -145,7 +145,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .partner-w-healthcaregov {
   background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -1516px;
+  background-position: 0px -1441px;
   width: 197px;
   height: 197px;
 }
@@ -1626,6 +1626,131 @@ a .icon-flip-vertical:before {
 .icon-renren:before {
   content: "\f18b";
 }
+.sprite-svg {
+  background-repeat: no-repeat;
+  background-image: url(icons/icons.svg);
+}
+.svg-icon_abcnews {
+  background-position: 0 0;
+}
+.svg-icon_abcnews-dims {
+  width: 155.9px;
+  height: 54.8px;
+}
+.svg-icon_aetna {
+  background-position: 0 -55px;
+}
+.svg-icon_aetna-dims {
+  width: 115.7px;
+  height: 35.5px;
+}
+.svg-icon_anthem {
+  background-position: 0 -91px;
+}
+.svg-icon_anthem-dims {
+  width: 135.8px;
+  height: 24.8px;
+}
+.svg-icon_bcbs,
+#broker-build h2:after {
+  background-position: 0 -116px;
+}
+.svg-icon_bcbs-dims,
+#broker-build h2:after {
+  width: 72.5px;
+  height: 64px;
+}
+.svg-icon_cnn {
+  background-position: 0 -180px;
+}
+.svg-icon_cnn-dims {
+  width: 87.9px;
+  height: 49.9px;
+}
+.svg-icon_contact {
+  background-position: 0 -230px;
+}
+.svg-icon_contact-dims {
+  width: 35.5px;
+  height: 32.2px;
+}
+.svg-icon_forbes {
+  background-position: 0 -263px;
+}
+.svg-icon_forbes-dims {
+  width: 129.2px;
+  height: 38px;
+}
+.svg-icon_giman-build {
+  background-position: 0 -301px;
+}
+.svg-icon_giman-build-dims {
+  width: 205.4px;
+  height: 168.4px;
+}
+.svg-icon_giman-superman {
+  background-position: 0 -470px;
+}
+.svg-icon_giman-superman-dims {
+  width: 288.3px;
+  height: 110.5px;
+}
+.svg-icon_humana {
+  background-position: 0 -581px;
+}
+.svg-icon_humana-dims {
+  width: 125.3px;
+  height: 39.3px;
+}
+.svg-icon_kaiser {
+  background-position: 0 -621px;
+}
+.svg-icon_kaiser-dims {
+  width: 186.8px;
+  height: 41.7px;
+}
+.svg-icon_licensed {
+  background-position: 0 -663px;
+}
+.svg-icon_licensed-dims {
+  width: 46.3px;
+  height: 46.3px;
+}
+.svg-icon_news {
+  background-position: 0 -710px;
+}
+.svg-icon_news-dims {
+  width: 31.7px;
+  height: 35px;
+}
+.svg-icon_partner {
+  background-position: 0 -745px;
+}
+.svg-icon_partner-dims {
+  width: 45.2px;
+  height: 38.5px;
+}
+.svg-icon_plans {
+  background-position: 0 -784px;
+}
+.svg-icon_plans-dims {
+  width: 77.8px;
+  height: 71px;
+}
+.svg-icon_usa {
+  background-position: 0 -855px;
+}
+.svg-icon_usa-dims {
+  width: 63.5px;
+  height: 39.7px;
+}
+.svg-icon_wsj {
+  background-position: 0 -895px;
+}
+.svg-icon_wsj-dims {
+  width: 283.2px;
+  height: 45.3px;
+}
 html,
 body {
   -webkit-box-sizing: border-box;
@@ -1789,8 +1914,12 @@ h6 {
 .ribbon .row {
   height: 100%;
 }
-.sprite {
-  display: block;
+.sprite-svg {
+  display: inline-block;
+  background-image: url('../less/svg/icons/icons.svg');
+}
+.no-svg .sprite-svg {
+  background-image: url('../less/svg/icons/icons.png');
 }
 .navbar-brand {
   position: relative;
@@ -3236,6 +3365,12 @@ section#our-process {
   font-size: 1.5em;
   font-family: 'latobold';
 }
+#about a,
+#broker-build a,
+#team a,
+#locations a {
+  font-size: 1.3em;
+}
 section#about {
   background-color: #2b2b2b;
   opacity: 0.99;
@@ -3278,8 +3413,13 @@ section#about h2 {
 #broker-build {
   border-top: 1px solid #c2c2c2;
 }
+#broker-build h2:after {
+  content: '';
+  background-size: 100%;
+}
 #broker-build .company-highlights {
   text-align: center;
+  padding: 10px 0 0;
 }
 #broker-build .company-highlights:after {
   display: block;
@@ -3297,13 +3437,25 @@ section#about h2 {
   text-align: left;
   margin: 0;
   width: 29%;
+  position: relative;
 }
-#broker-build .company-highlights li flake span {
+#broker-build .company-highlights li span,
+#broker-build .company-highlights li i,
+#broker-build .company-highlights li p {
+  position: absolute;
+}
+#broker-build .company-highlights li span {
   font-size: 2.25em;
   display: block;
+  right: 55px;
 }
 #broker-build .company-highlights li p {
   font-size: 1.5em;
+  top: 40px;
+  right: 22px;
+}
+#broker-build .company-highlights li i {
+  top: 0;
 }
 #broker-build .health-broker,
 #broker-build .build-marketplaces {
@@ -3373,6 +3525,16 @@ height:calc(100vh - 120px);
 }
 #team .contact-group p {
   font-size: 1.35em;
+  line-height: 1.25em;
+}
+#team .contact-group a {
+  font-size: 1em;
+  color: #ffffff;
+  border-bottom: 1px dotted #ffffff;
+  padding-bottom: 2px;
+}
+#team .contact-group a:hover {
+  text-decoration: none;
 }
 #team .contact div {
   border-right: 1px solid #298ada;
@@ -3387,7 +3549,7 @@ height:calc(120px);
 }
 #team .gi-in-press {
   border-top: 1px solid #298ada;
-  margin-top: 30px;
-  padding-top: 30px;
+  margin-top: 20px;
+  padding-top: 20px;
   padding-bottom: 0;
 }
