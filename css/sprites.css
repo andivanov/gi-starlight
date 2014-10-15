@@ -7,73 +7,43 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 .carrier-united-health-one {
   background-image: url(../img/sprite-png-post/sprite-main.png);
-  background-position: 0px -26px;
+  background-position: 0px 0px;
   width: 136px;
   height: 26px;
 }
 .clients-CA-coveredca {
   background-image: url(../img/sprite-png-post/sprite-main.png);
-  background-position: 0px -360px;
+  background-position: 0px -173px;
   width: 154px;
   height: 56px;
 }
 .clients-ID-yourhealthidaho {
   background-image: url(../img/sprite-png-post/sprite-main.png);
-  background-position: 0px -254px;
+  background-position: 0px -67px;
   width: 116px;
   height: 47px;
 }
 .clients-MS-onemississippi {
   background-image: url(../img/sprite-png-post/sprite-main.png);
-  background-position: 0px -83px;
+  background-position: 0px -28px;
   width: 167px;
   height: 37px;
 }
 .clients-NM-nmhix {
   background-image: url(../img/sprite-png-post/sprite-main.png);
-  background-position: 0px -418px;
+  background-position: 0px -231px;
   width: 99px;
   height: 59px;
 }
 .get-started-arrow {
   background-image: url(../img/sprite-png-post/sprite-main.png);
-  background-position: 0px -303px;
+  background-position: 0px -116px;
   width: 56px;
   height: 55px;
 }
 .partner-w-healthcaregov {
   background-image: url(../img/sprite-png-post/sprite-main.png);
-  background-position: 0px -479px;
+  background-position: 0px -292px;
   width: 197px;
   height: 197px;
-}
-.press-abcnews {
-  background-image: url(../img/sprite-png-post/sprite-main.png);
-  background-position: 0px -206px;
-  width: 140px;
-  height: 46px;
-}
-.press-cnn {
-  background-image: url(../img/sprite-png-post/sprite-main.png);
-  background-position: 0px -162px;
-  width: 91px;
-  height: 42px;
-}
-.press-forbes {
-  background-image: url(../img/sprite-png-post/sprite-main.png);
-  background-position: 0px -122px;
-  width: 151px;
-  height: 38px;
-}
-.press-venture-beat {
-  background-image: url(../img/sprite-png-post/sprite-main.png);
-  background-position: 0px -54px;
-  width: 199px;
-  height: 27px;
-}
-.press-wsj {
-  background-image: url(../img/sprite-png-post/sprite-main.png);
-  background-position: 0px 0px;
-  width: 232px;
-  height: 24px;
 }
