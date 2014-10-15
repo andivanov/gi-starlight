@@ -1,3 +1,11 @@
+.navbar {
+	min-height: 40px;
+	.border-radius(0);
+}
+#bs-example-navbar-collapse-1 { 
+	max-height: 40px;
+}
+
 .navbar-brand{
 	position: relative;
 	z-index: 1;
@@ -10,8 +18,9 @@
 		font-weight: 200;
 		margin-left: 21px;
 		position: absolute;
+		top: 5px;
 		padding: 0;
-		max-height: 50px;
+		max-height: 44px;
 	}
 	@media @S-V {
 		img {
@@ -39,6 +48,8 @@
 .navbar-default .navbar-nav > li > a{
 	color:@white;
 	font-size:14px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
 	color:@white;
@@ -121,15 +132,16 @@ nav{
 	}
 }
 
-nav{
-	li.number{
-		padding:15px 15px 14px;
-		color:@white;
-		a{
-			display:inline;
-			padding-left:5px;
-		}
-	}
+// nav{
+// 	li		a{
+// 			display:inline;
+// 			padding-left:5px;
+// 		}
+// 	}
+// }
+.number{ //add padding to li, remove from a --> remove padding from here after
+	padding:10px 15px 10px;
+	color:@white;
 }
 
 #secondary-navbar {
@@ -202,7 +214,7 @@ nav{
 }
 .navbar-left{
 	float:right!important;
-	margin-right:70px;
+	//margin-right:70px;
 }
 
 
@@ -233,8 +245,8 @@ img.brandpusher{
 	text-align:center;
 }
 #secondary-navbar .navbar-left{
-	margin:0 auto;
 	float:none!important;
+	text-align: right;
 }
 #secondary-navbar .navbar-left li{
 	float:none!important;

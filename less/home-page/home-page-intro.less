@@ -13,6 +13,15 @@
 
 // ---------------------------
 section#intro {
+	//
+	// local bootstrap reset
+	//
+	.list-inline {
+		margin-left: 0;
+	}
+	//
+	// local bootstrap reset ends
+	//
 	@media @S-V {
 		.calc(height, ~'100vh - 50px'); //height of the nav element - masthead.
 		background: url('../img/images/intro-mobile.jpg')no-repeat top center;
@@ -34,7 +43,7 @@ section#intro {
 	@media @L, @XL, @XXL {
 		background: url('../img/images/intro-desktop.jpg')no-repeat top center;
 		.background-size(cover);
-		.calc(height, ~'100vh - 104px'); //104 is the height of the nav element - masthead.
+		.calc(height, ~'100vh - 84px'); //104 is the height of the nav element - masthead.
 	}
 	.ribbon {
 		position: relative;
@@ -191,9 +200,9 @@ section#intro {
 				}
 				@media @L {
 					right: 24px;
-					top: 24px;
-					width: 19px;
-					height: 19px;
+					top: 20px;
+					width: 25px;
+					height: 25px;
 				}
 			}
 			@media @S-V {
@@ -234,7 +243,7 @@ section#intro {
 
 	.insurance-types {
 		@backgroundColor: 	#000;//#1F84C9;
-		@fontColor: 	 	#888;//#5CC2F8;
+		@fontColor: 	 	#b8b8b8;//#5CC2F8;
 		@borderColor: 	  	@fontColor;
 		@counterFontColor: 	#004D74;
 		text-transform: uppercase;
@@ -290,7 +299,7 @@ section#intro {
 
 	.counter {
 		@backgroundColor: 	#000;//#005C8D;
-		@fontColor: 	 	#888;//#5cc2f8;//#1F84C9;
+		@fontColor: 	 	#b8b8b8;//#5cc2f8;//#1F84C9;
 		@borderColor: 	  	@fontColor;
 		@counterFontColor: 	@white;//#004D74;
 		text-transform: uppercase;
@@ -385,12 +394,12 @@ section#intro {
 				margin-right: @margin;
 			}
 			@media @L {
-				@margin: 2.1%;
+				@margin: 1.6%;
 				margin-left: @margin;
 				margin-right: @margin;
 			}
 			@media @XL {
-				@margin: 2.65%;
+				@margin: 1.7%;
 				margin-left: @margin;
 				margin-right: @margin;
 			}
