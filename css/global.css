@@ -1864,15 +1864,15 @@ a[href^=tel] {
   color: #ffffff;
 }
 h1 {
-  font-family: 'roboto_slabthin';
+  font-family: 'roboto_slabregular';
   font-size: 2em;
 }
 h2 {
   text-align: center;
-  font-family: 'roboto_slabthin';
+  font-family: 'roboto_slabregular';
   font-size: 2.5em;
   margin-top: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   color: #5bb767;
   line-height: 1.5;
   text-transform: capitalize;
@@ -1886,18 +1886,18 @@ h2 span {
 }
 h3 {
   text-align: center;
-  font-family: 'roboto_slabthin';
+  font-family: 'roboto_slabregular';
   font-size: 1.25em;
 }
 h4 {
-  font-family: 'roboto_slabthin';
+  font-family: 'roboto_slabregular';
   font-size: 1em;
 }
 h5 {
-  font-family: 'roboto_slabthin';
+  font-family: 'roboto_slabregular';
 }
 h6 {
-  font-family: 'roboto_slabthin';
+  font-family: 'roboto_slabregular';
 }
 @font-face {
   font-family: 'latobold';
@@ -2000,6 +2000,18 @@ h6 {
 .no-svg .sprite-svg {
   background-image: url('../less/svg/icons/icons.png');
 }
+.navbar {
+  min-height: 40px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+#bs-example-navbar-collapse-1 {
+  max-height: 40px;
+}
 .navbar-brand {
   position: relative;
   z-index: 1;
@@ -2013,8 +2025,9 @@ h6 {
   font-weight: 200;
   margin-left: 21px;
   position: absolute;
+  top: 5px;
   padding: 0;
-  max-height: 50px;
+  max-height: 44px;
 }
 @media only screen and (max-height: 568px) {
   .navbar-brand img {
@@ -2042,6 +2055,8 @@ h6 {
 .navbar-default .navbar-nav > li > a {
   color: #ffffff;
   font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
@@ -2050,7 +2065,7 @@ h6 {
   background-color: #2c8b42;
 }
 nav {
-  font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+  font-family: 'latoregular', Helvetica, Arial, sans-serif;
 }
 nav li.nav-secondary {
   background-color: #48a95e;
@@ -2105,13 +2120,9 @@ nav ul.navbar-nav li.dropdown ul.dropdown-menu li:last-child {
 nav ul.navbar-nav li:first-child:hover {
   background-color: transparent;
 }
-nav li.number {
-  padding: 15px 15px 14px;
+.number {
+  padding: 10px 15px 10px;
   color: #ffffff;
-}
-nav li.number a {
-  display: inline;
-  padding-left: 5px;
 }
 #secondary-navbar {
   background: white;
@@ -2184,7 +2195,6 @@ nav li.number a {
 }
 .navbar-left {
   float: right!important;
-  margin-right: 70px;
 }
 img.brandpusher {
   height: 43px;
@@ -2213,8 +2223,8 @@ img.brandpusher {
   text-align: center;
 }
 #secondary-navbar .navbar-left {
-  margin: 0 auto;
   float: none!important;
+  text-align: right;
 }
 #secondary-navbar .navbar-left li {
   float: none!important;
@@ -2366,6 +2376,9 @@ footer.home-section-footer .copyright p {
   font-size: 14px;
   font-weight: 400;
 }
+section#intro .list-inline {
+  margin-left: 0;
+}
 @media only screen and (max-height: 568px) {
   section#intro {
     -lh-property: 0;
@@ -2421,9 +2434,9 @@ height:calc(100vh - 160px);
     -moz-background-size: cover;
     background-size: cover;
     -lh-property: 0;
-height:-webkit-calc(100vh - 104px);
-height:-moz-calc(100vh - 104px);
-height:calc(100vh - 104px);
+height:-webkit-calc(100vh - 84px);
+height:-moz-calc(100vh - 84px);
+height:calc(100vh - 84px);
 ;
   }
 }
@@ -2660,9 +2673,9 @@ height:calc(100vh - 250px);
   #lower-your-cost .call-to-action a:before,
   #stories .call-to-action a:before {
     right: 24px;
-    top: 24px;
-    width: 19px;
-    height: 19px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
   }
 }
 @media only screen and (max-height: 568px) {
@@ -2740,7 +2753,7 @@ height:calc(100vh - 250px);
 }
 #intro .insurance-types {
   text-transform: uppercase;
-  color: #888888;
+  color: #b8b8b8;
   font-size: 14px;
   height: 100%;
   font-family: 'latolight';
@@ -2823,7 +2836,7 @@ height:calc(100vh - 250px);
 }
 #intro .counter {
   text-transform: uppercase;
-  color: #888888;
+  color: #b8b8b8;
   font-size: 16px;
   height: 100%;
   position: relative;
@@ -2952,15 +2965,15 @@ section#about .carrier-logos li {
 @media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #intro .carrier-logos li,
   section#about .carrier-logos li {
-    margin-left: 2.1%;
-    margin-right: 2.1%;
+    margin-left: 1.6%;
+    margin-right: 1.6%;
   }
 }
 @media only screen and (min-width: 1280px) and (max-width: 2560px) {
   #intro .carrier-logos li,
   section#about .carrier-logos li {
-    margin-left: 2.65%;
-    margin-right: 2.65%;
+    margin-left: 1.7%;
+    margin-right: 1.7%;
   }
 }
 #intro .carrier-logos li:first-child,
@@ -3015,8 +3028,8 @@ section#about .carrier-logos li.carrier-cigna {
 }
 #lower-your-cost .subtitle p:after {
   content: "";
-  background-image: url('../img/images/geeman-card.png');
-  background-size: 100%;
+  background: url('../img/images/geeman-card.png') top center no-repeat;
+  background-size: 90%;
   display: block;
   margin: 0 auto;
   width: 651px;
@@ -3132,6 +3145,11 @@ section#about .carrier-logos li.carrier-cigna {
     right: 16px;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #lower-your-cost .call-to-action a:before {
+    top: 21px;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   #lower-your-cost .call-to-action a:before {
     top: 21px;
@@ -3245,7 +3263,7 @@ section#stories {
   width: 35%;
   margin-left: 70%;
   margin-bottom: 20px;
-  font-family: 'roboto_slabthin';
+  font-family: 'roboto_slabregular';
   font-size: 24px;
   border-left: none;
   line-height: 36px;
@@ -3258,16 +3276,16 @@ section#stories {
   color: #1FAB68;
   font-size: 8em;
   position: absolute;
-  top: 54px;
-  left: -22px;
+  top: 46px;
+  left: -50px;
 }
 #stories blockquote:after {
   content: close-quote;
   color: #1FAB68;
   font-size: 8em;
   position: absolute;
-  bottom: -60px;
-  right: 20px;
+  bottom: -56px;
+  right: -30px;
 }
 @media only screen and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   #stories blockquote {
@@ -3320,7 +3338,7 @@ section#our-process {
 #our-process h2,
 #our-process h4 {
   margin-top: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   color: #5bb767;
   line-height: 1.5;
   text-transform: capitalize;
@@ -3530,7 +3548,7 @@ section#our-process {
   font-size: 2em;
   line-height: 1.4;
   margin-bottom: 1.2em;
-  font-family: 'roboto_slabthin';
+  font-family: 'roboto_slabregular';
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   #our-process .common-questions h3 {
