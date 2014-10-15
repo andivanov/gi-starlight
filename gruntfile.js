@@ -23,8 +23,8 @@ module.exports = function(grunt) {
         
         sprite:{
             all: {
-                src: 'img/sprite-pre/*.png',
-                destImg: 'img/sprite-post/sprite-main.png',
+                src: 'img/sprite-png-pre/*.png',
+                destImg: 'img/sprite-png-post/sprite-main.png',
                 padding:2,
                 cssOpts:{
                     cssClass: function(item){
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
                 }
             },
             your_target: {
-                src      : 'img/svg-pre',
+                src      : 'img/sprite-svg-pre',
                 dest     : 'less/svg/'
             }
         },
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
         },
         watch: {
             css: {
-                files: ['less/**.less','css/*.css','js/*.js'],
+                files: ['less/**.less','less/*/**.less','css/*.css','js/*.js'],
                 tasks: ['less:style', 'concat:dist', 'cssmin:combine'],
                 options: {
                     //port: 8888,
@@ -96,7 +96,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // grunt.registerTask('build-sprite', ['iconizr']);
-    grunt.registerTask('default', [ 'less', 'concat', 'cssmin', 'iconizr','imagemin', 'sprite','watch' ]);
+    grunt.registerTask('images', [ 'iconizr','imagemin', 'sprite',]);
+    grunt.registerTask('default', [ 'less', 'concat', 'cssmin', 'watch' ]);
 };
 
 

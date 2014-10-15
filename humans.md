@@ -8,6 +8,7 @@
 	. health insurance explained
 	. state page
 	. blog page
+. add human file to gitignore in production
 
 # Notes
 	Use as a references: 
@@ -27,21 +28,26 @@
 # Table of Contents
 
 *F
-	.fonts
+	#fonts
 
 *G
-	.grunt
+	#grunt
 
 *L
-	.less
+	#less
+
+*P
+	#png
 
 *S
-	.sprite
-	.svg
-
-
+	#sprites
+	#svg
 
 # Table of Contents end
+
+
+
+
 
 // ------------------------
 //
@@ -49,7 +55,7 @@
 //
 // ------------------------
 
-# FONTS
+#FONTS
 
 . to extend fonts you want to use on your page:
 	. in your CSS, add "&:extend(x);"
@@ -68,7 +74,7 @@
 //
 // ------------------------
 
-# GRUNT
+#GRUNT
 
 . grunt restart for image minification
 . grunt restart for sprite creation
@@ -83,7 +89,7 @@
 //
 // ------------------------
 
-# LESS
+#LESS
 
 . when building new pages, create it's own folder with it's own modules
 	*Example*
@@ -96,6 +102,16 @@
 
 
 
+// ------------------------
+//
+### *P
+//
+// ------------------------
+
+#PNG Sprites
+
+. See #SPRITES
+
 
 
 // ------------------------
@@ -104,22 +120,57 @@
 //
 // ------------------------
 
-# SPRITES
+#SPRITES
 
-. to add sprite to HTML
+. to see the name of your sprite, go to file: 
+	"less/less-svg-data.less" OR
+	"css/sprites.css"
+
+. add **SVG sprite** to **HTML**
 	1. Add the following to an <i> tag.
 		svg-X
 		svg-X-dims
+		*Example*
+		<i class="svg-aetna svg-aetna-dims"></i>
 
-. to add sprite to CSS
+. add **SVG sprite** to **LESS**
 	1. to include sprites as pseudo element add the following to :before or :after
 		.svg-pseudo();
 		&:extend(.svg-icon_nameOfSVG);
 		&:extend(.svg-icon_nameOfSVG-dims);
+	2. Search for your SVG in "less/svg/less-svg-data.less"
 	2. to resize SVG Sprites SMALLER
 		background-size:x%;
 
-# SVG's
+
+. add **PNG** to **LESS**
+	1. include the entire CSS of your element from the "sprites.css" file
+	2. include ".png-pseudo();" to your LESS
+	*Example*
+	li:before{
+		.png-pseudo();
+		background-image: url(../img/sprite-png-post/sprite-main.png);
+		background-position: 0px -460px;
+		width: 56px;
+		height: 55px;
+	}		
+
+. add **PNG** to **HTML**
+	1. Add "sprite" class to element
+	2. Look at css/sprites.css for your class name
+	*Example*
+	<span class="sprite carrier-united-health-one"></span>
+
+. add **PNG** sprites
+	1. Put your PNG inside "sprite-png-pre" folder
+	2. Run "grunt images"
+	3. Run "grunt"
+	4. Find your sprite name inside "css/sprites.css"
+	5. Inside the <i> tag, include "sprite [sprite-name]"
+		*Example*
+		<i class="sprite carrier-aetna"></i>
+
+#SVG's
 
 . Name your SVG specifically and as you'd like to use it in a class.
 	*Example*

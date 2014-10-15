@@ -5,141 +5,75 @@ Icon classes can be used entirely standalone. They are named after their origina
 <i class="icon-home"></i>
 ```
 */
-.carrier-aetna {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -38px;
-  width: 87px;
-  height: 23px;
-}
-.carrier-anthem-bluecross {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px 0px;
-  width: 104px;
-  height: 16px;
-}
-.carrier-bluecross-blueshield {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -548px;
-  width: 52px;
-  height: 48px;
-}
-.carrier-cigna {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -598px;
-  width: 47px;
-  height: 51px;
-}
-.carrier-humana {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -18px;
-  width: 89px;
-  height: 18px;
-}
-.carrier-kaiser-permanente {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -63px;
-  width: 140px;
-  height: 23px;
-}
 .carrier-united-health-one {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -168px;
+  background-image: url(../img/sprite-png-post/sprite-main.png);
+  background-position: 0px -26px;
   width: 136px;
   height: 26px;
 }
 .clients-CA-coveredca {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -708px;
+  background-image: url(../img/sprite-png-post/sprite-main.png);
+  background-position: 0px -360px;
   width: 154px;
   height: 56px;
 }
 .clients-ID-yourhealthidaho {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -499px;
+  background-image: url(../img/sprite-png-post/sprite-main.png);
+  background-position: 0px -254px;
   width: 116px;
   height: 47px;
 }
 .clients-MS-onemississippi {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -328px;
+  background-image: url(../img/sprite-png-post/sprite-main.png);
+  background-position: 0px -83px;
   width: 167px;
   height: 37px;
 }
 .clients-NM-nmhix {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -766px;
+  background-image: url(../img/sprite-png-post/sprite-main.png);
+  background-position: 0px -418px;
   width: 99px;
   height: 59px;
 }
 .get-started-arrow {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -651px;
+  background-image: url(../img/sprite-png-post/sprite-main.png);
+  background-position: 0px -303px;
   width: 56px;
   height: 55px;
 }
-.insurance-type-accidental-medical {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -114px;
-  width: 30px;
-  height: 25px;
-}
-.insurance-type-dental {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -258px;
-  width: 32px;
-  height: 32px;
-}
-.insurance-type-major-medical {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -141px;
-  width: 26px;
-  height: 25px;
-}
-.insurance-type-vision {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -225px;
-  width: 28px;
-  height: 31px;
-}
-.insurance-typeshort-term-medical {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -292px;
-  width: 21px;
-  height: 34px;
-}
 .partner-w-healthcaregov {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -827px;
+  background-image: url(../img/sprite-png-post/sprite-main.png);
+  background-position: 0px -479px;
   width: 197px;
   height: 197px;
 }
 .press-abcnews {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -451px;
+  background-image: url(../img/sprite-png-post/sprite-main.png);
+  background-position: 0px -206px;
   width: 140px;
   height: 46px;
 }
 .press-cnn {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -407px;
+  background-image: url(../img/sprite-png-post/sprite-main.png);
+  background-position: 0px -162px;
   width: 91px;
   height: 42px;
 }
 .press-forbes {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -367px;
+  background-image: url(../img/sprite-png-post/sprite-main.png);
+  background-position: 0px -122px;
   width: 151px;
   height: 38px;
 }
 .press-venture-beat {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -196px;
+  background-image: url(../img/sprite-png-post/sprite-main.png);
+  background-position: 0px -54px;
   width: 199px;
   height: 27px;
 }
 .press-wsj {
-  background-image: url(../img/sprite-post/sprite-main.png);
-  background-position: 0px -88px;
+  background-image: url(../img/sprite-png-post/sprite-main.png);
+  background-position: 0px 0px;
   width: 232px;
   height: 24px;
 }

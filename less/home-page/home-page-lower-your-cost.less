@@ -77,14 +77,15 @@
 				margin-left: -12px;
 			}
 			&:after { //Authorized Partner medal
-				content: "";
-				background-image: url('../img/sprite-pre/partner-w-healthcaregov.png');
-				background-size: 100%;
+				.svg-pseudo();
+				&:extend(.svg-partner-w-healthcaregov);
+				&:extend(.svg-partner-w-healthcaregov-dims);
+				background-size:75%;
 				position: absolute;
 				left: 43em;
 				top: -6.5em;
-				width: 130px;
-				height: 130px;
+				// width: 130px;
+				// height: 130px;
 				z-index: 1;
 				@media @L {
 					left: 42em;

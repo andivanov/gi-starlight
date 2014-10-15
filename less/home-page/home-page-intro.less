@@ -173,13 +173,11 @@ section#intro {
 				}
 			}
 			&:before { //this is the arrow itself
-				content: "";
-				background-image: url('../img/sprite-pre/get-started-arrow.png');
-				background-size: 100%;
-				width: 22px;
-				height: 22px;
+				.png-pseudo();
+				&:extend(.svg-icons_get-started-arrow);
+				&:extend(.svg-icons_get-started-arrow-dims);
 				position: absolute;
-				top: 22px;
+				top: 18px;
 				right: 50px;
 				.transition(all 0.25s ease);
 				@media @S-V {
@@ -351,17 +349,18 @@ section#intro {
 			}
 			@media @ML-V {
 				font-size: 1.34em;
-			}
-		}
+			} 
+		}  
 	}
 	
-
-	.carrier-logos {
+ 
+	.carrier-logos { 
  		@heightLocal: 80px;
 		height: @heightLocal;
 		line-height: 1;
 		background: #E9E9E9;
 		text-align: center;
+		padding:7px 0 0;
 		@media @S-V {
 			display: none;
 		}
@@ -374,6 +373,7 @@ section#intro {
 			overflow: hidden;
 			top: -8px;
 			line-height: 1;
+			vertical-align:middle;
 			@media @ML-V {
 				@margin: 0.5%;
 				margin-left: @margin;
