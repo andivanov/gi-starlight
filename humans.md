@@ -24,6 +24,42 @@
 				4.move dude with the cart slightly when scrolling.
 
 # Dev Notes in ABC Order
+# Table of Contents
+
+*F
+	.fonts
+	
+*G
+	.grunt
+
+*L
+	.less
+
+*S
+	.sprite
+	.svg
+
+
+
+# Table of Contents end
+
+// ------------------------
+//
+### *F
+//
+// ------------------------
+
+# FONTS
+
+. to extend fonts you want to use on your page:
+	. in your CSS, add "&:extend(x);"
+	*Example*
+		#about h2{
+			&:extend(body h2 all);
+		}
+
+
+
 
 
 // ------------------------
@@ -36,6 +72,10 @@
 
 . grunt restart for image minification
 . grunt restart for sprite creation
+
+
+
+
 
 // ------------------------
 //
@@ -54,6 +94,10 @@
 						/about-page-locations.less
 
 
+
+
+
+
 // ------------------------
 //
 ### *S
@@ -69,3 +113,17 @@
 
 . to resize SVG Sprites SMALLER
 	background-size:x%;
+
+# SVG's
+
+. Name your SVG specifically and as you'd like to use it in a class.
+	*Example*
+	Acceptable name: "company-highlights-plans"
+	Unacceptable name: "icon"
+
+. To add new SVG image to sprite
+	1. add image to "img/svg-pre/"
+	2. run Grunt
+
+
+
