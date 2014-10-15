@@ -5,6 +5,12 @@ Icon classes can be used entirely standalone. They are named after their origina
 <i class="icon-home"></i>
 ```
 */
+.carrier-cigna {
+  background-image: url(../img/sprite-png-post/sprite-main.png);
+  background-position: 0px -292px;
+  width: 116px;
+  height: 125px;
+}
 .carrier-united-health-one {
   background-image: url(../img/sprite-png-post/sprite-main.png);
   background-position: 0px 0px;
@@ -43,7 +49,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .partner-w-healthcaregov {
   background-image: url(../img/sprite-png-post/sprite-main.png);
-  background-position: 0px -292px;
+  background-position: 0px -419px;
   width: 197px;
   height: 197px;
 }

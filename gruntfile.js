@@ -63,7 +63,7 @@ module.exports = function(grunt) {
                 separator: ';',
             },
             dist: {
-                src: ['css/sprites.css', 'css/global.css'],
+                src: ['css/animate.css','css/sprites.css', 'css/global.css'],
                 dest: 'css/universal.css',
             },
         },
