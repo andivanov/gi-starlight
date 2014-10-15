@@ -3,6 +3,11 @@
 
 # TODO LIST
 . compress svg file
+. new nav
+	. obamacare guides
+	. health insurance explained
+	. state page
+	. blog page
 
 # Notes
 	Use as a references: 
@@ -32,6 +37,22 @@
 . grunt restart for image minification
 . grunt restart for sprite creation
 
+// ------------------------
+//
+### *L
+//
+// ------------------------
+
+# LESS
+
+. when building new pages, create it's own folder with it's own modules
+	*Example*
+	aboutUs.html
+	about-page[folder] 	/about-page.less
+						/about-page-intro.less
+						/about-page-broker.less
+						/about-page-locations.less
+
 
 // ------------------------
 //
@@ -46,5 +67,5 @@
 	&:extend(.svg-icon_nameOfSVG);
 	&:extend(.svg-icon_nameOfSVG-dims);
 
-. to resize SVG Sprites
+. to resize SVG Sprites SMALLER
 	background-size:x%;
