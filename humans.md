@@ -28,7 +28,7 @@
 
 *F
 	.fonts
-	
+
 *G
 	.grunt
 
@@ -106,13 +106,18 @@
 
 # SPRITES
 
-. to include sprites as pseudo element add the following to :before or :after
-	.svg-pseudo();
-	&:extend(.svg-icon_nameOfSVG);
-	&:extend(.svg-icon_nameOfSVG-dims);
+. to add sprite to HTML
+	1. Add the following to an <i> tag.
+		svg-X
+		svg-X-dims
 
-. to resize SVG Sprites SMALLER
-	background-size:x%;
+. to add sprite to CSS
+	1. to include sprites as pseudo element add the following to :before or :after
+		.svg-pseudo();
+		&:extend(.svg-icon_nameOfSVG);
+		&:extend(.svg-icon_nameOfSVG-dims);
+	2. to resize SVG Sprites SMALLER
+		background-size:x%;
 
 # SVG's
 
