@@ -1,6 +1,9 @@
 # humanstxt.org/
 # The humans responsible & technology colophon
 
+# TODO LIST
+. compress svg file
+
 # Notes
 	Use as a references: 
 		http://html.iwthemes.com/jekas/run/
@@ -15,16 +18,33 @@
 				3.arm rotation for the GI dude on the same page - on scroll
 				4.move dude with the cart slightly when scrolling.
 
-# Dev Notes
+# Dev Notes in ABC Order
 
 
+// ------------------------
+//
+### *G
+//
+// ------------------------
 
-	1. Use GRUNT when: 
-		. LESS, CSS
-	2. Restart Grunt when:
-		. images (must restart grunt for image minification)
-		. sprite (must restart grunt of sprite)
+# GRUNT
 
-. to include sprites as pseudo element
-	&:extend(.svg-icon_giman-build);
-	&:extend(.svg-icon_giman-build-dims);
+. grunt restart for image minification
+. grunt restart for sprite creation
+
+
+// ------------------------
+//
+### *S
+//
+// ------------------------
+
+# SPRITES
+
+. to include sprites as pseudo element add the following to :before or :after
+	.svg-pseudo();
+	&:extend(.svg-icon_nameOfSVG);
+	&:extend(.svg-icon_nameOfSVG-dims);
+
+. to resize SVG Sprites
+	background-size:x%;

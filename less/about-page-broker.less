@@ -14,13 +14,16 @@
 
 #broker-build{
 	border-top:1px solid darken(@base-grey,5%);
+	@media @XS{
+		height:auto;
+	}
 	h2{
-		&:after{
-					content:'';
-					&:extend(.svg-icon_bcbs);
-					&:extend(.svg-icon_bcbs-dims);
-					background-size:100%;
-			}
+		// &:after{
+		// 	content:'';
+		// 	&:extend(.svg-icon_bcbs);
+		// 	&:extend(.svg-icon_bcbs-dims);
+		// 	background-size:100%;
+		// }
 	}
 	.company-highlights{
 		text-align:center;
@@ -59,20 +62,48 @@
 		position:relative;
 		.calc(height, ~'100vh - 120px');
 		padding:40px 70px;
-		.sprite{
+		@media @M{
+			padding:30px;
+		}
+		@media @S{
+			padding:20px 30px;
+		}
+		i{
 			position:absolute;
-			bottom:20px;
 			right:0;
+			bottom:30px;
 		}
 	}
 	.health-broker{
 		text-align:right;
+		@media @S{
+			text-align:left;
+		}
 		&:after{
 			.color-wide-left();
 			background:lighten(@base-grey,7%);
 		}
+		&:before{
+			.svg-pseudo();
+			&:extend(.svg-icon_giman-superman);
+			&:extend(.svg-icon_giman-superman-dims);
+			position:absolute;
+			bottom:20px;
+			right:20px;
+			@media @XS{
+				background-size:60%;
+				bottom:-40px;
+				right:-90px;
+			}
+		}
 		h2{
 			text-align:right;
+			@media @S{
+				text-align:left;
+			}
+		}
+		a{
+			display:block;
 		}
 	}
 	.build-marketplaces{
@@ -81,10 +112,26 @@
 			.color-wide-right();
 			background:lighten(@base-grey,10%);
 		}
+		&:before{
+			.svg-pseudo();
+			&:extend(.svg-icon_giman-build);
+			&:extend(.svg-icon_giman-build-dims);
+			bottom:20px;
+			right:20px;
+			position:absolute;
+			@media @XS{
+				background-size:60%;
+				bottom:-40px;
+				right:-90px;
+			}
+		}
 		h2{
 			text-align:left;
 			color:@GI-blue;
 		}
+	}
+	.absolute-bottom{
+		position:relative;
 	}
 }
 
@@ -106,12 +153,49 @@
 // ---------------------------
 
 .company-highlights{
+	@media @S{
+		height:200px;
+	}
 	ul{
 		li{
-			.sprite,
+			@media @S{
+				width:100%;
+			}
 			span{
 				float:left;
 				display:block;
+				@media @S{
+					display:inline-block;
+				}
+			}
+			&:last-child{
+				span{
+					right:77px!important; //temporary
+				}
+			}
+			&.company-highlights-usa{
+				&:before{
+					.svg-pseudo();
+					&:extend(.svg-icon_usa);
+					&:extend(.svg-icon_usa-dims);
+					position:absolute;
+				}
+			}
+			&.company-highlights-plans{
+				&:before{
+					.svg-pseudo();
+					&:extend(.svg-icon_plans);
+					&:extend(.svg-icon_plans-dims);
+					position:absolute;
+				}
+			}
+			&.company-highlights-licensed{
+				&:before{
+					.svg-pseudo();
+					&:extend(.svg-icon_licensed);
+					&:extend(.svg-icon_licensed-dims);
+					position:absolute;
+				}
 			}
 		}
 	}

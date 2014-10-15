@@ -19,9 +19,12 @@
 	.contact-group{
 		color:@white;
 		padding:40px 0;
-		p{
-			font-size: @fontSizeH1 - 0.65em; // 2em - x
-			line-height: @fontSizeH1 - 0.75em;
+		// p{
+		// 	font-size: @fontSizeH1 - 0.65em; // 2em - x
+		// 	line-height: @fontSizeH1 - 0.75em;
+		// }
+		@media @M{
+			padding:30px 0 0;
 		}
 		a{
 			font-size: @fontSizeH1 - 1em; // 2em - x
@@ -41,15 +44,24 @@
 			&:last-child{
 				border:none;
 			}
+			@media @M{
+				.calc(height, ~'190px');
+			}
 		}
 	}
 	.gi-in-press{
 		&:extend(#our-process .gi-in-press all);
 		border-top: 1px solid @team-border-color;
-		margin-top: 20px;
-		padding-top: 20px;
+		margin-top: 50px;
+		padding-top: 30px;
 		padding-bottom: 0;
-
+		@media @M{
+			margin-top:40px;
+			padding-top:10px;
+		}
+	}
+	a{
+		margin:0 2%;
 	}
 }
 

@@ -5,6 +5,9 @@
 		font-size:@fontSizeH1 + 0.75em; // 2em + x
 		margin:0 0 15px;
 		line-height:@fontSizeH1 - 0.75em; // 2m - .25
+		@media @S{
+			font-size:2.1em;
+		}
 	}
 }
 
@@ -13,11 +16,13 @@
 	h2{
 		.sub-head();
 		color:@home-general-font-color;
+		margin:40px 0 0;
 	}
 	h3{
 		&:extend(body h2 all);
 		font-size:@fontSizeH1 + 1.2em; // 2em + x
 		color:@GI-green;
+		margin:3px auto 20px;
 	}
 } 
 #about,
@@ -25,8 +30,11 @@
 #team,
 #locations{
 	p{
-		font-size: @fontSizeH1 - 0.35em; // 2em - x
+		font-size: @fontSizeH1 - 0.8em; // 2em - x
 		.accentFont();
+		@media @S{
+			font-size:1.1em;
+		}
 	}
 	h4{
 		font-size: @fontSizeH1 - 0.5em;
