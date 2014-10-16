@@ -2025,9 +2025,9 @@ h6 {
   font-weight: 200;
   margin-left: 21px;
   position: absolute;
-  top: 5px;
+  top: 10px;
   padding: 0;
-  max-height: 44px;
+  max-height: 49px;
 }
 @media only screen and (max-height: 568px) {
   .navbar-brand img {
@@ -2134,6 +2134,7 @@ nav ul.navbar-nav li:first-child:hover {
   box-shadow: 0 4px 3px rgba(0, 0, 0, 0.03);
   text-align: center;
   position: relative;
+  min-height: 54px;
 }
 #secondary-navbar li {
   background: white;
@@ -2229,6 +2230,7 @@ img.brandpusher {
 #secondary-navbar .navbar-left li {
   float: none!important;
   display: inline-block;
+  margin-top: 6px;
 }
 #secondary-navbar .navbar-right.cart-nav {
   position: absolute;
@@ -2458,7 +2460,7 @@ section#intro .ribbon:nth-of-type(2):before {
   content: '';
   position: absolute;
   top: 1px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
   width: 100%;
 }
 #intro .header-section {
@@ -3184,7 +3186,7 @@ section#about .carrier-logos li.carrier-cigna {
   left: 0;
 }
 section#stories {
-  background: url('../img/images/happy-place.jpg') no-repeat top center;
+  background: url('../img/images/happy-place-v2.jpg') no-repeat top center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
